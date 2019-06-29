@@ -1,6 +1,6 @@
 ### Parameter
 ---
-TEXT=ir_data
+TEXT=ir_data \n
 python fairseq/preprocess.py --source-lang intent --target-lang code \
 --trainpref $TEXT/train_tok_500 \
 --validpref $TEXT/valid_tok_500 \
