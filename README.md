@@ -1,15 +1,6 @@
 ### Parameter
 ---
-TEXT=ir_data \n
-python fairseq/preprocess.py --source-lang intent --target-lang code \
---trainpref $TEXT/train_tok_500 \
---validpref $TEXT/valid_tok_500 \
---testpref $TEXT/test_tok_500 \
---destdir data-bin/ir_data \
---nwordssrc 437 --nwordstgt 524 \
---joined-dictionary
-===== v2
-TEXT=ir_dataAdd_v3
+TEXT=ir_dataAdd_v3 \
 python fairseq/preprocess.py --source-lang intent --target-lang code \
 --srcdict $TEXT/dict.intent.txt \
 --tgtdict $TEXT/dict.code.txt \
