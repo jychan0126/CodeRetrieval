@@ -1,0 +1,2007 @@
+Namespace(beam=4, cpu=False, criterion='cross_entropy', data='data-bin/ir_data_v2', dataset_impl='cached', diverse_beam_groups=-1, diverse_beam_strength=0.5, force_anneal=None, fp16=False, fp16_init_scale=128, fp16_scale_tolerance=0.0, fp16_scale_window=None, gen_subset='test', lazy_load=False, left_pad_source='True', left_pad_target='False', lenpen=0.6, log_format=None, log_interval=1000, lr_scheduler='fixed', lr_shrink=0.1, match_source_len=False, max_len_a=1.0, max_len_b=50, max_sentences=64, max_source_positions=1024, max_target_positions=1024, max_tokens=None, memory_efficient_fp16=False, min_len=1, min_loss_scale=0.0001, model_overrides='{}', momentum=0.99, nbest=1, no_beamable_mm=False, no_early_stop=False, no_progress_bar=False, no_repeat_ngram_size=0, num_shards=1, num_workers=0, optimizer='nag', path='averaged_model_10.66.pt', prefix_size=0, print_alignment=False, quiet=False, raw_text=False, remove_bpe='@@ ', replace_unk=None, required_batch_size_multiple=8, results_path=None, sacrebleu=False, sampling=False, sampling_topk=-1, score_reference=False, seed=1, shard_id=0, skip_invalid_size_inputs_valid_test=False, source_lang=None, target_lang=None, task='translation', tbmf_wrapper=False, temperature=1.0, tensorboard_logdir='', threshold_loss_scale=None, unkpen=0, unnormalized=False, upsample_primary=1, user_dir=None, warmup_updates=0, weight_decay=0.0)
+| [intent] dictionary: 1618 types
+| [code] dictionary: 2119 types
+| data-bin/ir_data_v2 test intent-code 500 examples
+| loading model(s) from averaged_model_10.66.pt
+S-408	determine the type of variable var_0
+T-408	type ( v )
+H-408	-0.5846513509750366	isinstance ( var_0 , str )
+P-408	-1.5347 -0.0356 -0.0555 -0.0211 -0.1688 -0.0311 -0.0323
+S-409	determine the type of variable var_0
+T-409	type ( v )
+H-409	-0.5846513509750366	isinstance ( var_0 , str )
+P-409	-1.5347 -0.0356 -0.0555 -0.0211 -0.1688 -0.0311 -0.0323
+S-373	remove escape character from string str_0
+T-373	"""\\a""" . decode ( 'string_escape' )
+H-373	-0.5664926767349243	re . sub ( '[^0-9]' , '' , 'str_0' )
+P-373	-0.7903 -0.0255 -0.0425 -0.0238 -1.3914 -0.0186 -0.0062 -0.0199 -0.0106 -0.0284 -0.0307
+S-230	<unk> attribute var_0 of object var_1
+T-230	getattr ( <<unk>> , <<unk>> )
+H-230	-0.12069999426603317	getattr ( var_1 , var_0 )
+P-230	-0.2181 -0.0280 -0.0381 -0.0197 -0.0190 -0.0319 -0.0332
+S-133	remove key str_0 from dictionary var_0
+T-133	del d [ <<unk>> ]
+H-133	-0.05817164108157158	var_0 . pop ( 'str_0' , None )
+P-133	-0.0172 -0.0286 -0.0051 -0.0364 -0.0210 -0.0280 -0.0024 -0.0421 -0.0367
+S-369	<unk> the length of array var_0
+T-369	len ( l )
+H-369	-0.24333414435386658	len ( var_0 )
+P-369	-0.3587 -0.0312 -0.1955 -0.0292 -0.0244
+S-287	get attribute str_0 from object var_0
+T-287	getattr ( <<unk>> , <<unk>> )
+H-287	-0.22014085948467255	print ( var_0 . __dict__ )
+P-287	-0.5295 -0.0291 -0.0150 -0.0251 -0.0472 -0.0306 -0.0311
+S-497	open file var_0 with mode str_0
+T-497	open ( path , 'r' )
+H-497	-0.3527601361274719	x_file = open ( 'str_0' , 'rb' )
+P-497	-0.1821 -0.0187 -0.0005 -0.0306 -0.2892 -0.0211 -0.7122 -0.0290 -0.0349
+S-368	<unk> the length of list var_0
+T-368	len ( my_list )
+H-368	-0.669946014881134	len ( set ( var_0 ) )
+P-368	-0.1018 -0.0308 -2.0543 -0.0298 -0.0196 -0.0363 -0.0301 -0.0302
+S-407	determine the type of variable var_0
+T-407	type ( v )
+H-407	-0.5846513509750366	isinstance ( var_0 , str )
+P-407	-1.5347 -0.0356 -0.0555 -0.0211 -0.1688 -0.0311 -0.0323
+S-370	<unk> the length of array var_0
+T-370	len ( s )
+H-370	-0.24333414435386658	len ( var_0 )
+P-370	-0.3587 -0.0312 -0.1955 -0.0292 -0.0244
+S-406	determine the type of variable var_0
+T-406	type ( v )
+H-406	-0.5846513509750366	isinstance ( var_0 , str )
+P-406	-1.5347 -0.0356 -0.0555 -0.0211 -0.1688 -0.0311 -0.0323
+S-479	write line str_0 to file var_0
+T-479	print ( <<unk>> <<unk>> , file = f )
+H-479	-0.27286508679389954	var_0 . write ( <unk> <unk> )
+P-479	-0.0265 -0.0401 -0.0000 -0.0325 -0.1271 -0.0368 -0.6560 -0.0312
+S-222	function to convert <unk> into <unk>
+T-222	int ( )
+H-222	-1.1579173803329468	lambda x , y : x + y
+P-222	-2.5981 -0.5788 -0.0225 -0.5059 -0.0476 -0.2431 -0.1060 -0.2053 -0.0200
+S-127	copy file var_0 to directory var_1
+T-127	shutil . copy ( <<unk>> , <<unk>> )
+H-127	-0.12881191074848175	copyfile ( var_0 , var_1 )
+P-127	-0.2346 -0.0281 -0.0447 -0.0232 -0.0193 -0.0355 -0.0286
+S-23	set pythonpath in python script .
+T-23	sys . path . append ( '/path/to/whatever' )
+H-23	-0.4478960633277893	sys . setdefaultencoding ( 'utf8' )
+P-23	-0.0235 -0.0300 -0.8339 -0.0245 -0.4689 -0.0290 -0.0296
+S-319	match regex str_0 with string str_1
+T-319	re . findall ( '\\((.*?)\\)|(\\w)' , <<unk>> )
+H-319	-0.7175593376159668	re . match ( '(str_0)' , 'str_1' )
+P-319	-2.0409 -0.0314 -0.3504 -0.0293 -0.1201 -0.0211 -0.0014 -0.0263 -0.0607
+S-486	execute script str_0 using str_1 shell
+T-486	os . system ( <<unk>> , <<unk>> )
+H-486	-0.3749636709690094	subprocess . call ( [ 'str_0' , 'str_1' ] )
+P-486	-0.0090 -0.0342 -0.0028 -0.0329 -0.2403 -0.9426 -0.0251 -0.0388 -0.0536 -0.1696 -0.0318
+S-429	plot dataframe var_0 without a legend
+T-429	df . plot ( legend = False )
+H-429	-0.19102714955806732	var_0 . legend ( frameon = False )
+P-429	-0.0234 -0.0287 -0.1694 -0.0329 -0.3261 -0.0238 -0.0390 -0.0385 -0.0321
+S-362	extract <unk> str_0 from string var_0
+T-362	re . findall ( 'src="js/([^"]*\\bjquery\\b[^"]*)"' , data )
+H-362	-0.6141294240951538	re . findall ( 'str_0' , var_0 )
+P-362	-0.3904 -0.0433 -0.1829 -0.0312 -1.5063 -0.0223 -0.0510 -0.0350 -0.0328
+S-482	convert unicode string var_0 to ascii
+T-482	s . encode ( 'iso-8859-15' )
+H-482	-0.3370872437953949	print ( var_0 . encode ( 'unicode_escape' ) )
+P-482	-0.6781 -0.0258 -0.0433 -0.0359 -0.1583 -0.0269 -0.2908 -0.0283 -0.0278 -0.0267
+S-279	<unk> a delay of 1 second
+T-279	time . sleep ( 1 )
+H-279	-0.36270764470100403	time . sleep ( 1 )
+P-279	-0.8992 -0.0365 -0.0288 -0.0257 -0.1093 -0.0271 -0.0392
+S-29	download a file var_0 over <unk>
+T-29	r = requests . get ( url )
+H-29	-0.41586384177207947	for root , subFolders , files in os . walk ( var_0 ) : \n pass
+P-29	-0.5330 -1.0459 -0.0084 -0.1808 -0.0196 -0.1287 -0.0112 -0.0474 -0.0335 -0.0685 -0.0259 -0.0165 -0.0407 -0.0115 -0.0272 -0.0379 -0.0394
+S-233	convert unicode string ustr_0 into dictionary
+T-233	d = ast . literal_eval ( <<unk>> )
+H-233	-0.44332611560821533	"""""" . join ( chr ( ord ( c ) ) for c in 'AndrÃ©' )
+P-233	-0.3096 -0.0281 -0.0115 -0.0318 -0.1564 -0.0305 -0.1569 -0.0284 -0.2627 -0.0283 -0.0288 -0.0172 -0.7891 -0.0148 -0.1766 -0.0301 -0.3257
+S-410	get the type of variable var_0
+T-410	print ( type ( <<unk>> ) )
+H-410	-0.6370452046394348	isinstance ( var_0 , str )
+P-410	-1.6739 -0.0349 -0.0599 -0.0219 -0.1912 -0.0319 -0.0339
+S-335	check if var_0 is a string
+T-335	isinstance ( <<unk>> , str )
+H-335	-0.26814982295036316	var_0 . isdigit ( )
+P-335	-0.5446 -0.0781 -0.0650 -0.0298 -0.0366 -0.0317
+S-202	<unk> data in <unk> <unk>
+T-202	df . sort_values ( [ 'System_num' , 'Dis' ] )
+H-202	-0.4762275218963623	plt . gca ( ) . invert_yaxis ( )
+P-202	-0.9123 -0.0276 -0.0673 -0.0221 -0.0338 -0.0345 -0.7168 -0.0226 -0.0341 -0.0247
+S-315	<unk> response with <unk> var_0
+T-315	return HttpResponse ( data , mimetype = 'application/json' )
+H-315	-0.8952362537384033	os . var_0 . realpath ( var_0 )
+P-315	-1.3359 -0.0274 -1.3057 -0.0284 -0.5199 -0.0270 -0.0384 -0.0318 -0.0312
+S-267	<unk> <unk> from string var_0
+T-267	brackets = re . sub ( '[^(){}[\\]]' , '' , s )
+H-267	-0.6661412119865417	var_0 . decode ( 'unicode_escape' )
+P-267	-0.1346 -0.0340 -1.2974 -0.0272 -0.5915 -0.0284 -0.0280
+S-41	convert scalar var_0 to array
+T-41	x = np . asarray ( x ) . reshape ( 1 , - 1 ) [ ( 0 ) , : ]
+H-41	-0.8273094296455383	( var_0 . T * var_1 ) . T
+P-41	-2.4204 -0.0732 -0.0265 -0.3096 -0.0764 -0.0374 -0.0173 -0.0161 -0.2881 -0.0286
+S-209	<unk> <unk> in list var_0
+T-209	list ( OrderedDict . fromkeys ( <<unk>> ) )
+H-209	-0.7677190899848938	var_0 = [ i [ 0 ] for i in var_0 ]
+P-209	-0.7621 -0.2409 -0.1118 -1.5951 -0.2257 -0.2117 -0.0348 -0.0338 -0.0408 -0.0297 -0.2196 -0.0436 -0.0277
+S-140	<unk> tuple var_0 to list
+T-140	<<unk>> = map ( list , <<unk>> )
+H-140	-0.3740595281124115	[ ( a , b , c ) for a , ( b , c ) in var_0 ]
+P-140	-0.1922 -0.0460 -0.3319 -0.5272 -0.0040 -0.0182 -0.0498 -0.0219 -0.0147 -0.0693 -0.0204 -0.0299 -0.1052 -0.0212 -0.1336 -0.0271 -0.1201 -0.4728 -0.0219 -0.0298
+S-10	sending http <unk> to var_0
+T-10	<<unk>> . send ( <<unk>> 200 <<unk>> )
+H-10	-1.3885793685913086	file_name = wget . get ( var_0 )
+P-10	-2.7023 -0.0170 -1.4595 -0.0330 -0.8073 -0.0264 -0.0694 -0.0317 -0.0428
+S-138	<unk> tuple var_0 to list
+T-138	list ( t )
+H-138	-0.3740595281124115	[ ( a , b , c ) for a , ( b , c ) in var_0 ]
+P-138	-0.1922 -0.0460 -0.3319 -0.5272 -0.0040 -0.0182 -0.0498 -0.0219 -0.0147 -0.0693 -0.0204 -0.0299 -0.1052 -0.0212 -0.1336 -0.0271 -0.1201 -0.4728 -0.0219 -0.0298
+S-17	enable <unk> using action str_0
+T-17	warnings . simplefilter ( <<unk>> )
+H-17	-0.8451760411262512	urllib . parse . unquote ( 'str_0' )
+P-17	-1.7809 -0.0265 -0.3593 -0.0315 -0.8695 -0.0257 -0.0119 -0.0280 -0.0253
+S-372	<unk> the length of var_0
+T-372	len ( my_string )
+H-372	-0.17000094056129456	len ( var_0 )
+P-372	-0.0983 -0.0287 -0.2636 -0.0282 -0.0277
+S-139	<unk> list var_0 to tuple
+T-139	tuple ( l )
+H-139	-0.44898366928100586	[ ( a , b , c ) for a , ( b , c ) in var_0 ]
+P-139	-0.2686 -0.0496 -0.6071 -0.7194 -0.0065 -0.0176 -0.0424 -0.0216 -0.0132 -0.0981 -0.0201 -0.0303 -0.1805 -0.0206 -0.1215 -0.0272 -0.1123 -0.3006 -0.0224 -0.0299
+S-371	<unk> the length of var_0
+T-371	len ( <<unk>> )
+H-371	-0.17000094056129456	len ( var_0 )
+P-371	-0.0983 -0.0287 -0.2636 -0.0282 -0.0277
+S-405	get the type of var_0
+T-405	type ( i )
+H-405	-0.7516396641731262	isinstance ( var_0 , int )
+P-405	-1.5264 -0.0327 -0.0504 -0.0238 -0.7113 -0.0331 -0.0381
+S-208	<unk> <unk> in list var_0
+T-208	list ( set ( <<unk>> ) )
+H-208	-0.7677190899848938	var_0 = [ i [ 0 ] for i in var_0 ]
+P-208	-0.7621 -0.2409 -0.1118 -1.5951 -0.2257 -0.2117 -0.0348 -0.0338 -0.0408 -0.0297 -0.2196 -0.0436 -0.0277
+S-449	split string var_0 by space
+T-449	text . split ( )
+H-449	-0.32007837295532227	re . split ( '\\s+|\\S+' , var_0 )
+P-449	-0.2056 -0.0369 -0.3808 -0.0259 -0.4332 -0.0214 -0.0240 -0.0396 -0.0288
+S-450	split string var_0 by str_0
+T-450	text . split ( ',' )
+H-450	-0.4628375172615051	str_0 . split ( 'str_0' )
+P-450	-1.2593 -0.0424 -0.0014 -0.0354 -0.0797 -0.0339 -0.0355
+S-338	append list var_0 to var_1
+T-338	c . extend ( a )
+H-338	-0.12046825885772705	var_1 . append ( 'var_0' )
+P-338	-0.2093 -0.0371 -0.0012 -0.0303 -0.0461 -0.0326 -0.0305
+S-337	append list var_0 to var_1
+T-337	<<unk>> . extend ( <<unk>> )
+H-337	-0.12046825885772705	var_1 . append ( 'var_0' )
+P-337	-0.2093 -0.0371 -0.0012 -0.0303 -0.0461 -0.0326 -0.0305
+S-336	append list var_0 to var_1
+T-336	<<unk>> . extend ( <<unk>> )
+H-336	-0.12046825885772705	var_1 . append ( 'var_0' )
+P-336	-0.2093 -0.0371 -0.0012 -0.0303 -0.0461 -0.0326 -0.0305
+S-207	<unk> <unk> in list var_0
+T-207	list ( set ( t ) )
+H-207	-0.7677190899848938	var_0 = [ i [ 0 ] for i in var_0 ]
+P-207	-0.7621 -0.2409 -0.1118 -1.5951 -0.2257 -0.2117 -0.0348 -0.0338 -0.0408 -0.0297 -0.2196 -0.0436 -0.0277
+S-221	convert string str_0 into integer
+T-221	int ( '1' )
+H-221	-0.20780755579471588	int ( 'str_0' , 2 )
+P-221	-0.0169 -0.0323 -0.0259 -0.0278 -0.4922 -0.0331 -0.0397
+S-470	reload a module var_0
+T-470	import imp \n imp . reload ( <<unk>> )
+H-470	-1.0029207468032837	var_0 = int ( round ( var_0 ) )
+P-470	-0.4618 -0.0977 -2.7952 -0.0232 -0.4722 -0.0235 -0.0377 -0.0249 -0.0274 -0.0291
+S-45	running bash script str_0
+T-45	subprocess . call ( <<unk>> , shell = True )
+H-45	-0.2153289020061493	os . system ( <unk> <unk> <unk> )
+P-45	-0.1010 -0.0302 -0.0068 -0.0334 -0.1918 -0.0324 -0.2973 -0.0783 -0.0336
+S-180	replace <unk> with underscore
+T-180	mystring . replace ( <<unk>> <<unk>> , '_' )
+H-180	-0.8013162016868591	br . decode ( 'utf-8' )
+P-180	-0.4509 -0.0288 -1.5880 -0.0260 -0.4175 -0.0278 -0.0365
+S-466	django filter by hour
+T-466	Entry . objects . filter ( pub_date__contains = '08:00' )
+H-466	-0.8140968084335327	datetime . datetime . now ( ) . isoformat ( )
+P-466	-1.1798 -0.0258 -0.3040 -0.0264 -0.3086 -0.0322 -0.0320 -0.0656 -1.5403 -0.0326 -0.0395 -0.0287
+S-375	remove directory tree str_0
+T-375	shutil . rmtree ( <<unk>> )
+H-375	-0.09120047092437744	os . listdir ( 'str_0' )
+P-375	-0.0221 -0.0333 -0.1141 -0.0296 -0.0222 -0.0394 -0.0324
+S-239	run r script str_0
+T-239	subprocess . call ( <<unk>> <<unk>> <<unk>> , shell = True )
+H-239	-0.2622949182987213	subprocess . call ( 'str_0' , shell = True )
+P-239	-0.1951 -0.0308 -0.4054 -0.0294 -0.2513 -0.0257 -0.0399 -0.0232 -0.0420 -0.0337 -0.0291
+S-71	upload file using <unk>
+T-71	ftp . storlines ( <<unk>> <<unk>> + filename , open ( filename , 'r' ) )
+H-71	-0.8820115327835083	open ( 'file.txt' , 'w' ) . close ( )
+P-71	-1.4621 -0.0260 -0.9969 -0.0227 -0.2792 -0.0337 -0.0207 -0.7913 -0.0263 -0.0341 -0.0251
+S-291	unzip the list str_0
+T-291	zip ( * [ ( 'a' , 1 ) , ( 'b' , 2 ) , ( 'c' , 3 ) , ( 'd' , 4 ) ] )
+H-291	-0.22674904763698578	zip ( * [ str_0 ] )
+P-291	-0.4095 -0.0310 -0.0019 -0.1181 -0.1156 -0.0371 -0.0429 -0.0335
+S-292	unzip the list str_0
+T-292	zip ( * [ ( 'a' , 1 ) , ( 'b' , 2 ) , ( 'c' , 3 ) , ( 'd' , 4 ) ] )
+H-292	-0.22674904763698578	zip ( * [ str_0 ] )
+P-292	-0.4095 -0.0310 -0.0019 -0.1181 -0.1156 -0.0371 -0.0429 -0.0335
+S-424	print str_0 without newline
+T-424	sys . stdout . write ( '.' )
+H-424	-0.6558468341827393	print ( <unk> is <unk> + str ( str_0 ) + '"' )
+P-424	-0.0084 -0.0285 -0.0659 -0.2839 -0.0194 -0.6729 -1.2862 -0.0265 -0.4840 -0.0421 -0.1548 -0.0515 -0.0401 -0.0310
+S-227	encode string str_0
+T-227	encoded = base64 . b64encode ( <<unk>> <<unk>> <<unk>> <<unk>> )
+H-227	-0.3576664626598358	"""\\xc3\\x85あ""" . encode ( 'utf-8' )
+P-227	-0.9579 -0.0452 -0.0005 -0.0269 -0.0662 -0.0312 -0.0217
+S-85	format string str_0
+T-85	<<unk>> <<unk>> <<unk>> . format ( self )
+H-85	-0.8667657971382141	<unk> <unk> . format ( 'str_0' )
+P-85	-0.5684 -0.0444 -0.1718 -0.4590 -0.0255 -1.6840 -0.0381 -0.0272
+S-398	declare an array
+T-398	my_list = [ ]
+H-398	-0.5547345280647278	intarray = array ( )
+P-398	-0.9319 -0.0250 -0.0702 -0.0298 -0.5492 -0.0194
+S-64	flatten list var_0
+T-64	[ image for menuitem in <<unk>> for image in menuitem ]
+H-64	-0.0452486015856266	var_0 = [ i [ 0 ] for i in var_0 ]
+P-64	-0.0093 -0.0119 -0.0077 -0.0017 -0.0059 -0.0030 -0.0337 -0.0199 -0.0031 -0.0112 -0.0495 -0.0334 -0.0206
+S-293	unzip list var_0
+T-293	result = ( [ a for ( a , b ) in <<unk>> ] , [ b for ( a , b ) in <<unk>> ] )
+H-293	-0.42610567808151245	zip ( * var_0 )
+P-293	-1.0852 -0.0330 -0.0044 -0.0620 -0.0342 -0.0298
+S-295	unzip list str_0
+T-295	zip ( * [ ( 'a' , 1 ) , ( 'b' , 2 ) , ( 'c' , 3 ) , ( 'd' , 4 ) , ( 'e' , ) ] )
+H-295	-0.12522834539413452	zip ( * [ str_0 ] )
+P-295	-0.1155 -0.0322 -0.0009 -0.0510 -0.1240 -0.0368 -0.0421 -0.0335
+S-35	read keyboard-input
+T-35	input ( <<unk>> <<unk>> <<unk>> )
+H-35	-0.8332369923591614	sys . stdin . read ( )
+P-35	-0.9709 -0.0340 -0.8562 -0.0393 -0.0623 -0.0266 -0.8912 -0.0211
+S-286	<unk> a file str_0 in write mode
+T-286	f = open ( <<unk>> , 'w' )
+H-286	-0.19900141656398773	output = open ( 'str_0' , 'wb' )
+P-286	-0.4450 -0.0221 -0.0075 -0.0245 -0.0136 -0.0277 -0.1443 -0.0326 -0.0263
+S-250	<unk> a file str_0 in write mode
+T-250	new_file = open ( <<unk>> , 'w' )
+H-250	-0.19900141656398773	output = open ( 'str_0' , 'wb' )
+P-250	-0.4450 -0.0221 -0.0075 -0.0245 -0.0136 -0.0277 -0.1443 -0.0326 -0.0263
+S-36	enable debug mode on <unk> application var_0
+T-36	app . run ( debug = True )
+H-36	-0.07129323482513428	var_0 . run ( debug = True )
+P-36	-0.0306 -0.0484 -0.0244 -0.0292 -0.0353 -0.0351 -0.0016 -0.0333 -0.0285
+S-447	decode json string str_0 to python dict
+T-447	json . loads ( request . body )
+H-447	-0.17881886661052704	json . load ( { str_0 } )
+P-447	-0.3342 -0.0382 -0.0350 -0.0278 -0.0550 -0.0958 -0.0111 -0.0384 -0.0328
+S-224	call a shell script str_0 using subprocess
+T-224	subprocess . call ( [ <<unk>> ] )
+H-224	-0.10828447341918945	subprocess . call ( 'str_0' , shell = True )
+P-224	-0.0003 -0.0332 -0.0012 -0.0344 -0.2516 -0.0194 -0.0049 -0.0350 -0.0102 -0.0388 -0.0276
+S-225	call a shell script var_0 using subprocess
+T-225	subprocess . call ( [ <<unk>> ] )
+H-225	-0.531014621257782	subprocess . call ( [ 'shutdown' , <unk> <unk> ] )
+P-225	-0.0007 -0.0350 -0.0009 -0.0337 -0.1641 -0.3117 -0.0223 -1.5253 -0.1494 -0.0421 -0.0426 -0.0305
+S-341	<unk> var_0 in flask config with str_0
+T-341	app . config [ <<unk>> ] = <<unk>>
+H-341	-0.6533079743385315	var_0 = var_0 . engine . get ( 'str_0' )
+P-341	-0.0423 -0.2331 -0.1118 -0.0263 -1.8318 -0.0326 -0.3732 -0.0320 -0.0153 -0.0287 -0.0270
+S-25	open a file str_0 in append mode
+T-25	file = open ( <<unk>> , 'a' )
+H-25	-0.4840766191482544	f = open ( 'str_0' , 'r' )
+P-25	-0.2287 -0.0256 -0.0002 -0.0277 -0.2937 -0.0213 -1.0544 -0.1111 -0.0464
+S-142	get index of <unk> in column str_0
+T-142	df . loc [ df [ <<unk>> ] ]
+H-142	-0.17916139960289001	list ( df . index )
+P-142	-0.1644 -0.0308 -0.1265 -0.1384 -0.0072 -0.0389 -0.0697
+S-332	check if object var_0 is a string
+T-332	isinstance ( o , str )
+H-332	-0.47711843252182007	"""""" . join ( chr ( i ) for i in var_0 )
+P-332	-0.8243 -0.0380 -0.0071 -0.0322 -0.7256 -0.0308 -0.4290 -0.0308 -0.0570 -0.0248 -0.0130 -0.0342 -0.0371 -0.0404
+S-148	decode string str_0 into a normal string
+T-148	"""\\x89\\n""" . decode ( 'string_escape' )
+H-148	-0.16534408926963806	urllib . parse . unquote ( 'str_0' )
+P-148	-0.3876 -0.0339 -0.0014 -0.0354 -0.0048 -0.0251 -0.0400 -0.0272 -0.0625
+S-399	<unk> item str_0 to a list var_0
+T-399	my_list . append ( 12 )
+H-399	-0.6985360980033875	var_0 . remove ( 'str_0' )
+P-399	-0.1373 -0.0257 -1.2659 -0.0305 -0.7227 -0.0317 -0.0313
+S-354	truncate float float_0 to 3 decimal <unk>
+T-354	round ( <<unk>> , 3 )
+H-354	-0.10239201039075851	round ( float_0 , 3 )
+P-354	-0.1929 -0.0329 -0.0023 -0.0226 -0.0111 -0.0347 -0.0326
+S-394	get html source of <unk> <unk> var_0
+T-394	element . get_attribute ( 'innerHTML' )
+H-394	-1.2497432231903076	k = var_0 . find ( text = re . compile ( 'http://www\\.iwashere\\.com/' ) ) . parent . text
+P-394	-2.5829 -0.0234 -0.0924 -0.0348 -0.6882 -0.0280 -0.1850 -0.0245 -0.3421 -0.0363 -0.2427 -0.0286 -2.0813 -0.0359 -0.0380 -0.0570 -0.2617 -0.0341 -0.0512 -0.6730
+S-333	check if object var_0 is a string
+T-333	( type ( o ) is str )
+H-333	-0.47711843252182007	"""""" . join ( chr ( i ) for i in var_0 )
+P-333	-0.8243 -0.0380 -0.0071 -0.0322 -0.7256 -0.0308 -0.4290 -0.0308 -0.0570 -0.0248 -0.0130 -0.0342 -0.0371 -0.0404
+S-334	check if object var_0 is a string
+T-334	isinstance ( o , str )
+H-334	-0.47711843252182007	"""""" . join ( chr ( i ) for i in var_0 )
+P-334	-0.8243 -0.0380 -0.0071 -0.0322 -0.7256 -0.0308 -0.4290 -0.0308 -0.0570 -0.0248 -0.0130 -0.0342 -0.0371 -0.0404
+S-246	length of longest element in list var_0
+T-246	len ( max ( <<unk>> , key = len ) )
+H-246	-0.5565848350524902	len ( max ( var_0 , key = len ) )
+P-246	-0.6122 -0.0314 -1.2722 -0.0298 -0.0741 -0.0575 -0.2566 -0.0249 -0.0061 -0.0368 -0.0318 -0.0385
+S-402	select the last column of dataframe var_0
+T-402	df [ df . columns [ - 1 ] ]
+H-402	-0.2971595227718353	var_0 [ - 1 ]
+P-402	-0.0314 -0.0658 -0.4176 -0.0129 -0.2848 -0.0583
+S-339	append <unk> in list var_0 to var_1
+T-339	for line in <<unk>> : \n <<unk>> . append ( line )
+H-339	-0.3044898509979248	var_1 . append ( 'var_0' )
+P-339	-0.0875 -0.0321 -0.0013 -0.0291 -0.7669 -0.0313 -0.0304
+S-183	get filename without extension from file var_0
+T-183	os . path . splitext ( filename ) [ 0 ]
+H-183	-0.4486240744590759	os . path . getmtime ( var_0 )
+P-183	-0.0039 -0.0391 -0.3199 -0.0413 -1.1032 -0.0324 -0.0538 -0.0400 -0.0430
+S-228	encode a string str_0 to var_0 encoding
+T-228	encoded = <<unk>> <<unk>> <<unk>> <<unk>> . encode ( 'ascii' )
+H-228	-0.13879136741161346	var_0 . encode ( 'str_0' )
+P-228	-0.1719 -0.0463 -0.0014 -0.0301 -0.1355 -0.0332 -0.0277
+S-358	get number of <unk> in dictionary var_0
+T-358	len ( list ( <<unk>> . keys ( ) ) )
+H-358	-0.41362717747688293	sum ( len ( v ) for v in list ( var_0 . values ( ) ) )
+P-358	-0.9026 -0.0302 -0.0777 -0.0302 -0.3977 -0.0327 -0.0178 -0.0685 -0.0402 -0.5203 -0.0304 -0.0100 -0.0456 -0.0208 -0.0290 -0.0327 -0.0332 -0.0519 -0.0486
+S-175	extract a url from a string var_0
+T-175	print ( re . findall ( '(https?://[^\\s]+)' , <<unk>> ) )
+H-175	-0.7210325002670288	[ row [ 0 ] for s in var_0 ]
+P-175	-0.0046 -1.2957 -0.0955 -0.5685 -0.0723 -0.0190 -0.7438 -0.0192 -0.0632 -0.1311 -0.0265
+S-240	add a header to a csv file
+T-240	writer . writeheader ( )
+H-240	-0.7224024534225464	response . write ( open ( 'str_0' , 'rb' ) )
+P-240	-2.4568 -0.0460 -0.0866 -0.0296 -0.0903 -0.0289 -0.1525 -0.0187 -0.1157 -0.0385 -0.1130 -0.0317
+S-412	<unk> a string var_0 with string format
+T-412	print ( '"{}"' . format ( word ) )
+H-412	-0.20257319509983063	"""{0:.3g}""" . format ( var_0 )
+P-412	-0.4521 -0.0349 -0.0239 -0.0251 -0.0541 -0.0297 -0.0314
+S-418	delete all <unk> str_0 in string str_1
+T-418	<<unk>> is <<unk>> . replace ( 'i' , '' )
+H-418	-0.6669162511825562	re . sub ( '[^0-9]' , 'str_1' , 'str_0' )
+P-418	-0.0631 -0.0269 -0.0184 -0.0229 -2.0040 -0.0175 -0.5421 -0.0183 -0.0446 -0.0266 -0.0268
+S-198	click a href button str_0 with selenium
+T-198	driver . find_element_by_partial_link_text ( <<unk>> ) . click ( )
+H-198	-0.09492470324039459	driver . find_element_by_css_selector ( 'str_0' ) . click ( )
+P-198	-0.0046 -0.0251 -0.1528 -0.0284 -0.0243 -0.0336 -0.0363 -0.0010 -0.0298 -0.0344 -0.0300
+S-24	split string str_0 using a regex str_1
+T-24	re . split ( '(\\W+)' , <<unk>> <<unk>> <<unk>> )
+H-24	-0.16377419233322144	re . split ( 'str_1' , 'str_0' )
+P-24	-0.0130 -0.0318 -0.0443 -0.0313 -0.0837 -0.0214 -0.2781 -0.0790 -0.0295
+S-499	add a new axis to array var_0
+T-499	a [ : , ( np . newaxis ) ]
+H-499	-0.6893115639686584	var_0 [ np . all ( var_0 != 0 , axis = 1 ) ]
+P-499	-0.0221 -0.1688 -1.0688 -0.0299 -0.6838 -0.0372 -0.0636 -0.2737 -0.1979 -0.0266 -0.3720 -0.0277 -0.1246 -0.4655 -0.0375 -0.0384
+S-304	extract ip address from an html string
+T-304	ip = re . findall ( '[0-9]+(?:\\.[0-9]+){3}' , s )
+H-304	-0.9015401005744934	pat = re . compile ( '^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$' )
+P-304	-2.4992 -0.0250 -0.0007 -0.0267 -0.2890 -0.0236 -0.4468 -0.0301 -0.0280
+S-331	check if object var_0 is a string
+T-331	isinstance ( <<unk>> , str )
+H-331	-0.47711843252182007	"""""" . join ( chr ( i ) for i in var_0 )
+P-331	-0.8243 -0.0380 -0.0071 -0.0322 -0.7256 -0.0308 -0.4290 -0.0308 -0.0570 -0.0248 -0.0130 -0.0342 -0.0371 -0.0404
+S-478	get the last key of dictionary var_0
+T-478	list ( dict . keys ( ) ) [ - 1 ]
+H-478	-0.49294981360435486	var_0 [ - 1 ]
+P-478	-0.0723 -0.0547 -1.2471 -0.0214 -0.0238 -0.0251
+S-146	change working directory to the directory var_0
+T-146	os . chdir ( <<unk>> )
+H-146	-0.05339526757597923	os . chdir ( var_0 )
+P-146	-0.0015 -0.0334 -0.0019 -0.0328 -0.0402 -0.0302 -0.0316
+S-269	read a file var_0 without newlines
+T-269	[ line . rstrip ( '\n' ) for line in file ]
+H-269	-0.5027020573616028	open ( var_0 , 'r' ) . read ( )
+P-269	-0.9530 -0.0286 -0.2343 -0.1951 -0.5103 -0.0387 -0.0461 -0.0073 -0.0305 -0.0534 -0.0217
+S-8	concatenate a list of <unk> str_0
+T-8	"""""" . join ( [ 'a' , 'b' , 'c' ] )
+H-8	-0.7338461875915527	from functools import [ str_0 ]
+P-8	-1.1429 -0.1403 -0.0453 -0.9866 -0.0016 -0.0205 -0.0214
+S-324	convert list str_0 into a dictionary
+T-324	dict ( [ ( 'Name' , 'Joe' ) , ( <<unk>> , <<unk>> ) ] )
+H-324	-0.08760318905115128	dict ( map ( lambda s : s . split ( ':' ) , [ str_0 ] ) )
+P-324	-0.0066 -0.0381 -0.0581 -0.0329 -0.0746 -0.0128 -0.0200 -0.0221 -0.0282 -0.0131 -0.0323 -0.0048 -0.0359 -0.0163 -0.0065 -0.0030 -0.0310 -0.0346 -0.0282 -0.0296
+S-377	reverse sort <unk> var_0 by <unk>
+T-377	sorted ( x , key = x . get , reverse = True )
+H-377	-0.3820408284664154	sorted ( var_0 , key = var_0 . get )
+P-377	-0.2322 -0.0309 -0.1143 -0.0235 -0.0322 -0.0271 -0.5048 -0.0322 -0.0107 -0.5634 -0.0391
+S-455	eliminate all <unk> from list var_0
+T-455	[ element for element in lst if isinstance ( element , int ) ]
+H-455	-0.236214280128479	list ( itertools . product ( * var_0 ) )
+P-455	-0.3829 -0.0288 -0.0698 -0.0333 -0.1251 -0.0280 -0.1962 -0.0383 -0.0292 -0.0291 -0.0351
+S-223	convert <unk> in var_0 to <unk>
+T-223	T2 = [ map ( int , x ) for x in <<unk>> ]
+H-223	-0.4706289768218994	var_0 . decode ( 'utf-8' )
+P-223	-0.0562 -0.0261 -0.6724 -0.0249 -0.5775 -0.0282 -0.1273
+S-302	find maximal value in matrix var_0
+T-302	max ( [ max ( i ) for i in matrix ] )
+H-302	-0.6360987424850464	np . where ( np . isnan ( var_0 ) , 0 , var_0 )
+P-302	-0.0729 -0.0303 -0.4324 -0.0303 -1.5347 -0.0323 -0.3524 -0.0328 -0.0248 -0.0356 -0.5567 -0.0119 -0.0293 -0.0746 -0.0350 -0.0713
+S-210	<unk> array var_0 into a list
+T-210	numpy . array ( a ) . reshape ( - 1 ) . tolist ( )
+H-210	-0.5889115929603577	np . concatenate ( var_0 )
+P-210	-0.5779 -0.0318 -1.0588 -0.0293 -0.0475 -0.0331 -0.1144
+S-494	<unk> all <unk> within text var_0
+T-494	re . findall ( '"(http.*?)"' , s , re . MULTILINE | re . DOTALL )
+H-494	-0.27194952964782715	re . findall ( '\\([^)]*\\)' , var_0 )
+P-494	-0.0205 -0.0394 -0.0423 -0.0276 -0.7320 -0.0231 -0.0738 -0.0277 -0.0300
+S-238	running r script str_0 from python
+T-238	subprocess . call ( [ '/usr/bin/Rscript' , '--vanilla' , <<unk>> ] )
+H-238	-0.5506132245063782	subprocess . Popen ( [ str_0 ] )
+P-238	-0.3229 -0.0301 -1.0025 -0.0301 -0.0873 -0.4934 -0.0265 -0.0317 -0.0332
+S-182	split string var_0 on white <unk>
+T-182	<<unk>> <<unk>> . join ( my_string . split ( ) )
+H-182	-0.24874889850616455	re . findall ( '\\s+|\\S+' , var_0 )
+P-182	-0.6644 -0.0332 -0.0548 -0.0265 -0.0252 -0.0235 -0.0361 -0.0367 -0.0292
+S-345	remove <unk> from a string var_0
+T-345	re . sub ( '[^\\w]' , <<unk>> <<unk>> , s )
+H-345	-0.4440040588378906	var_0 = re . sub ( '[!@#$]' , '' , var_0 )
+P-345	-0.5032 -0.1577 -0.1056 -0.0329 -0.0141 -0.0313 -1.0907 -0.0201 -0.0003 -0.0195 -0.0270 -0.0352 -0.0313
+S-297	encode str_0 to a <unk> string
+T-297	json . dumps ( Decimal ( '3.9' ) )
+H-297	-0.11961638927459717	"""\\xc3\\x85あ""" . encode ( 'utf-8' )
+P-297	-0.2461 -0.0413 -0.0003 -0.0275 -0.0133 -0.0301 -0.0259
+S-386	return a int_0 unauthorized in django
+T-386	return HttpResponse ( 'Unauthorized' , status = <<unk>> )
+H-386	-0.07533890753984451	return HttpResponse ( status = int_0 )
+P-386	-0.0691 -0.0403 -0.0254 -0.0335 -0.0318 -0.0006 -0.0372 -0.0245
+S-32	remove key str_0 from dictionary var_0
+T-32	{ i : d [ i ] for i in d if i != 'c' }
+H-32	-0.058171384036540985	var_0 . pop ( 'str_0' , None )
+P-32	-0.0172 -0.0286 -0.0051 -0.0364 -0.0210 -0.0280 -0.0024 -0.0421 -0.0367
+S-256	print unicode string str_0 with utf-8
+T-256	print ( <<unk>> . encode ( 'raw_unicode_escape' ) )
+H-256	-0.28498131036758423	print ( 'ÅÄÖ' . encode ( 'UTF8' ) )
+P-256	-0.0018 -0.0294 -0.5606 -0.0368 -0.0234 -0.0279 -0.3590 -0.0319 -0.0302 -0.0335
+S-60	identify duplicate <unk> in list var_0
+T-60	[ k for k , v in list ( Counter ( mylist ) . items ( ) ) if v > 1 ]
+H-60	-0.7088500261306763	results_union = set ( ) . union ( * var_0 )
+P-60	-2.2725 -0.0216 -0.0732 -0.0308 -0.0478 -0.0305 -0.4995 -0.0301 -0.0336 -0.0353 -0.0315 -0.0417
+S-268	remove duplicate <unk> from list str_0
+T-268	list ( dict ( ( x [ 0 ] , x ) for x in L ) . values ( ) )
+H-268	-0.24600782990455627	[ set ( item ) for item in set ( frozenset ( item ) for item in str_0 ) ]
+P-268	-0.0283 -0.0429 -0.0321 -0.2744 -0.0359 -0.0166 -0.1519 -0.0132 -0.0046 -0.0319 -0.5524 -0.0322 -0.1135 -0.0371 -0.0340 -0.0127 -0.0154 -0.0017 -0.0420 -0.0166 -0.0392
+S-61	<unk> directory str_0 into directory var_0
+T-61	sys . path . insert ( 1 , os . path . join ( os . path . dirname ( __file__ ) , <<unk>> ) )
+H-61	-0.31065207719802856	os . listdir ( var_0 )
+P-61	-0.0102 -0.0430 -0.6724 -0.0333 -0.1719 -0.0349 -0.0328
+S-378	reverse sort counter var_0 by value
+T-378	sorted ( list ( x . items ( ) ) , key = lambda pair : pair [ 1 ] , reverse = True )
+H-378	-0.15391972661018372	sorted ( var_0 , key = var_0 . get )
+P-378	-0.0074 -0.0289 -0.3064 -0.0542 -0.0253 -0.0271 -0.0614 -0.0341 -0.0098 -0.0558 -0.0385
+S-76	loop over <unk> in directory var_0
+T-76	for ( root , dirs , filenames ) in os . walk ( <<unk>> ) : \n for f in filenames : \n pass
+H-76	-0.7311578392982483	for i in var_0 : \n pass
+P-76	-0.3389 -0.6540 -0.0138 -0.1060 -1.3333 -0.0432 -0.0235 -0.0333
+S-62	modify sys.path for python module var_0
+T-62	sys . path . append ( os . path . join ( os . path . dirname ( __file__ ) , <<unk>> ) )
+H-62	-0.8110146522521973	cursor . execute ( <unk> <unk> <unk> <unk> <unk> <unk> , ( var_0 , ) )
+P-62	-2.4526 -0.0287 -0.2064 -0.0279 -0.0948 -0.0852 -0.0798 -0.0795 -0.0945 -0.2968 -0.1255 -0.0268 -0.0874 -0.0228 -0.6624 -0.0350 -0.0329
+S-75	loop over <unk> in directory str_0
+T-75	for fn in os . listdir ( '.' ) : \n if os . path . isfile ( fn ) : \n pass
+H-75	-0.5138786435127258	for dirname , dirnames , filenames in os str_0 walk ( 'str_0' ) : \n for subdirname in dirnames : \n pass
+P-75	-0.3088 -0.2922 -0.0179 -0.0896 -0.0307 -0.1273 -0.0149 -0.0129 -0.0069 -0.1322 -0.0282 -0.0114 -0.0402 -0.0088 -0.0311 -0.0985 -0.0514 -0.0161 -0.0844 -0.0065 -0.0533 -1.8568 -0.0520
+S-55	sum <unk> of a list var_0
+T-55	[ sum ( row [ i ] for row in array ) for i in range ( len ( array [ 0 ] ) ) ]
+H-55	-0.16115562617778778	sum ( var_0 )
+P-55	-0.0007 -0.0328 -0.3030 -0.0282 -0.0586
+S-481	write line str_0 to file str_1
+T-481	with open ( <<unk>> , 'a' ) as the_file : \n the_file . write ( 'Hello\n' )
+H-481	-0.2929665446281433	with open ( 'str_1' , 'a' ) as myfile : \n myfile . write ( 'str_0' )
+P-481	-0.7783 -0.0405 -0.0312 -0.0002 -0.0321 -0.0089 -0.0366 -0.0145 -0.2868 -0.0167 -0.0155 -0.2387 -0.0332 -0.0002 -0.0280 -0.0196 -0.0413 -0.0371
+S-480	write line str_0 to file var_0
+T-480	f = open ( <<unk>> , 'w' ) \n f . write ( <<unk>> <<unk>> ) \n f . close ( )
+H-480	-0.27286508679389954	var_0 . write ( <unk> <unk> )
+P-480	-0.0265 -0.0401 -0.0000 -0.0325 -0.1271 -0.0368 -0.6560 -0.0312
+S-77	create a random list of <unk>
+T-77	[ int ( 1000 * random . random ( ) ) for i in range ( 10000 ) ]
+H-77	-0.6892011165618896	random . choice ( range ( 10 ) )
+P-77	-0.0988 -0.0340 -0.1379 -0.0326 -0.6258 -0.0323 -1.2547 -0.0326 -0.4536 -0.0414
+S-235	remove any url within string var_0
+T-235	text = re . sub ( '^https?:\\/\\/.*[\\r\\n]*' , '' , text , flags = re . MULTILINE )
+H-235	-0.12117842584848404	re . sub ( '\\([^)]*\\)' , '' , var_0 )
+P-235	-0.0047 -0.0344 -0.0026 -0.0296 -0.2745 -0.0211 -0.0004 -0.0218 -0.0538 -0.0314 -0.0365
+S-468	convert datetime object str_0 to <unk>
+T-468	( t - datetime . datetime ( 1970 , 1 , 1 ) ) . total_seconds ( )
+H-468	-0.2965705692768097	datetime . datetime . strptime ( '16Sep2012' , '%d%b%Y' )
+P-468	-0.0023 -0.0376 -0.2299 -0.0366 -0.0367 -0.0315 -0.7069 -0.0215 -0.0867 -0.0316 -0.0290
+S-28	download a file str_0 over <unk>
+T-28	response = urllib . request . urlopen ( <<unk>> ) \n html = response . read ( )
+H-28	-0.4825440049171448	pickle . load ( open ( 'str_0' , 'rb' ) )
+P-28	-1.5841 -0.0325 -0.2092 -0.0283 -0.0009 -0.0278 -0.0329 -0.0352 -0.0603 -0.0396 -0.0511 -0.0412
+S-310	<unk> split a string using regex
+T-310	re . findall ( <<unk>> <<unk>> , text )
+H-310	-0.763262152671814	re . findall ( '\\S+' , str1 )
+P-310	-0.0182 -0.0338 -1.2247 -0.0306 -1.1430 -0.0187 -0.3284 -0.0297 -0.0254
+S-117	access a tag called str_0 in beautifulsoup var_0
+T-117	print ( soup . find ( 'name' ) . string )
+H-117	-0.3804440200328827	soup . var_0 . findAll ( text = 'str_0' )
+P-117	-0.0261 -0.0344 -1.0782 -0.0312 -0.0066 -0.0287 -0.0447 -0.0243 -0.2623 -0.0290 -0.0381
+S-257	<unk> a latin character in string str_0 properly
+T-257	<<unk>> . encode ( 'latin-1' ) . decode ( 'utf-8' )
+H-257	-0.24891017377376556	re . findall ( '(([0-9]+)([A-Z]))' , '20M10000N80M' )
+P-257	-0.0894 -0.0249 -0.1703 -0.0283 -0.4014 -0.0170 -0.1524 -0.0204 -0.0261
+S-328	plotting stacked barplots on a panda data frame
+T-328	df . plot ( kind = 'barh' , stacked = True )
+H-328	-0.45815524458885193	df . round ( )
+P-328	-0.0026 -0.0263 -1.2500 -0.0249 -0.0153 -0.0233
+S-472	convert int <unk> in list var_0 to float
+T-472	<<unk>> = [ float ( x ) for x in <<unk>> ]
+H-472	-0.419741153717041	float ( var_0 )
+P-472	-0.8185 -0.0312 -0.1897 -0.0266 -0.0365
+S-39	<unk> 3d array of <unk> of size str_0
+T-39	numpy . zeros ( ( 3 , 3 , 3 ) )
+H-39	-0.36367180943489075	np . zeros ( ( 3 , 3 ) ) . ravel ( )
+P-39	-0.0120 -0.0266 -0.4534 -0.0306 -0.0308 -0.4424 -0.0284 -0.4606 -0.0271 -0.0239 -0.0279 -0.1941 -0.0314 -0.0287 -0.0286
+S-1	decode a hex string str_0 to <unk> .
+T-1	bytes . fromhex ( <<unk>> ) . decode ( 'utf-8' )
+H-1	-0.32832109928131104	str_0 . decode ( 'utf-8' , 'ignore' )
+P-1	-0.4466 -0.0398 -0.0001 -0.0264 -0.5671 -0.0230 -0.0658 -0.0285 -0.0296
+S-206	return var_0 if string var_1 contains regex str_0
+T-206	bool ( re . search ( <<unk>> , <<unk>> ) )
+H-206	-0.23616862297058105	if var_0 . find ( 'str_0' ) == - 1 : \n print ( <unk> 'is' <unk> ) \n else : \n print ( <unk> 'is' in <unk> )
+P-206	-0.1172 -0.0069 -0.0404 -0.0271 -0.0297 -0.1596 -0.0375 -0.0097 -0.0188 -0.0277 -0.0197 -0.0523 -0.0043 -0.0299 -0.0069 -0.0155 -0.0161 -0.0488 -0.0422 -0.1170 -0.0206 -0.0372 -0.0117 -0.0291 -0.0115 -0.0220 -0.0176 -0.0601 -0.7211 -0.0594
+S-47	make a comma-separated string from a list var_0
+T-47	<<unk>> = ',' . join ( map ( str , <<unk>> ) )
+H-47	-0.6931654810905457	list ( var_0 . values ( ) )
+P-47	-0.2457 -0.0307 -0.3275 -0.0392 -1.8073 -0.0305 -0.0393 -0.0407 -0.0296
+S-437	remove last comma character str_0 in string var_0
+T-437	"""""" . join ( s . rsplit ( ',' , 1 ) )
+H-437	-0.18274103105068207	var_0 = var_0 . replace ( 'str_0' , '' )
+P-437	-0.0209 -0.0105 -0.0388 -0.0337 -0.0893 -0.0326 -0.4363 -0.0227 -0.0222 -0.0324 -0.0309
+S-96	erase all the <unk> of a file var_0
+T-96	open ( filename , 'w' ) . close ( )
+H-96	-0.07676507532596588	open ( 'var_0' , 'w' ) . close ( )
+P-96	-0.0684 -0.0264 -0.0134 -0.0304 -0.0103 -0.0365 -0.0366 -0.0070 -0.0284 -0.0388 -0.0274
+S-120	concat two <unk> var_0 and var_1 in numpy
+T-120	np . vstack ( ( A , B ) )
+H-120	-0.6844567060470581	networkx . draw_networkx_labels ( var_0 , var_1 , var_0 )
+P-120	-1.9280 -0.0647 -0.5145 -0.0285 -0.0561 -0.0166 -0.0049 -0.1051 -0.1088 -0.0291 -0.0289
+S-322	<unk> a background process str_0 with <unk> str_1
+T-322	subprocess . Popen ( [ <<unk>> , <<unk>> ] )
+H-322	-0.9967284798622131	subprocess . Popen ( [ 'bash' , '-c' , <unk> <unk> <unk> ] )
+P-322	-2.4841 -0.0259 -0.1782 -0.0276 -0.0521 -1.5552 -0.0201 -0.4633 -0.0214 -0.0301 -0.0718 -0.0366 -0.0408 -0.0274 -0.0263
+S-357	check if path var_0 is an absolute path
+T-357	os . path . isabs ( <<unk>> )
+H-357	-0.14949074387550354	os . path . exists ( var_0 )
+P-357	-0.1653 -0.0370 -0.0089 -0.0374 -0.1548 -0.0343 -0.0536 -0.0314 -0.0361
+S-121	<unk> the <unk> count in a file var_0
+T-121	os . stat ( <<unk>> ) . st_size
+H-121	-0.605617344379425	os . listdir ( var_0 )
+P-121	-0.5501 -0.0338 -1.2201 -0.0324 -0.0390 -0.0395 -0.0317
+S-158	convert <unk> index in a dataframe to <unk>
+T-158	df . reset_index ( level = [ 'tick' , 'obs' ] )
+H-158	-0.44522643089294434	var_0 . reset_index ( 0 ) . reset_index ( drop = True )
+P-158	-0.0746 -0.0301 -1.3657 -0.0272 -0.2438 -0.0384 -0.0330 -0.2162 -0.0293 -0.0120 -0.0290 -0.0032 -0.0375 -0.0289
+S-181	get an absolute file path of file str_0
+T-181	os . path . abspath ( <<unk>> )
+H-181	-0.398013710975647	os . path . dirname ( os . path . abspath ( __file__ ) )
+P-181	-0.0129 -0.0360 -0.0038 -0.0361 -1.5474 -0.0280 -0.0040 -0.0327 -0.0021 -0.0343 -0.0373 -0.0278 -0.1873 -0.0405 -0.0391 -0.0314
+S-496	split a string var_0 considering the <unk> str_0
+T-496	mystring . replace ( <<unk>> <<unk>> , <<unk>> <<unk>> ) . split ( '!' )
+H-496	-0.6473429203033447	var_0 . split ( 'str_0' )
+P-496	-1.8308 -0.0388 -0.0644 -0.0343 -0.0425 -0.0354 -0.0344
+S-162	convert list var_0 into a comma separated string
+T-162	""",""" . join ( [ str ( i ) for i in <<unk>> ] )
+H-162	-0.5390235781669617	[ int ( i ) for i in var_0 ]
+P-162	-0.0470 -0.6770 -0.0254 -0.9518 -0.0255 -0.0153 -0.0886 -0.0106 -0.0108 -0.3847 -0.0356
+S-109	<unk> a string by a delimiter in python
+T-109	[ x . strip ( ) for x in <<unk>> <<unk>> <<unk>> . split ( '$$TEXT$$' ) ]
+H-109	-0.34828904271125793	"""2.7.0_bf4fda703454""" . split ( '_' )
+P-109	-0.7444 -0.0272 -0.0418 -0.0256 -0.2198 -0.0375 -0.0231
+S-359	count the number of <unk> in dictionary var_0
+T-359	len ( set ( open ( <<unk>> ) . read ( ) . split ( ) ) )
+H-359	-0.22871747612953186	sum ( len ( v ) for v in var_0 . values ( ) )
+P-359	-0.2347 -0.0327 -0.0225 -0.0324 -0.2228 -0.0350 -0.0195 -0.0365 -0.0365 -0.3319 -0.0471 -0.0092 -0.0332 -0.0345 -0.0381 -0.0405
+S-415	read a file str_0 into a list var_0
+T-415	data = [ line . strip ( ) for line in open ( <<unk>> , 'r' ) ]
+H-415	-0.1365044265985489	var_0 = open ( 'str_0' ) . read ( )
+P-415	-0.0651 -0.0150 -0.0507 -0.0342 -0.0069 -0.2671 -0.0361 -0.0027 -0.0341 -0.0371 -0.0262
+S-43	convert hex string str_0 to a float number
+T-43	struct . unpack ( '!f' , <<unk>> . decode ( 'hex' ) ) [ 0 ]
+H-43	-0.16585692763328552	int ( 'str_0' , 16 )
+P-43	-0.4110 -0.0275 -0.0049 -0.0203 -0.0073 -0.0299 -0.0322
+S-52	parse <unk> epoch time str_0 to format str_1
+T-52	time . strftime ( <<unk>> <<unk>> , time . gmtime ( <<unk>> / 1000.0 ) )
+H-52	-0.11793395131826401	datetime . datetime . strptime ( 'str_0' , 'str_1' )
+P-52	-0.0117 -0.0273 -0.2772 -0.0263 -0.0173 -0.0250 -0.0122 -0.0244 -0.0076 -0.0331 -0.0351
+S-12	split a multi-line string var_0 into separate <unk>
+T-12	<<unk>> . split ( '\n' )
+H-12	-0.5235646367073059	re . findall ( '\\s+|\\S+' , var_0 )
+P-12	-0.6770 -0.0319 -0.0211 -0.0300 -1.0893 -0.0187 -0.0263 -0.0345 -0.0279
+S-48	reverse the list that contains 1 to 10
+T-48	list ( reversed ( list ( range ( 10 ) ) ) )
+H-48	-0.6567144989967346	var_0 = [ i for i in range ( 10 ) ]
+P-48	-1.3257 -0.2526 -0.2374 -0.7615 -0.0338 -0.0100 -0.0215 -0.0005 -0.0310 -0.0086 -0.0379 -0.2976 -0.0420
+S-84	format string str_0 with <unk> var_0 and var_1
+T-84	<<unk>> <<unk>> <<unk>> . format ( self . goals , self . penalties )
+H-84	-0.39561355113983154	"""str_0""" . format ( var_1 , var_0 )
+P-84	-0.8476 -0.0540 -0.0039 -0.0324 -0.3937 -0.0217 -0.0388 -0.0420 -0.0443
+S-0	send a signal str_0 to the current process
+T-0	os . kill ( os . getpid ( ) , signal . SIGUSR1 )
+H-0	-1.0429778099060059	subprocess . call ( [ str_0 ] )
+P-0	-1.2310 -0.0256 -0.6324 -0.0288 -0.2352 -1.6504 -0.0280 -0.0359 -0.0305
+S-242	<unk> unix timestamp str_0 to formatted string str_1
+T-242	time . strftime ( <<unk>> <<unk>> , time . localtime ( <<unk>> ) )
+H-242	-0.5545515418052673	datetime . datetime . strptime ( <unk> <unk> , 'str_0' )
+P-242	-1.2744 -0.0254 -0.2413 -0.0260 -0.0208 -0.0292 -0.3265 -0.0319 -0.0350 -0.3389 -0.0328 -0.0807
+S-463	concatenate array of <unk> str_0 into a string
+T-463	"""""" . join ( [ 'A' , 'B' , 'C' , 'D' ] )
+H-463	-0.5394527316093445	"""""" . join ( ( str_0 ) )
+P-463	-0.5257 -0.0295 -0.0184 -0.0317 -0.8903 -0.4164 -0.0488 -0.0222 -0.0331
+S-37	python save list var_0 to file object str_0
+T-37	pickle . dump ( mylist , open ( <<unk>> , 'wb' ) )
+H-37	-0.4298325777053833	var_0 . strftime ( 'str_0' )
+P-37	-0.4851 -0.0382 -0.7298 -0.0310 -0.0303 -0.0344 -0.0327
+S-220	<unk> to sort <unk> by <unk> in <unk>
+T-220	sorted ( d . items ( ) )
+H-220	-0.3916915953159332	sorted ( list ( data . items ( ) ) , key = lambda x : x [ 1 ] )
+P-220	-0.5447 -0.0269 -0.0949 -0.0281 -0.7186 -0.0314 -0.0075 -0.0276 -0.0323 -0.0330 -0.0237 -0.0863 -0.0256 -0.0326 -0.1879 -0.0143 -0.3446 -0.0429 -0.0755 -0.0385 -0.0573 -0.0283
+S-124	count the <unk> of <unk> in list var_0
+T-124	[ [ x , l . count ( x ) ] for x in set ( l ) ]
+H-124	-0.30160361528396606	sum ( isinstance ( x , int ) for x in var_0 )
+P-124	-0.1247 -0.0342 -0.5307 -0.0332 -0.0144 -0.0403 -0.4875 -0.0364 -0.0201 -0.0291 -0.0213 -0.0206 -0.0379 -0.0389
+S-131	<unk> the curser at beginning of the file
+T-131	file . seek ( 0 )
+H-131	-1.243050456047058	os . path . expanduser ( __file__ )
+P-131	-1.1728 -0.0325 -1.0232 -0.0346 -1.2704 -0.0280 -1.0127 -0.0402 -0.0312
+S-451	<unk> string var_0 into a list by whitespace
+T-451	line . split ( )
+H-451	-0.23325271904468536	<unk> <unk> . join ( var_0 . split ( ) )
+P-451	-0.3407 -0.0232 -0.0171 -0.0077 -0.0321 -0.1173 -0.3431 -0.0135 -0.0353 -0.0369 -0.0364 -0.0326
+S-219	get sorted list of <unk> of dict var_0
+T-219	sorted ( d )
+H-219	-0.14699120819568634	sorted ( var_0 , key = var_0 . index )
+P-219	-0.0147 -0.0293 -0.1880 -0.0317 -0.0262 -0.0428 -0.1181 -0.0440 -0.0640 -0.0294 -0.0315
+S-123	count the <unk> of <unk> in list var_0
+T-123	Counter ( l )
+H-123	-0.30160361528396606	sum ( isinstance ( x , int ) for x in var_0 )
+P-123	-0.1247 -0.0342 -0.5307 -0.0332 -0.0144 -0.0403 -0.4875 -0.0364 -0.0201 -0.0291 -0.0213 -0.0206 -0.0379 -0.0389
+S-476	write var_0 to a binary file var_1
+T-476	<<unk>> . write ( struct . pack ( '5B' , * <<unk>> ) )
+H-476	-0.6544991731643677	var_0 . write ( <unk> <unk> )
+P-476	-0.1691 -0.0317 -0.0437 -0.0280 -0.9972 -0.1533 -0.8245 -0.0315
+S-176	extract a url from a string var_0
+T-176	print ( re . search ( '(?P<url>https?://[^\\s]+)' , <<unk>> ) . group ( 'url' ) )
+H-176	-0.7210325002670288	[ row [ 0 ] for s in var_0 ]
+P-176	-0.0046 -1.2957 -0.0955 -0.5685 -0.0723 -0.0190 -0.7438 -0.0192 -0.0632 -0.1311 -0.0265
+S-165	<unk> ove list str_0 using list comprehension
+T-165	print ( [ item for item in [ 1 , 2 , 3 ] ] )
+H-165	-0.5504520535469055	[ [ x [ str_0 ] for x in range ( 3 ) ]
+P-165	-0.0054 -0.0758 -1.2579 -0.0842 -0.1122 -0.0355 -0.0154 -0.0135 -0.0145 -0.0891 -0.0417 -0.9334 -0.0370 -0.0407 -0.0388
+S-471	<unk> integer var_0 into an unassigned integer
+T-471	struct . unpack ( 'H' , struct . pack ( 'h' , number ) )
+H-471	-0.6072334051132202	int ( Decimal ( var_0 ) )
+P-471	-0.1907 -0.0302 -1.7143 -0.0312 -0.0337 -0.0351 -0.0329 -0.0463
+S-284	convert a list into a generator object
+T-284	( n for n in [ 1 , 2 , 3 , 5 ] )
+H-284	-0.6236262917518616	list ( range ( 10 , 0 , 2 ) )
+P-284	-0.4422 -0.0287 -0.7607 -0.0307 -0.1004 -0.0257 -0.3543 -0.0253 -0.9038 -0.0325 -0.0311 -0.0342
+S-311	generate all 2-element <unk> of tuple str_0
+T-311	list ( itertools . combinations ( ( 1 , 2 , 3 ) , 2 ) )
+H-311	-0.7164992094039917	itertools . permutations ( list ( range ( 9 ) ) , 'str_0' )
+P-311	-1.7207 -0.0340 -0.0428 -0.0322 -1.0908 -0.0316 -0.0638 -0.0309 -0.3537 -0.0258 -0.0287 -0.0343 -0.0845 -0.0267 -0.0374
+S-49	remove substring str_0 from a string str_1
+T-49	print ( <<unk>> <<unk>> <<unk>> . replace ( <<unk>> , '' ) )
+H-49	-0.5594084858894348	re . sub ( '\\.com$' , '' , var_0 )
+P-49	-1.0231 -0.0457 -0.0199 -0.0247 -0.6787 -0.0233 -0.0443 -0.0235 -0.4126 -0.0340 -0.0283
+S-464	get json data from restful service str_0
+T-464	json . load ( urllib . request . urlopen ( 'url' ) )
+H-464	-0.5960164666175842	json . loads ( request . POST . get ( 'str_0' ) )
+P-464	-0.4243 -0.0297 -0.0255 -0.0292 -0.4082 -0.0325 -1.4469 -0.1045 -0.2548 -0.0282 -0.0124 -0.0340 -0.0348 -0.0387
+S-391	<unk> a list of <unk> in <unk>
+T-391	c2 . sort ( key = lambda row : ( row [ 2 ] , row [ 1 ] ) )
+H-391	-0.639460563659668	list ( itertools . product ( * var_0 ) )
+P-391	-0.7267 -0.0300 -0.4929 -0.0317 -0.1060 -0.0284 -0.9385 -0.2511 -0.0305 -0.0306 -0.0292
+S-186	shuffle <unk> of an numpy array str_0
+T-186	np . random . shuffle ( np . transpose ( r ) )
+H-186	-0.7997971177101135	numpy . array ( map ( int , 'str_0' ) )
+P-186	-0.5589 -0.0335 -0.0365 -0.0301 -1.9431 -0.0299 -0.7505 -0.0210 -0.0581 -0.0318 -0.0313 -0.0275
+S-260	display the float str_0 <unk> a percentage
+T-260	print ( '{0:.0f}%' . format ( 1.0 / 3 * 100 ) )
+H-260	-0.7437360286712646	print ( '{0}' . format ( 'str_0' . zfill ( 1 ) ) )
+P-260	-0.0243 -0.0276 -1.9017 -0.0394 -0.0102 -0.0292 -0.0590 -0.0364 -1.0250 -0.0300 -0.3762 -0.0350 -0.0556 -0.0981 -0.0287
+S-401	convert a hex-string representation to actual <unk>
+T-401	"""\\xF3\\xBE\\x80\\x80""" . replace ( '\\x' , '' ) . decode ( 'hex' )
+H-401	-1.3460476398468018	ast . literal_eval ( 'str_0' )
+P-401	-2.2631 -0.0268 -1.0861 -0.0279 -0.8549 -0.0308 -0.0367
+S-414	create list var_0 containing two empty <unk>
+T-414	y = [ [ ] for n in range ( 2 ) ]
+H-414	-0.3506488502025604	var_0 = [ [ ] for i in range ( int_0 ) ]
+P-414	-0.1982 -0.0209 -0.0114 -0.5384 -0.0723 -0.0371 -0.0087 -0.0209 -0.0031 -0.0340 -0.6705 -0.0339 -0.0248 -0.0342
+S-432	loop through the <unk> address range str_0
+T-432	generator = iter_iprange ( '192.168.1.1' , '192.168.255.255' , step = 1 )
+H-432	-0.6588893532752991	sys . path . insert ( 0 , 'str_0' )
+P-432	-1.4978 -0.0404 -0.6680 -0.0430 -0.2880 -0.0321 -0.0608 -0.0219 -0.0187 -0.0370 -0.0698
+S-411	get the 5th item of a generator
+T-411	next ( itertools . islice ( range ( 10 ) , 5 , 5 + 1 ) )
+H-411	-0.9784665107727051	for i in range ( 0 , 10 , 2 ) : \n pass
+P-411	-2.9143 -0.0467 -0.0070 -0.1786 -0.0274 -0.4308 -0.0243 -0.5791 -0.0225 -0.4175 -0.0359 -0.0485 -0.0324 -0.1591 -0.0441
+S-325	average each two <unk> of array var_0
+T-325	data . reshape ( - 1 , j ) . mean ( axis = 1 ) . reshape ( data . shape [ 0 ] , - 1 )
+H-325	-0.17074017226696014	np . mean ( np . array ( [ var_0 , var_1 ] ) , axis = 0 )
+P-325	-0.0357 -0.0395 -0.2326 -0.0374 -0.0189 -0.0401 -0.0780 -0.0372 -0.0346 -0.0633 -0.0250 -0.1477 -0.0252 -0.0368 -0.0355 -0.0136 -0.0356 -0.0156 -0.0360 -0.0420
+S-431	loop through the <unk> address range str_0
+T-431	for ( i , j ) in product ( list ( range ( 256 ) ) , list ( range ( 256 ) ) ) : \n pass
+H-431	-0.6588893532752991	sys . path . insert ( 0 , 'str_0' )
+P-431	-1.4978 -0.0404 -0.6680 -0.0430 -0.2880 -0.0321 -0.0608 -0.0219 -0.0187 -0.0370 -0.0698
+S-430	loop through the <unk> address range str_0
+T-430	for i in range ( 256 ) : \n for j in range ( 256 ) : \n ip = ( '192.168.%d.%d' % ( i , j ) ) \n print ( ip )
+H-430	-0.6588893532752991	sys . path . insert ( 0 , 'str_0' )
+P-430	-1.4978 -0.0404 -0.6680 -0.0430 -0.2880 -0.0321 -0.0608 -0.0219 -0.0187 -0.0370 -0.0698
+S-288	convert tuple of tuples str_0 to tuple
+T-288	from functools import reduce \n reduce ( lambda a , b : a + b , ( ( <<unk>> , ) , ( <<unk>> , ) , ( <<unk>> , ) ) )
+H-288	-0.515312135219574	tuple ( zip ( * [ ( 1 , 2 ) , ( 3 , 4 ) , ( 5 , 6 ) ] ) )
+P-288	-1.3252 -0.0349 -0.1827 -0.0330 -0.0135 -1.2567 -0.0273 -0.0820 -0.0278 -0.0159 -0.0353 -0.0308 -0.0313 -0.0073 -0.0237 -0.0139 -0.0321 -0.0350 -0.0366 -0.0265 -0.0232 -0.2619 -0.0298 -0.0314 -0.0309 -0.0331 -0.0411
+S-169	create a list containing flattened list str_0
+T-169	values = sum ( [ [ 'A' , 'B' , 'C' ] , [ 'D' , <<unk>> , <<unk>> ] , [ <<unk>> , 'H' , <<unk>> ] ] , [ ] )
+H-169	-0.9086197018623352	list ( powerset ( 'str_0' ) )
+P-169	-1.7512 -0.0412 -1.0978 -0.0322 -0.1082 -0.0347 -0.0536 -0.0451
+S-161	zip two 2-d <unk> var_0 and var_1
+T-161	np . array ( zip ( a . ravel ( ) , b . ravel ( ) ) , dtype = 'i4,i4' ) . reshape ( a . shape )
+H-161	-0.4500957429409027	dict ( zip ( var_0 , zip ( * var_1 ) ) )
+P-161	-1.6537 -0.0381 -0.0136 -0.0350 -0.0328 -0.0241 -0.1497 -0.0328 -0.0543 -0.0033 -0.0348 -0.0377 -0.0500 -0.0328
+S-42	sum all <unk> of nested list var_0
+T-42	sum ( sum ( i ) if isinstance ( i , list ) else i for i in L )
+H-42	-0.49219653010368347	sum ( sum ( x ) for x in var_0 )
+P-42	-0.0001 -0.0321 -1.5522 -0.0294 -0.3092 -0.0285 -0.0233 -0.0363 -0.0234 -0.0813 -0.0295 -0.0408
+S-346	<unk> the current directory of a script
+T-346	os . path . basename ( os . path . dirname ( os . path . realpath ( __file__ ) ) )
+H-346	-0.4011560380458832	os . chdir ( os . path . abspath ( __file__ ) )
+P-346	-0.0072 -0.0319 -0.5296 -0.0270 -0.6423 -0.0295 -0.0223 -0.0327 -0.5026 -0.0291 -0.0012 -0.0380 -0.0338 -0.0272
+S-153	do a scatter plot with empty <unk>
+T-153	plt . plot ( np . random . randn ( 100 ) , np . random . randn ( 100 ) , 'o' , mfc = 'none' )
+H-153	-0.35810354351997375	plt . cla ( )
+P-153	-0.0005 -0.0214 -0.9453 -0.0276 -0.0272 -0.0273
+S-294	unzip list var_0 and return a generator
+T-294	result = ( ( a for ( a , b ) in <<unk>> ) , ( b for ( a , b ) in <<unk>> ) )
+H-294	-0.30287572741508484	zip ( * var_0 )
+P-294	-0.6056 -0.0317 -0.1570 -0.0358 -0.0319 -0.0254
+S-390	<unk> a list of <unk> in <unk>
+T-390	c2 . sort ( key = lambda row : ( row [ 2 ] , row [ 1 ] , row [ 0 ] ) )
+H-390	-0.639460563659668	list ( itertools . product ( * var_0 ) )
+P-390	-0.7267 -0.0300 -0.4929 -0.0317 -0.1060 -0.0284 -0.9385 -0.2511 -0.0305 -0.0306 -0.0292
+S-194	<unk> a <unk> list by two <unk>
+T-194	sorted ( list , key = lambda x : ( x [ 0 ] , - x [ 1 ] ) )
+H-194	-0.4522509276866913	list ( itertools . combinations ( [ 1 , 2 , 3 , 4 , 5 , 6 ] , 2 ) )
+P-194	-0.3854 -0.0293 -1.1227 -0.0287 -0.6316 -0.0294 -0.0725 -0.1197 -0.0238 -0.0434 -0.0250 -0.0605 -0.0278 -0.0112 -0.0488 -0.1130 -0.0173 -0.0435 -0.0288 -0.0266 -0.0578 -0.0324 -0.0325 -0.0328
+S-56	encode binary string str_0 to base64 code
+T-56	base64 . b64encode ( bytes ( <<unk>> <<unk>> , 'utf-8' ) )
+H-56	-0.08148983865976334	"""\\xc3\\x85あ""" . encode ( 'utf-8' )
+P-56	-0.1028 -0.0515 -0.0002 -0.0252 -0.0150 -0.0314 -0.0358
+S-155	filter <unk> containing key word var_0 in column var_1
+T-155	df [ df [ <<unk>> ] . str . contains ( <<unk>> ) ]
+H-155	-0.6444060802459717	var_1 . setdefault ( var_0 , [ ] )
+P-155	-0.2231 -0.1184 -1.2619 -0.0300 -0.2218 -0.0224 -0.2012 -0.0763 -0.0323 -0.3781
+S-83	format the <unk> str_0 and str_1 using string formatting
+T-83	<<unk>> <<unk>> <<unk>> . format ( self . goals , self . penalties )
+H-83	-0.3070205748081207	<unk> <unk> . format ( 'str_0' , 'str_1' )
+P-83	-0.4973 -0.0267 -0.0302 -0.0018 -0.0325 -0.5243 -0.0297 -0.0075 -0.0375 -0.0347
+S-491	subtract int_0 from every number in a list var_0
+T-491	a [ : ] = [ ( x - <<unk>> ) for x in a ]
+H-491	-0.9660447239875793	list ( str ( int_0 ) )
+P-491	-1.9017 -0.0294 -1.2242 -0.0299 -0.0037 -0.0359 -0.1018 -0.0374
+S-326	double backslash escape all double <unk> in string var_0
+T-326	print ( s . encode ( 'unicode-escape' ) . replace ( '"' , '\\"' ) )
+H-326	-0.8976761102676392	tex . delete ( '1.0' , END )
+P-326	-1.5919 -0.0330 -0.7575 -0.0266 -0.3654 -0.0247 -0.4903 -0.0321 -0.0334
+S-18	concatenate <unk> of list var_0 with a space str_0
+T-18	print ( <<unk>> <<unk>> . join ( map ( str , l ) ) )
+H-18	-0.6873350739479065	<unk> <unk> . join ( var_0 )
+P-18	-1.5485 -0.0690 -0.6008 -0.0095 -0.0351 -0.0473 -0.0555 -0.0277
+S-306	append each line in file var_0 into a list
+T-306	[ x for x in myfile . splitlines ( ) if x != '' ]
+H-306	-0.30075547099113464	with open ( 'str_0' , 'r' ) as ins : \n var_0 = [ ] \n for line in ins : \n var_0 . append ( line )
+P-306	-0.0385 -0.0024 -0.0341 -1.2454 -0.2307 -0.0463 -0.0340 -0.0095 -0.0680 -0.0158 -0.0153 -0.0533 -0.0206 -0.0045 -0.0091 -0.0078 -0.0363 -0.0425 -0.0158 -0.0598 -0.0084 -0.0208 -0.0570 -0.0502 -0.0014 -0.0316 -0.0312 -0.0422 -0.0357
+S-255	print <unk> of list var_0 seperated by <unk> str_0
+T-255	print ( '\t' . join ( map ( str , list ) ) )
+H-255	-0.8210264444351196	print ( '\n' . join ( <unk> <unk> . join ( p ) for p in var_0 ) )
+P-255	-0.0004 -0.0324 -1.3026 -0.0335 -0.0172 -0.0340 -0.0969 -0.0477 -0.0679 -0.0411 -0.0338 -2.2117 -0.2849 -0.0277 -0.5043 -0.0324 -0.0695 -0.0368 -0.0402 -0.0391
+S-423	convert list of string <unk> into list of <unk>
+T-423	map ( int , eval ( input ( <<unk>> <<unk>> <<unk>> <<unk>> <<unk>> ) ) )
+H-423	-0.36673128604888916	list ( map ( int , [ '1' , '2' , '3' ] ) )
+P-423	-0.3525 -0.0304 -0.1006 -0.0286 -0.1460 -0.0156 -0.0029 -0.3777 -0.0216 -0.5062 -0.0214 -0.2005 -0.0299 -0.0326 -0.0314 -0.0376
+S-63	<unk> a str_0 value into a <unk> table .
+T-63	db . execute ( <<unk>> <<unk>> <<unk>> <<unk>> <<unk>> <<unk>> , ( None , ) )
+H-63	-1.4588547945022583	subprocess . call ( [ str_0 ] )
+P-63	-2.7660 -0.0300 -1.6672 -0.0319 -0.4501 -0.4082 -0.0330 -0.0321 -0.0335
+S-321	formate each string cin list var_0 into pattern str_0
+T-321	elements = [ <<unk>> . format ( element ) for element in elements ]
+H-321	-0.5996365547180176	map ( 'str_0' , var_0 . split ( 'str_0' ) )
+P-321	-0.1296 -0.0356 -1.0800 -0.1345 -0.0559 -0.0379 -1.0312 -0.0373 -0.0165 -0.0363 -0.0354 -0.0329
+S-154	remove a div with a id str_0 using beautifulsoup
+T-154	soup . find ( 'div' , id = <<unk>> ) . decompose ( )
+H-154	-0.3731110990047455	soup . findAll ( id = re . compile ( 'para$' ) )
+P-154	-0.0131 -0.0474 -0.1556 -0.0275 -0.0525 -0.0264 -1.2628 -0.0317 -0.0220 -0.0274 -0.0612 -0.0310 -0.0294 -0.0297
+S-105	create list var_0 containing int_0 <unk> of object var_1
+T-105	lst = [ Object ( ) for i in range ( 100 ) ]
+H-105	-0.2693501114845276	var_0 = [ var_1 [ i ] for i in range ( int_0 ) ]
+P-105	-0.0566 -0.0124 -0.0165 -0.5197 -0.5240 -0.0093 -0.0309 -0.0656 -0.0082 -0.0159 -0.0178 -0.0268 -0.0288 -0.0312 -0.0247 -0.0333
+S-2	check if all <unk> in list var_0 are identical
+T-2	all ( x == <<unk>> [ 0 ] for x in <<unk>> )
+H-2	-0.6863710284233093	all ( word in var_0 for word in [ 0 ] )
+P-2	-0.0208 -0.0320 -1.2444 -0.1793 -0.0538 -0.1217 -0.1927 -0.0350 -0.4594 -0.7507 -0.0334 -0.0268 -0.0483
+S-14	concatenate <unk> of list var_0 by a colon str_0
+T-14	<<unk>> . join ( str ( x ) for x in b )
+H-14	-1.032214641571045	var_0 = [ x [ str_0 ] for x in var_0 ]
+P-14	-1.9682 -0.0498 -0.0918 -0.7353 -1.3538 -0.3716 -0.0400 -0.0608 -0.0246 -0.0127 -0.0357 -0.0430 -0.0227
+S-11	<unk> a datetime string var_0 to extract date only
+T-11	then = datetime . datetime . strptime ( <<unk>> , '%Y-%m-%d' ) . date ( )
+H-11	-0.7377110719680786	datetime . datetime . strptime ( <unk> <unk> , var_0 ) . date ( )
+P-11	-1.3410 -0.0482 -0.1051 -0.0439 -0.0310 -0.0300 -0.4209 -0.0181 -0.0451 -0.3067 -0.0326 -0.0525 -1.3188 -0.0312 -0.0386 -0.0301
+S-308	add color bar with image var_0 to plot var_1
+T-308	plt . colorbar ( <<unk>> = <<unk>> , cax = ax3 )
+H-308	-0.46438083052635193	var_0 . plot ( var_1 , var_2 = var_2 )
+P-308	-0.0819 -0.0200 -0.5127 -0.0321 -0.1343 -0.0175 -0.2545 -0.0190 -0.8232 -0.0321 -0.0301
+S-416	delete all <unk> of character str_0 in string str_1
+T-416	"""""" . join ( [ char for char in <<unk>> is <<unk>> if char != 'i' ] )
+H-416	-0.4194810688495636	re . sub ( '\\*\\*+' , 'str_0' , str_1 )
+P-416	-0.0351 -0.0293 -0.0204 -0.0237 -1.0495 -0.0187 -0.0053 -0.0211 -0.5089 -0.0286 -0.0277
+S-241	replacing float_0 in the dataframe var_0 with row average
+T-241	df . fillna ( df . mean ( axis = 1 ) , axis = 1 )
+H-241	-0.6763631105422974	var_0 . fillna ( axis = 0 )
+P-241	-0.0075 -0.4725 -0.3465 -0.0337 -0.7188 -0.0261 -0.8133 -0.0379 -0.0715
+S-9	find intersection data between series var_0 and series var_1
+T-9	pd . Series ( list ( set ( s1 ) . intersection ( set ( <<unk>> ) ) ) )
+H-9	-0.7253418564796448	pd . concat ( [ var_0 , var_1 ] , ignore_index = True )
+P-9	-0.5259 -0.0352 -0.0331 -0.0334 -0.7558 -0.0510 -0.0692 -0.0797 -1.2145 -0.0407 -0.3803 -0.0359 -0.0152 -0.0389 -0.3742
+S-426	<unk> all <unk> in directory str_0 with extension str_1
+T-426	os . chdir ( <<unk>> ) \n for file in glob . glob ( '*.txt' ) : \n pass
+H-426	-0.19553092122077942	os . listdir ( 'str_0' )
+P-426	-0.1233 -0.0359 -0.2900 -0.0290 -0.0859 -0.0343 -0.0301
+S-276	get the position of item var_0 in list var_1
+T-276	try : \n print ( <<unk>> . index ( element ) ) \n except ValueError : \n pass
+H-276	-0.5541613698005676	min ( var_0 , key = lambda x : abs ( x - var_1 ) )
+P-276	-1.5225 -0.0280 -0.0599 -0.0255 -0.0204 -0.0375 -0.0459 -0.0133 -0.0235 -0.5065 -0.0355 -0.0516 -0.1987 -0.0469 -0.0408 -0.3235 -0.0530
+S-283	<unk> do <unk> perform secondary sorting in python ?
+T-283	sorted ( list5 , key = lambda vertex : ( degree ( vertex ) , vertex ) )
+H-283	-0.5123403072357178	sorted ( enumerate ( a ) , key = lambda x : x [ 1 ] )
+P-283	-1.4759 -0.0240 -0.6113 -0.0257 -0.0403 -0.0375 -0.0236 -0.0720 -0.0277 -0.0455 -0.1799 -0.0167 -0.1123 -0.0948 -0.0249 -0.0339 -0.0310 -0.0253
+S-40	cut off the last word of a sentence var_0
+T-40	<<unk>> <<unk>> . join ( <<unk>> . split ( <<unk>> <<unk>> ) [ : - 1 ] )
+H-40	-0.22173097729682922	re . split ( '\\.\\s' , var_0 )
+P-40	-0.1588 -0.0627 -0.2430 -0.0321 -0.2260 -0.0247 -0.0142 -0.0337 -0.0335
+S-200	click a href button with text str_0 with selenium
+T-200	driver . find_element_by_link_text ( <<unk>> <<unk>> ) . click ( )
+H-200	-0.19456034898757935	driver . find_element_by_css_selector ( 'str_0' ) . click ( )
+P-200	-0.0279 -0.0242 -0.5442 -0.0290 -0.0288 -0.0322 -0.0395 -0.0013 -0.0307 -0.0336 -0.0286
+S-199	click a href button having text str_0 with selenium
+T-199	driver . findElement ( By . linkText ( <<unk>> <<unk>> ) ) . click ( )
+H-199	-0.2945290207862854	driver . find_element_by_css_selector ( 'str_0' ) . click ( )
+P-199	-0.0153 -0.0236 -0.9899 -0.0290 -0.0283 -0.0319 -0.0310 -0.0019 -0.0301 -0.0330 -0.0276
+S-190	determine number of <unk> on a drive with python
+T-190	os . statvfs ( '/' ) . f_files - os . statvfs ( '/' ) . f_ffree
+H-190	-0.33566975593566895	os . system ( <unk> <unk> )
+P-190	-0.9254 -0.0339 -0.0527 -0.0275 -0.0133 -0.0259 -0.0596 -0.0306
+S-392	set font var_0 to display non-ascii <unk> in matplotlib
+T-392	matplotlib . rc ( 'font' , ** { 'sans-serif' : <<unk>> , 'family' : 'sans-serif' } )
+H-392	-0.5957408547401428	imshow ( var_0 , cmap = 'Greys_r' )
+P-392	-1.1421 -0.0254 -0.0410 -0.0218 -0.6381 -0.0259 -0.2699 -0.0319 -0.0301
+S-192	convert string var_0 into a list of <unk> var_1
+T-192	<<unk>> = [ int ( number ) for number in <<unk>> . split ( ',' ) ]
+H-192	-0.18916131556034088	var_1 = [ '{0:.8e}' . format ( flt ) for flt in sublist ] for sublist in var_0 ]
+P-192	-0.0046 -0.0116 -0.0933 -0.4918 -0.0318 -0.0382 -0.0279 -0.0755 -0.0333 -0.0213 -0.0573 -0.0124 -0.0427 -0.0337 -0.0248 -0.0567 -0.0096 -0.0149 -0.0248 -0.0353
+S-226	combine <unk> var_0 and var_1 by alternating their <unk>
+T-226	[ val for pair in zip ( <<unk>> , <<unk>> ) for val in pair ]
+H-226	-0.36255887150764465	dict ( zip ( var_0 , zip ( * var_1 ) ) )
+P-226	-0.1477 -0.0311 -0.5427 -0.0323 -0.0471 -0.0235 -0.2130 -0.0308 -0.4151 -0.0024 -0.0382 -0.0429 -0.1624 -0.0370
+S-443	get <unk> of dataframe var_0 that match regex str_0
+T-443	df . loc [ df [ 0 ] . str . contains ( <<unk>> ) ]
+H-443	-0.5853977203369141	var_0 . toPandas ( ) . to_csv ( 'str_0' )
+P-443	-0.0681 -0.0741 -1.4327 -0.0311 -0.0464 -0.0455 -0.6703 -0.0319 -0.0025 -0.0325 -0.0326
+S-91	<unk> duplicate <unk> from a string var_0 using regex
+T-91	text = re . sub ( <<unk>> <<unk>> , '\\1' , text )
+H-91	-0.5454731583595276	re . sub ( '(?<!\\S)((\\S+)(?:\\s+\\2))(?:\\s+\\2)+(?!\\S)' , '\\1' , var_0 )
+P-91	-0.2849 -0.0247 -0.2277 -0.0268 -1.4987 -0.0149 -0.1090 -0.0163 -0.0386 -0.0288 -0.0291
+S-167	get the filename without the extension from file str_0
+T-167	print ( os . path . splitext ( os . path . basename ( <<unk>> ) ) [ 0 ] )
+H-167	-0.17142514884471893	os . path . expanduser ( 'str_0' )
+P-167	-0.0099 -0.0401 -0.0234 -0.0428 -0.3357 -0.0305 -0.0830 -0.0372 -0.0380
+S-384	fetch address information for host str_0 ion port int_0
+T-384	print ( socket . getaddrinfo ( <<unk>> , <<unk>> ) )
+H-384	-1.0888442993164062	logging . getLogger ( ) . setLevel ( 'str_0' )
+P-384	-1.7545 -0.0234 -1.0562 -0.0301 -0.0377 -0.0861 -0.8024 -0.0300 -0.6688 -0.0626 -0.0382
+S-150	convert a raw string var_0 into a normal string
+T-150	<<unk>> . decode ( 'unicode_escape' )
+H-150	-0.4331521689891815	struct . unpack ( '11B' , var_0 ) [ 0 ]
+P-150	-0.0534 -0.0274 -0.0157 -0.0271 -1.6400 -0.0199 -0.0220 -0.0333 -0.0192 -0.0005 -0.0308 -0.0346
+S-301	<unk> key str_0 to dictionary var_0 with value 1
+T-301	data . update ( a = 1 )
+H-301	-0.6648625135421753	var_0 [ 'str_0' ] = list ( var_0 . items ( ) )
+P-301	-0.0988 -0.4097 -0.6828 -0.0351 -0.2543 -0.9505 -0.0357 -0.0835 -0.1959 -0.3206 -0.0308 -0.0395 -0.0731 -0.0289
+S-46	<unk> <unk> of list var_0 with a comma str_0
+T-46	""",""" . join ( l )
+H-46	-0.5535953640937805	[ x for x in var_0 if x >= str_0 ]
+P-46	-0.3581 -0.3397 -0.6423 -0.0146 -0.0079 -0.0149 -0.1673 -0.0106 -0.8320 -0.0034 -0.0403 -0.0277
+S-122	count the <unk> of item str_0 in list var_0
+T-122	l . count ( 'a' )
+H-122	-0.260692298412323	sum ( 1 for i in var_0 )
+P-122	-0.0255 -0.0331 -0.1895 -0.0461 -0.5617 -0.0123 -0.0344 -0.0337 -0.0379
+S-298	<unk> key str_0 to dictionary var_0 with value str_1
+T-298	d [ <<unk>> ] = <<unk>>
+H-298	-0.47354385256767273	var_0 [ 'str_1' ] . update ( { str_0 } )
+P-298	-0.3320 -0.3580 -0.0065 -0.0369 -0.5011 -0.0400 -0.0309 -0.0001 -0.7115 -0.0109 -0.0393 -0.0361
+S-97	convert a string into datetime using the format str_0
+T-97	datetime . datetime . strptime ( string_date , <<unk>> <<unk>> )
+H-97	-0.39599835872650146	datetime . strptime ( 'str_0' , '%H:%M' )
+P-97	-0.0079 -0.0306 -0.0473 -0.0288 -0.0491 -0.0215 -1.2387 -0.0284 -0.0275
+S-149	convert a raw string var_0 into a normal string
+T-149	<<unk>> . decode ( 'string_escape' )
+H-149	-0.4331521689891815	struct . unpack ( '11B' , var_0 ) [ 0 ]
+P-149	-0.0534 -0.0274 -0.0157 -0.0271 -1.6400 -0.0199 -0.0220 -0.0333 -0.0192 -0.0005 -0.0308 -0.0346
+S-126	count the <unk> of item str_0 in list var_0
+T-126	l . count ( 'b' )
+H-126	-0.260692298412323	sum ( 1 for i in var_0 )
+P-126	-0.0255 -0.0331 -0.1895 -0.0461 -0.5617 -0.0123 -0.0344 -0.0337 -0.0379
+S-489	create a datetime with the current date & time
+T-489	datetime . datetime . now ( )
+H-489	-0.3368106484413147	datetime . datetime . now ( ) . strftime ( '%a' )
+P-489	-0.0020 -0.0260 -0.0022 -0.0238 -0.4525 -0.0288 -0.0334 -0.0292 -0.5536 -0.0302 -0.3252 -0.0367 -0.0262
+S-164	<unk> last occurrence of character str_0 in string str_1
+T-164	<<unk>> . rfind ( '}' )
+H-164	-0.6112152934074402	re . sub ( '\\*\\*+' , 'str_0' , str_1 )
+P-164	-0.0337 -0.0301 -1.0167 -0.0256 -1.1118 -0.0153 -0.0071 -0.0168 -0.2637 -0.0281 -0.0277
+S-205	split string var_0 by <unk> that <unk> with str_0
+T-205	re . findall ( '\\b(\\w+)d\\b' , s )
+H-205	-0.32801082730293274	re . split ( '\\t+' , var_0 . rstrip ( '\t' ) )
+P-205	-0.3520 -0.0378 -0.0488 -0.0291 -0.4008 -0.0243 -0.0358 -0.0307 -0.2588 -0.0280 -0.2521 -0.0336 -0.0360 -0.0301
+S-16	<unk> sum over all <unk> of <unk> numpy array
+T-16	a . sum ( axis = 1 )
+H-16	-0.39749857783317566	numpy . sum ( axis = 0 )
+P-16	-0.5020 -0.0375 -0.1078 -0.0298 -0.6705 -0.0256 -0.0394 -0.0333 -0.0396
+S-387	<unk> set folder str_0 <unk> the default template folder
+T-387	Flask ( __name__ , template_folder = <<unk>> )
+H-387	-0.5360620021820068	os . system ( 'str_0' )
+P-387	-0.1818 -0.0333 -1.0450 -0.0333 -0.3689 -0.0294 -0.0312
+S-34	<unk> a string var_0 by space with str_0 <unk>
+T-34	s . split ( <<unk>> <<unk>> , 4 )
+H-34	-0.2854160666465759	<unk> <unk> . join ( var_0 )
+P-34	-0.5909 -0.0492 -0.0319 -0.0084 -0.0299 -0.0818 -0.1703 -0.0314
+S-275	get the position of item var_0 in list var_1
+T-275	print ( <<unk>> . index ( element ) )
+H-275	-0.5541613698005676	min ( var_0 , key = lambda x : abs ( x - var_1 ) )
+P-275	-1.5225 -0.0280 -0.0599 -0.0255 -0.0204 -0.0375 -0.0459 -0.0133 -0.0235 -0.5065 -0.0355 -0.0516 -0.1987 -0.0469 -0.0408 -0.3235 -0.0530
+S-94	split string str_0 into a list on white <unk>
+T-94	<<unk>> <<unk>> <<unk>> <<unk>> <<unk>> . split ( )
+H-94	-0.11796551197767258	"""str_0""" . split ( )
+P-94	-0.1302 -0.0338 -0.0863 -0.0294 -0.0333 -0.0328
+S-237	calculate mean across dimension in a 2d array var_0
+T-237	np . mean ( a , axis = 1 )
+H-237	-0.944714367389679	np . isnan ( var_0 ) . sum ( ) / np . sum ( )
+P-237	-0.1251 -0.0331 -1.7322 -0.0311 -0.0474 -0.0338 -0.0339 -0.0536 -0.0310 -0.0319 -0.1668 -0.0237 -0.0381 -1.9409 -0.0308 -0.7852 -0.0324
+S-300	<unk> key str_0 to dictionary var_0 with value 1
+T-300	data . update ( dict ( a = 1 ) )
+H-300	-0.6648625135421753	var_0 [ 'str_0' ] = list ( var_0 . items ( ) )
+P-300	-0.0988 -0.4097 -0.6828 -0.0351 -0.2543 -0.9505 -0.0357 -0.0835 -0.1959 -0.3206 -0.0308 -0.0395 -0.0731 -0.0289
+S-299	<unk> key str_0 to dictionary var_0 with value 1
+T-299	data . update ( { 'a' : 1 , } )
+H-299	-0.6648625135421753	var_0 [ 'str_0' ] = list ( var_0 . items ( ) )
+P-299	-0.0988 -0.4097 -0.6828 -0.0351 -0.2543 -0.9505 -0.0357 -0.0835 -0.1959 -0.3206 -0.0308 -0.0395 -0.0731 -0.0289
+S-280	convert list of tuples var_0 to a string
+T-280	<<unk>> <<unk>> . join ( '(' + <<unk>> <<unk>> . join ( i ) + ')' for i in L )
+H-280	-0.30274760723114014	[ list ( t ) for t in zip ( * var_0 ) ]
+P-280	-0.0167 -0.9945 -0.0317 -0.0089 -0.0403 -0.0196 -0.0173 -0.0226 -0.1735 -0.0304 -0.0611 -0.0256 -0.0387 -0.0192 -0.0371
+S-5	get rid of <unk> <unk> in dictionary var_0
+T-5	res = { k : v for k , v in list ( kwargs . items ( ) ) if v is not None }
+H-5	-0.5251496434211731	sorted ( list ( var_0 . items ( ) ) , key = lambda v : v [ 1 ] )
+P-5	-0.8549 -0.0257 -0.1886 -0.0257 -0.0205 -0.0364 -0.1087 -0.0265 -0.0306 -0.0306 -0.0182 -0.0310 -0.0339 -0.1563 -0.9297 -0.0334 -0.1496 -0.0250 -0.5406 -0.0343 -0.0249 -0.0303
+S-271	get the position of item 1 in var_0
+T-271	[ i for ( i , x ) in enumerate ( <<unk>> ) if ( x == 1 ) ]
+H-271	-0.7142217755317688	print ( np . linspace ( 1 , 3 , 1 ) )
+P-271	-0.3000 -0.0271 -0.4518 -0.0384 -0.7317 -0.0284 -0.0659 -0.0226 -1.3983 -0.0220 -0.2429 -0.0662 -0.0446 -0.0395
+S-229	parse tab-delimited <unk> file str_0 into a list
+T-229	lol = list ( csv . reader ( open ( <<unk>> , 'rb' ) , delimiter = '\t' ) )
+H-229	-0.1686156541109085	with open ( 'str_0' , 'r' ) as stream : \n try : \n print ( yaml . load ( stream ) ) \n except yaml . YAMLError as exc : \n print ( exc )
+P-229	-0.1130 -0.0027 -0.0290 -0.0137 -0.3465 -0.0933 -0.0315 -0.0044 -0.0568 -0.0250 -0.0171 -0.0693 -0.0198 -0.0160 -0.0157 -0.0276 -0.0145 -0.0365 -0.0033 -0.0278 -0.0080 -0.0360 -0.0419 -0.0068 -0.1509 -0.0140 -0.0353 -0.0259 -0.0143 -0.0130 -0.0320 -0.0193 -0.0087 -0.0262 -0.0085 -0.0358 -0.0316
+S-125	count the <unk> of <unk> in list var_0
+T-125	dict ( ( ( x , l . count ( x ) ) for x in set ( l ) ) )
+H-125	-0.30160361528396606	sum ( isinstance ( x , int ) for x in var_0 )
+P-125	-0.1247 -0.0342 -0.5307 -0.0332 -0.0144 -0.0403 -0.4875 -0.0364 -0.0201 -0.0291 -0.0213 -0.0206 -0.0379 -0.0389
+S-270	get the position of item 1 in var_0
+T-270	[ i for ( i , x ) in enumerate ( <<unk>> ) if ( x == 1 ) ]
+H-270	-0.7142217755317688	print ( np . linspace ( 1 , 3 , 1 ) )
+P-270	-0.3000 -0.0271 -0.4518 -0.0384 -0.7317 -0.0284 -0.0659 -0.0226 -1.3983 -0.0220 -0.2429 -0.0662 -0.0446 -0.0395
+S-6	get rid of <unk> <unk> in dictionary var_0
+T-6	res = dict ( ( k , v ) for k , v in kwargs . items ( ) if v is not None )
+H-6	-0.5251496434211731	sorted ( list ( var_0 . items ( ) ) , key = lambda v : v [ 1 ] )
+P-6	-0.8549 -0.0257 -0.1886 -0.0257 -0.0205 -0.0364 -0.1087 -0.0265 -0.0306 -0.0306 -0.0182 -0.0310 -0.0339 -0.1563 -0.9297 -0.0334 -0.1496 -0.0250 -0.5406 -0.0343 -0.0249 -0.0303
+S-272	get the position of item 1 in var_0
+T-272	for i in [ i for ( i , x ) in enumerate ( <<unk>> ) if ( x == 1 ) ] : \n pass
+H-272	-0.7142217755317688	print ( np . linspace ( 1 , 3 , 1 ) )
+P-272	-0.3000 -0.0271 -0.4518 -0.0384 -0.7317 -0.0284 -0.0659 -0.0226 -1.3983 -0.0220 -0.2429 -0.0662 -0.0446 -0.0395
+S-273	get the position of item 1 in var_0
+T-273	for i in ( i for ( i , x ) in enumerate ( <<unk>> ) if ( x == 1 ) ) : \n pass
+H-273	-0.7142217755317688	print ( np . linspace ( 1 , 3 , 1 ) )
+P-273	-0.3000 -0.0271 -0.4518 -0.0384 -0.7317 -0.0284 -0.0659 -0.0226 -1.3983 -0.0220 -0.2429 -0.0662 -0.0446 -0.0395
+S-274	get the position of item 1 in var_0
+T-274	gen = ( i for ( i , x ) in enumerate ( <<unk>> ) if ( x == 1 ) ) \n for i in gen : \n pass
+H-274	-0.7142217755317688	print ( np . linspace ( 1 , 3 , 1 ) )
+P-274	-0.3000 -0.0271 -0.4518 -0.0384 -0.7317 -0.0284 -0.0659 -0.0226 -1.3983 -0.0220 -0.2429 -0.0662 -0.0446 -0.0395
+S-363	<unk> <unk> contained in <unk> in list str_0
+T-363	sum ( int ( float ( item ) ) for item in [ _f for _f in [ '' , <<unk>> , '' , '' , '1.0' ] if _f ] )
+H-363	-0.753670334815979	map ( list , permutations ( [ str_0 ] ) )
+P-363	-2.5944 -0.0294 -0.0335 -0.0139 -0.4927 -0.0281 -0.0171 -0.0181 -0.0344 -0.0290 -0.0268 -0.0299
+S-249	swap <unk> with <unk> in a dictionary var_0
+T-249	res = dict ( ( v , k ) for k , v in a . items ( ) )
+H-249	-0.14193019270896912	dict ( ( v , k ) for k , v in var_0 . items ( ) )
+P-249	-0.0634 -0.0280 -0.1303 -0.2043 -0.0209 -0.0026 -0.0308 -0.0142 -0.0137 -0.0244 -0.0120 -0.0206 -0.0103 -0.0381 -0.0062 -0.0307 -0.0357 -0.1161 -0.0280
+S-474	convert a urllib unquoted string var_0 to a json data var_1
+T-474	<<unk>> = json . loads ( <<unk>> )
+H-474	-0.5012921690940857	var_1 = json . loads ( var_0 )
+P-474	-0.0013 -0.0130 -0.0724 -0.0335 -1.0091 -0.0298 -0.0914 -0.0366 -0.5863
+S-112	check if a directory var_0 exists and create it if necessary
+T-112	distutils . dir_util . mkpath ( path )
+H-112	-0.1998080611228943	os . path . exists ( var_0 )
+P-112	-0.0485 -0.0404 -0.0964 -0.0408 -0.3602 -0.0326 -0.0606 -0.0346 -0.0326
+S-157	<unk> <unk> in a data frame var_0 to a column var_1
+T-157	df [ <<unk>> ] = df . index
+H-157	-0.6399024128913879	var_1 . set_index ( [ 'var_0' ] , append = True )
+P-157	-0.0030 -0.3381 -1.3623 -0.0256 -0.0100 -0.0015 -0.0209 -0.0218 -1.0381 -0.0392 -0.0510 -0.0410 -0.0292
+S-59	<unk> do <unk> get the url parameter in a <unk> view
+T-59	request . args [ 'myParam' ]
+H-59	-0.7401260733604431	request . params . get ( 'c' )
+P-59	-0.8918 -0.0312 -0.3867 -0.0328 -0.6148 -0.0279 -0.7213 -0.0331 -0.0263
+S-484	<unk> all <unk> and <unk> from a string var_0 using regex
+T-484	re . findall ( 'Test([0-9.]*[0-9]+)' , text )
+H-484	-0.4604148864746094	re . findall ( '\\w+(?:-\\w+)+' , var_0 )
+P-484	-0.0092 -0.0328 -0.0103 -0.0281 -1.5138 -0.0163 -0.0536 -0.0308 -0.0258
+S-248	<unk> each line from a file str_0 <unk> a list
+T-248	[ line . split ( ) for line in open ( <<unk>> ) ]
+H-248	-0.4769262671470642	with open ( 'str_0' ) as f : \n var_0 = f . readlines ( )
+P-248	-0.4494 -0.0027 -0.0353 -0.0311 -1.0561 -0.0093 -0.0141 -0.0152 -0.0190 -0.5902 -0.0176 -0.0141 -0.0400 -0.2135 -0.0297 -0.0386 -0.0344
+S-67	write the data of dataframe var_0 into text file str_0
+T-67	np . savetxt ( 'c:\\data\\np.txt' , df . values , fmt = '%d' )
+H-67	-0.4738151431083679	var_0 . write . csv ( 'str_0' )
+P-67	-0.0095 -0.0541 -0.4727 -1.0092 -0.0718 -0.0368 -0.0409 -0.0399 -0.0357
+S-104	initialize a list var_0 of int_0 <unk> <unk> ( )
+T-104	lst = [ Object ( ) for _ in range ( 100 ) ]
+H-104	-0.09416280686855316	var_0 = [ MyClass ( ) for i in range ( int_0 ) ]
+P-104	-0.0091 -0.0128 -0.0292 -0.1878 -0.0252 -0.0305 -0.0248 -0.0053 -0.0166 -0.0021 -0.0275 -0.0217 -0.0305 -0.0266 -0.0285
+S-262	sort a list var_0 of dicts by dict value str_0
+T-262	l . sort ( key = lambda x : x [ <<unk>> ] )
+H-262	-0.32623204588890076	sorted ( var_0 , key = lambda d : d . index ( 'str_0' ) )
+P-262	-0.0403 -0.0305 -0.0275 -0.0226 -0.0091 -0.0281 -0.0143 -0.3745 -0.0171 -0.2366 -0.0396 -0.7779 -0.0276 -0.0416 -0.0330 -0.0319 -0.0337
+S-103	loop over a list var_0 if sublists length <unk> 3
+T-103	[ x for x in mylist if len ( x ) == 3 ]
+H-103	-0.9759038090705872	[ sublist for _ in range ( 3 ) for sublist in var_0 ]
+P-103	-0.0499 -1.5862 -0.0497 -1.3601 -0.0176 -0.3732 -0.0300 -0.1685 -0.0359 -0.5050 -0.1792 -0.0217 -0.4979 -0.0394 -0.0409
+S-147	insert data from a string var_0 to sqlite db var_1
+T-147	c . execute ( <<unk>> <<unk>> test <<unk>> <<unk>> <<unk>> , ( <<unk>> , ) )
+H-147	-0.27892982959747314	var_1 . encode ( 'var_0' )
+P-147	-0.0243 -0.1626 -0.1934 -0.0305 -0.4061 -0.0467 -0.0329
+S-261	sort a list of dictionary var_0 by the key var_1
+T-261	mylist . sort ( key = lambda x : x [ <<unk>> ] )
+H-261	-0.34341689944267273	sorted ( var_0 , key = lambda x : var_1 . index ( list ( x . values ( ) ) [ 0 ] ) )
+P-261	-0.0551 -0.0287 -0.6275 -0.0258 -0.0220 -0.0287 -0.0438 -0.0865 -0.0394 -0.0068 -0.0390 -0.0027 -0.0277 -0.2042 -0.0292 -0.0265 -0.0794 -0.1739 -0.0293 -0.0382 -0.4600 -0.0069 -0.0066 -0.0479 -0.0347 -0.2713 -0.0392
+S-385	add a column str_0 with value str_1 to dataframe var_0
+T-385	df . xs ( <<unk>> , level = <<unk>> , drop_level = False )
+H-385	-0.4524165391921997	var_0 [ 'str_1' ] = var_0 [ 'str_0' ] . astype ( str_0 )
+P-385	-0.0187 -0.0425 -0.2095 -0.0270 -0.1242 -0.2885 -0.0377 -0.0440 -0.0273 -0.0254 -1.1040 -0.0327 -0.2505 -0.0278 -0.0374
+S-116	get <unk> only from a string var_0 using lambda function
+T-116	"""""" . join ( [ x for x in <<unk>> if x . isdigit ( ) ] )
+H-116	-0.5662074089050293	"""""" . join ( set ( var_0 ) )
+P-116	-0.6117 -0.0302 -0.0054 -0.0294 -1.2744 -0.0284 -0.1643 -0.0387 -0.0335 -0.0380
+S-475	<unk> a list containing all ascii <unk> <unk> <unk> <unk>
+T-475	[ chr ( i ) for i in range ( 127 ) ]
+H-475	-0.48662811517715454	list ( itertools . product ( * var_0 ) )
+P-475	-0.7032 -0.0285 -0.7899 -0.0345 -0.0053 -0.0257 -0.1034 -0.2629 -0.0312 -0.0320 -0.0346
+S-353	find duplicate <unk> in column str_0 of the dataframe var_0
+T-353	x . set_index ( 'name' ) . index . get_duplicates ( )
+H-353	-0.8773746490478516	var_0 [ var_0 . groupby ( [ 'str_0' ] ) . size ( ) ] . reset_index ( )
+P-353	-0.0148 -0.1226 -0.5919 -0.0269 -0.2350 -0.0417 -0.7196 -0.0136 -0.0396 -0.0896 -0.1313 -1.1874 -0.0353 -0.0368 -0.7724 -0.0407 -1.0339 -0.0348 -0.0945 -0.0321
+S-307	<unk> a list of <unk> var_0 from a file str_0
+T-307	lst = map ( int , open ( <<unk>> ) . readlines ( ) )
+H-307	-0.41271907091140747	var_0 = open ( 'str_0' ) . read ( )
+P-307	-0.1812 -0.0231 -1.0613 -0.0305 -0.0180 -0.2723 -0.0485 -0.0073 -0.0303 -0.0398 -0.0275
+S-13	<unk> a multi-line string str_0 by new line character str_1
+T-13	<<unk>> a \n b <<unk>> c <<unk>> . split ( '\n' )
+H-13	-0.22399292886257172	re . split ( 'str_1' , 'str_0' )
+P-13	-0.1296 -0.0258 -0.4412 -0.0259 -0.0223 -0.0213 -0.0307 -0.1103 -0.0299
+S-393	<unk> <unk> column str_0 of <unk> dataframe str_1 to ordinal
+T-393	df [ 'date' ] . apply ( lambda x : x . toordinal ( ) )
+H-393	-0.6983360648155212	var_0 [ 'str_1' ] = var_0 [ 'str_0' ] . dt . date
+P-393	-0.1715 -0.2461 -0.3842 -0.0369 -0.5312 -0.3493 -0.1198 -0.0139 -0.0266 -0.0322 -0.8901 -0.0303 -0.5456 -0.0243
+S-88	convert a list of <unk> var_0 to list of <unk>
+T-88	L = [ int ( '' . join ( [ str ( y ) for y in x ] ) ) for x in L ]
+H-88	-0.6196202039718628	[ list ( i ) for i in var_0 ]
+P-88	-0.0325 -0.6859 -0.0272 -0.9043 -0.0256 -0.0191 -0.0032 -0.0136 -0.8502 -0.0226 -0.0277
+S-110	check if directory str_0 exists and create it if necessary
+T-110	if ( not os . path . exists ( <<unk>> ) ) : \n os . makedirs ( <<unk>> )
+H-110	-0.22018097341060638	os . path . exists ( 'str_0' )
+P-110	-0.4119 -0.0354 -0.0428 -0.0371 -0.1269 -0.0361 -0.0652 -0.0335 -0.0340
+S-27	download a file var_0 over <unk> and save to var_1
+T-27	u = urllib . request . urlopen ( url ) \n f = open ( file_name , 'wb' ) \n meta = u . info ( ) \n file_size = int ( meta . getheaders ( 'Content-Length' ) [ 0 ] ) \n print ( ( <<unk>> <<unk>> <<unk>> <<unk>> % ( file_name , file_size ) ) ) \n file_size_dl = 0 \n block_sz = 8192 \n while True : \n buffer = u . read ( block_sz ) \n if ( not buffer ) : \n break \n file_size_dl += len ( buffer ) \n f . write ( buffer ) \n status = ( <<unk>> <<unk>> % ( file_size_dl , ( ( file_size_dl * 100.0 ) / file_size ) ) ) \n status = ( status + ( chr ( 8 ) * ( len ( status ) + 1 ) ) ) \n print ( status , end = <<unk>> <<unk>> ) \n f . close ( )
+H-27	-0.5838834047317505	pickle . dump ( var_0 , var_1 )
+P-27	-1.7420 -0.0345 -0.2611 -0.0291 -0.0203 -0.0219 -0.0074 -0.0350 -0.0307
+S-30	download a file var_0 over <unk> and save to str_0
+T-30	response = requests . get ( url , stream = True ) \n with open ( <<unk>> , 'wb' ) as handle : \n for data in tqdm ( response . iter_content ( ) ) : \n handle . write ( data )
+H-30	-0.21024996042251587	var_0 . write ( open ( 'str_0' , 'rb' ) . read ( ) )
+P-30	-0.3862 -0.2193 -0.0458 -0.0314 -0.0812 -0.0288 -0.0240 -0.0429 -0.0220 -0.0390 -0.0291 -0.0171 -0.0276 -0.0423 -0.0412 -0.0317
+S-289	convert tuple of tuples str_0 to list in one line
+T-289	map ( lambda a : a [ 0 ] , ( ( <<unk>> , ) , ( <<unk>> , ) , ( <<unk>> , ) ) )
+H-289	-0.43152058124542236	zip ( * [ ( 1 , 2 ) , ( 3 , 4 ) , ( 5 , 6 ) ] )
+P-289	-1.7586 -0.0323 -0.0068 -0.0064 -0.3474 -0.1026 -0.0299 -0.0461 -0.0370 -0.0551 -0.0283 -0.0058 -0.0249 -0.0029 -0.0343 -0.0657 -0.0327 -0.0091 -0.0249 -0.0810 -0.0339 -0.0596 -0.0325 -0.0471
+S-136	increment a value with leading <unk> in a number var_0
+T-136	str ( int ( x ) + 1 ) . zfill ( len ( x ) )
+H-136	-1.1585906744003296	var_0 . decode ( 'hex' )
+P-136	-2.2747 -0.0406 -0.6149 -0.0303 -0.7002 -0.0323 -0.0308
+S-204	sort a list var_0 by length of value in tuple
+T-204	l . sort ( key = lambda t : len ( t [ 1 ] ) , reverse = True )
+H-204	-0.28824421763420105	var_0 . sort ( key = lambda s : len ( s ) )
+P-204	-0.0580 -0.0256 -0.0003 -0.0295 -0.0225 -0.0202 -0.0046 -0.3468 -0.0311 -0.0964 -0.0291 -0.0929 -0.0382 -0.6358 -0.0325
+S-7	capture final output of a chain of system <unk> str_0
+T-7	subprocess . check_output ( <<unk>> <<unk>> | <<unk>> <<unk>> | <<unk>> <<unk>> , shell = True )
+H-7	-0.3038332462310791	subprocess . check_output ( 'str_0' , shell = True )
+P-7	-0.8317 -0.0309 -0.0140 -0.0350 -0.1559 -0.0303 -0.0668 -0.0269 -0.0252 -0.0344 -0.0297
+S-137	check if a <unk> dataframe var_0 's index is sorted
+T-137	all ( df . index [ : - 1 ] <= df . index [ 1 : ] )
+H-137	-0.5424010157585144	var_0 . drop ( var_0 . columns [ [ 0 , 1 ] ] , inplace = True )
+P-137	-0.5268 -0.0234 -0.4094 -0.0289 -0.0125 -0.0234 -1.1771 -0.0721 -0.1985 -0.0560 -0.1433 -0.0543 -0.2210 -0.1172 -0.0313 -0.0810 -0.0223 -0.0082 -0.0363 -0.0299
+S-79	<unk> <unk> <unk> execute <unk> query str_0 with parameter str_1
+T-79	db . GqlQuery ( <<unk>> * <<unk>> <<unk>> <<unk>> <<unk>> = <<unk>> , foo . key ( ) )
+H-79	-0.8147780895233154	requests . get ( 'str_0' , 'str_1' )
+P-79	-1.6811 -0.0296 -0.1882 -0.0302 -0.0145 -0.0230 -1.0173 -0.0303 -0.0309
+S-281	<unk> set default value of field var_0 equal to str_0
+T-281	b = models . CharField ( max_length = 7 , default = <<unk>> , editable = False )
+H-281	-0.6535144448280334	var_0 = var_0 . set_index ( [ 'str_0' ] )
+P-281	-0.0348 -0.0171 -0.8901 -0.0276 -1.2926 -0.0289 -0.1125 -0.2584 -0.0318 -0.0227 -0.0383
+S-69	<unk> a string var_0 by last occurrence of character str_0
+T-69	print ( x . rpartition ( '-' ) [ 0 ] )
+H-69	-0.5098178386688232	re . split ( '(.)(?=.)' , var_0 )
+P-69	-0.0618 -0.0316 -0.4492 -0.0279 -1.1149 -0.0167 -0.1493 -0.0263 -0.0277
+S-303	<unk> number var_0 to 2 precision after the decimal point
+T-303	<<unk>> = str ( round ( <<unk>> , 2 ) )
+H-303	-0.41802239418029785	round ( float_0 , 2 )
+P-303	-0.7412 -0.0289 -0.4665 -0.0245 -0.0045 -0.0336 -0.0443
+S-422	converting list of <unk> var_0 to list of integer var_1
+T-422	<<unk>> = [ int ( x ) for x in <<unk>> ]
+H-422	-0.29464444518089294	var_1 = [ x [ : ] for x in var_0 ]
+P-422	-0.5559 -0.0233 -0.0456 -0.2782 -0.2339 -0.0139 -0.0302 -0.0218 -0.0117 -0.0184 -0.0833 -0.0278 -0.0290
+S-367	find all <unk> of regex pattern str_0 in string var_0
+T-367	re . findall ( <<unk>> , data )
+H-367	-0.05842095613479614	re . findall ( '(str_0)' , var_0 )
+P-367	-0.0067 -0.0398 -0.0048 -0.0329 -0.0272 -0.0191 -0.0259 -0.0281 -0.0337
+S-379	append a numpy array str_0 to a numpy array str_1
+T-379	np . vstack ( ( a , b ) )
+H-379	-0.32501986622810364	np . zeros ( ( str_0 ) ) + np . array ( [ str_1 ] ) . reshape ( 1 , 9 , 1 )
+P-379	-0.5338 -0.0371 -0.1234 -0.0330 -0.0419 -0.3378 -0.0287 -0.0373 -0.0428 -0.0014 -0.0386 -0.0031 -0.0352 -0.0115 -0.0043 -0.0364 -0.0361 -0.0772 -0.0791 -0.0324 -0.1223 -0.0230 -0.0226 -0.0235 -0.0206 -0.0401 -0.5250
+S-356	place the radial <unk> in plot var_0 at int_0 <unk>
+T-356	ax . set_rlabel_position ( <<unk>> )
+H-356	-1.2068367004394531	var_0 . implicitly_wait ( int_0 )
+P-356	-0.0097 -0.0290 -3.7337 -0.0281 -0.0088 -0.0347 -0.0348
+S-413	join a list of <unk> var_0 using a space str_0
+T-413	<<unk>> <<unk>> . join ( list )
+H-413	-0.5096942186355591	var_0 = [ x for x in var_0 if x != str_0 ]
+P-413	-0.1619 -0.0214 -0.1200 -0.1848 -0.0489 -0.0089 -0.0206 -0.1156 -0.0581 -0.0023 -1.3310 -0.3246 -0.0600 -0.0248
+S-485	python regex to find all <unk> and <unk> from str_0
+T-485	re . findall ( 'Test([\\d.]*\\d+)' , text )
+H-485	-0.6310882568359375	re . findall ( '\\d|\\d,\\d\\)' , 'str_0' )
+P-485	-0.4262 -0.0285 -0.0634 -0.0287 -1.7061 -0.0182 -0.0246 -0.0293 -0.0336
+S-400	add an entry str_0 at the beginning of list var_0
+T-400	<<unk>> . insert ( 0 , <<unk>> )
+H-400	-0.5300478339195251	var_0 = [ x + 'str_0' ] for x in var_0 ]
+P-400	-0.0140 -0.1007 -0.2348 -0.0974 -0.6006 -0.2943 -0.1057 -0.7488 -0.0155 -0.0168 -0.0912 -0.1269 -0.0232
+S-327	split a string into a list of <unk> and whitespace
+T-327	re . split ( '(\\W+)' , s )
+H-327	-0.631183385848999	list ( 'hello' )
+P-327	-1.2477 -0.0368 -0.3008 -0.0428 -0.0297
+S-351	write <unk> var_0 to a file var_1 in python 3
+T-351	open ( <<unk>> , 'wb' ) . write ( <<unk>> )
+H-351	-1.0563395023345947	var_0 . write ( open ( var_1 ) )
+P-351	-0.3219 -0.0337 -0.1130 -0.0428 -2.2597 -0.0304 -0.9551 -0.0371 -0.3836 -0.0281
+S-141	send the output of pprint object var_0 to file var_1
+T-141	pprint . pprint ( <<unk>> , <<unk>> )
+H-141	-1.1091479063034058	subprocess . call ( var_0 , var_1 )
+P-141	-2.4520 -0.0315 -0.6123 -0.0305 -0.9076 -0.0221 -0.0242 -0.0364 -0.0285
+S-66	<unk> <unk> of a set to a list in <unk>
+T-66	a . extend ( list ( b ) )
+H-66	-0.7623233199119568	list ( itertools . combinations ( [ 1 , 2 , 3 , 4 , 5 , 6 ] , 2 ) )
+P-66	-0.7769 -0.0329 -1.3977 -0.0294 -0.8021 -0.0329 -0.2694 -0.0522 -0.0238 -0.5240 -0.0209 -0.0148 -0.0209 -0.0023 -0.0284 -0.0128 -0.0207 -0.0140 -0.0326 -0.0247 -0.9081 -0.0291 -0.0262 -0.0351
+S-65	append <unk> of a set var_0 to a list var_1
+T-65	a . extend ( b )
+H-65	-0.49015912413597107	var_1 . append ( 'var_0' )
+P-65	-0.7802 -0.0310 -0.0790 -0.0318 -0.5932 -0.0274 -0.0329
+S-348	split string var_0 based on <unk> of regex pattern str_0
+T-348	re . split ( <<unk>> <<unk>> , input )
+H-348	-0.09785821288824081	re . findall ( '(str_0)' , var_0 )
+P-348	-0.0059 -0.0390 -0.1036 -0.0309 -0.0809 -0.0200 -0.0267 -0.0293 -0.0293
+S-436	<unk> new line character <unk> str_0 in a string str_1
+T-436	print ( 'foo\nbar' . encode ( 'string_escape' ) )
+H-436	-0.4831015169620514	re . sub ( '\\*\\*+' , 'str_0' , 'str_1' )
+P-436	-0.1190 -0.0288 -0.1792 -0.0263 -1.0584 -0.0212 -0.0501 -0.0199 -0.3758 -0.1252 -0.0327
+S-360	<unk> dataframe get first row of each group by str_0
+T-360	df . groupby ( 'id' ) . first ( )
+H-360	-0.5245118737220764	var_0 . groupby ( level = 'str_0' ) . agg ( lambda x : x . index . tolist ( ) )
+P-360	-0.0557 -0.0859 -0.0004 -0.0392 -1.1878 -0.0202 -0.0318 -0.0306 -0.0601 -0.0365 -0.0361 -0.1685 -0.0170 -0.0285 -0.0227 -0.0476 -0.2437 -0.0348 -1.0550 -0.0357 -0.0367 -0.1227 -0.0448
+S-364	<unk> a subprocess with <unk> str_0 that may contain <unk>
+T-364	subprocess . Popen ( [ <<unk>> <<unk>> <<unk>> ] )
+H-364	-0.2433767318725586	subprocess . call ( 'str_0' , shell = True )
+P-364	-0.0402 -0.0221 -0.0542 -0.0273 -0.6983 -0.0181 -0.0645 -0.0310 -0.0136 -0.0323 -0.0244
+S-26	download a file str_0 over <unk> and save to str_1
+T-26	urllib . request . urlretrieve ( <<unk>> , <<unk>> )
+H-26	-0.12803183495998383	urllib . request . urlretrieve ( 'str_0' , 'str_1' )
+P-26	-0.1663 -0.0299 -0.0639 -0.0289 -0.0303 -0.0299 -0.0880 -0.0263 -0.0015 -0.0372 -0.0375
+S-115	substitute <unk> <unk> in string str_0 with empty string str_1
+T-115	re . sub ( '\\D' , '' , <<unk>> )
+H-115	-0.5639097094535828	re . sub ( '(?m)^[^\\S\\n]+' , 'str_1' , 'str_0' )
+P-115	-0.6450 -0.0247 -0.3429 -0.0255 -0.2321 -0.0203 -0.0012 -0.0230 -0.9994 -0.0349 -0.0282
+S-4	<unk> to convert a string from <unk> to <unk> ?
+T-4	d . decode ( 'cp1251' ) . encode ( 'utf8' )
+H-4	-1.537731647491455	ast . literal_eval ( 'str_0' )
+P-4	-2.7825 -0.0281 -0.8430 -0.0256 -1.2062 -0.0306 -0.0264
+S-347	<unk> octal <unk> <unk> from a string var_0 using regex
+T-347	print ( re . findall ( "'\\\\[0-7]{1,3}'" , str ) )
+H-347	-0.550381600856781	re . sub ( '(?<=[a-z])\\r?\\n' , <unk> , var_0 )
+P-347	-0.0318 -0.0286 -0.4763 -0.0273 -1.1111 -0.0155 -0.0358 -0.4737 -0.0638 -0.0286 -0.0276
+S-365	reverse a priority queue var_0 in python without using <unk>
+T-365	<<unk>> . put ( ( - n , n ) )
+H-365	-0.7811899185180664	cursor . execute ( <unk> <unk> <unk> <unk> <unk> , ( var_0 , ) )
+P-365	-2.2981 -0.0299 -0.3277 -0.0317 -0.2666 -0.0558 -0.0620 -0.0790 -0.1769 -0.5731 -0.0299 -0.0273 -0.0242 -0.0766 -0.0360 -0.0280
+S-446	count number of <unk> string str_0 occurred in string str_1
+T-446	<<unk>> <<unk>> <<unk>> <<unk>> is <<unk>> . count ( <<unk>> )
+H-446	-0.09913940727710724	"""str_1""" . count ( 'str_0' )
+P-446	-0.0132 -0.0361 -0.1481 -0.0321 -0.0240 -0.0329 -0.0322
+S-53	get the date 7 <unk> before the current date
+T-53	( datetime . datetime . now ( ) - datetime . timedelta ( days = 7 ) ) . date ( )
+H-53	-0.9280761480331421	date ( 2010 , 12 , 31 ) + relativedelta ( months = + 7 )
+P-53	-2.1374 -0.0304 -0.3183 -0.0170 -0.5525 -0.0421 -0.3184 -0.0329 -0.1259 -0.3769 -0.0339 -0.1155 -0.0276 -0.3443 -0.5518 -0.0281 -0.0268
+S-68	write content of <unk> var_0 into text file str_0
+T-68	df . to_csv ( 'c:\\data\\pandas.txt' , header = None , index = None , sep = <<unk>> <<unk>> , mode = 'a' )
+H-68	-1.042211890220642	var_0 = open ( 'str_0' , 'rb' ) . read ( )
+P-68	-0.0185 -3.7718 -0.0097 -0.0307 -0.0166 -0.2617 -0.0222 -0.0334 -0.0300 -0.0083 -0.0289 -0.0344 -0.5903
+S-404	converting two <unk> str_0 and str_1 into a matrix
+T-404	np . column_stack ( ( [ 1 , 2 , 3 ] , [ 4 , 5 , 6 ] ) )
+H-404	-0.5409010052680969	np . dot ( [ str_0 ] , [ str_1 ] )
+P-404	-0.2223 -0.0308 -1.1228 -0.0348 -0.0387 -0.3780 -0.1142 -0.0271 -0.0135 -0.0148 -0.0448 -0.4426 -0.0361
+S-86	convert list of <unk> var_0 to list of <unk>
+T-86	[ int ( '' . join ( str ( d ) for d in x ) ) for x in L ]
+H-86	-0.6754198670387268	[ list ( x ) for x in set ( var_0 ) ]
+P-86	-0.0701 -0.6984 -0.0271 -1.0594 -0.0254 -0.0202 -0.0243 -0.0214 -1.0619 -0.0288 -0.1775 -0.0270 -0.0154 -0.0335
+S-329	reverse the <unk> and <unk> in a dictionary var_0
+T-329	{ i [ 1 ] : i [ 0 ] for i in list ( <<unk>> . items ( ) ) }
+H-329	-0.14790882170200348	dict ( ( v , k ) for k , v in var_0 . items ( ) )
+P-329	-0.0721 -0.0316 -0.2889 -0.0193 -0.0337 -0.0090 -0.0313 -0.0116 -0.0152 -0.0307 -0.0157 -0.0283 -0.0252 -0.0385 -0.0103 -0.0329 -0.0347 -0.1117 -0.0248
+S-498	sum <unk> at the same index in list var_0
+T-498	[ [ sum ( item ) for item in zip ( * items ) ] for items in zip ( * data ) ]
+H-498	-0.08118530362844467	map ( sum , zip ( * var_0 ) )
+P-498	-0.1040 -0.0308 -0.0066 -0.0201 -0.0024 -0.0297 -0.0021 -0.0467 -0.0323 -0.0308 -0.0367
+S-435	<unk> list of <unk> var_0 into a flat list
+T-435	[ y for x in data for y in ( x if isinstance ( x , list ) else [ x ] ) ]
+H-435	-0.8152990937232971	map ( list , zip ( * var_0 ) )
+P-435	-1.5948 -0.0325 -0.3429 -0.0153 -1.0271 -0.0314 -0.2823 -0.0156 -0.0318 -0.0340 -0.0292
+S-428	<unk> all <unk> in directory str_0 with extension str_1
+T-428	for ( root , dirs , files ) in os . walk ( <<unk>> ) : \n for file in files : \n if file . endswith ( <<unk>> ) : \n pass
+H-428	-0.1955312192440033	os . listdir ( 'str_0' )
+P-428	-0.1233 -0.0359 -0.2900 -0.0290 -0.0859 -0.0343 -0.0301
+S-296	unzip list str_0 and fill empty <unk> with <unk>
+T-296	map ( None , * [ ( 'a' , 1 ) , ( 'b' , 2 ) , ( 'c' , 3 ) , ( 'd' , 4 ) , ( 'e' , ) ] )
+H-296	-0.4391518831253052	zip ( * [ [ str_0 ] )
+P-296	-0.6070 -0.0349 -0.0165 -0.0032 -0.6923 -0.0270 -0.0293 -0.2053 -0.0257
+S-427	<unk> all <unk> in directory str_0 with extension str_1
+T-427	for file in os . listdir ( <<unk>> ) : \n if file . endswith ( <<unk>> ) : \n pass
+H-427	-0.1955312192440033	os . listdir ( 'str_0' )
+P-427	-0.1233 -0.0359 -0.2900 -0.0290 -0.0859 -0.0343 -0.0301
+S-448	download the file from url var_0 and save it under file var_1
+T-448	urllib . request . urlretrieve ( url , file_name )
+H-448	-0.6170457005500793	file_name = wget . download ( var_0 )
+P-448	-1.5050 -0.0308 -0.3309 -0.0401 -0.2638 -0.0309 -0.0290 -0.0410 -0.0344
+S-80	filter <unk> in <unk> starting with alphabet str_0 using regular expression .
+T-80	df . b . str . contains ( '^f' )
+H-80	-1.129906415939331	re . sub ( '\\d|\\d,\\d\\)' , 'str_0' , str_1 )
+P-80	-0.0175 -0.0245 -0.2823 -0.0283 -3.1658 -0.0155 -0.1223 -0.0420 -1.0098 -0.0242 -0.0307
+S-22	convert a string str_0 with dot and comma into a floating number
+T-22	float ( <<unk>> . replace ( ',' , '' ) )
+H-22	-0.3282778859138489	int ( 'str_0' , 16 )
+P-22	-0.7337 -0.0346 -0.0126 -0.0322 -0.1735 -0.0328 -0.0357
+S-82	<unk> : delete <unk> in dataframe var_0 based on multiple <unk> <unk>
+T-82	df . set_index ( list ( 'BC' ) ) . drop ( tuples , errors = 'ignore' ) . reset_index ( )
+H-82	-0.5198282599449158	var_0 . apply ( <unk> <unk> . join , axis = 1 )
+P-82	-0.0127 -0.0358 -0.5580 -0.0314 -0.1430 -0.0650 -0.0980 -0.4394 -0.0202 -0.4668 -0.0248 -0.5696 -0.0374 -0.0304
+S-135	merge list str_0 and list str_1 and list str_2 into one list
+T-135	[ <<unk>> ] + [ <<unk>> ] + [ <<unk>> ]
+H-135	-0.14463505148887634	[ list ( a ) for a in zip ( [ str_0 ] , [ str_1 ] , [ str_2 ] ) ]
+P-135	-0.1375 -0.3171 -0.0368 -0.0176 -0.0276 -0.0135 -0.0075 -0.0143 -0.0029 -0.0329 -0.0121 -0.0252 -0.0353 -0.0262 -0.0045 -0.0723 -0.0303 -0.0243 -0.0190 -0.0031 -0.0357 -0.0284 -0.0239 -0.0257
+S-243	<unk> a base class 's class method var_0 from derived class var_1
+T-243	super ( <<unk>> , cls ) . <<unk>> ( a )
+H-243	-0.15121953189373016	super ( var_0 , self ) . __init__ ( * args , ** kwargs )
+P-243	-0.0715 -0.0295 -0.0409 -0.0214 -0.0033 -0.0410 -0.0238 -0.0137 -0.0315 -0.0447 -0.1246 -0.0216 -0.0065 -0.2554 -0.0370 -0.0318
+S-444	find the string in var_0 between two special <unk> str_0 and str_1
+T-444	re . search ( '\\[(.*)\\]' , your_string ) . group ( 1 )
+H-444	-0.3915540874004364	re . findall ( 'str_0' , 'str_1' , var_0 )
+P-444	-0.0114 -0.0452 -0.0068 -0.0336 -0.9393 -0.0236 -0.1952 -0.2219 -0.1045 -0.0339 -0.0350
+S-218	<unk> dictionary var_0 in ascending order based on <unk> <unk> and <unk>
+T-218	sorted ( o . items ( ) )
+H-218	-0.23707406222820282	dict ( ( v , k ) for k , v in var_0 . items ( ) )
+P-218	-0.0923 -0.0337 -0.0678 -0.3337 -0.0237 -0.0217 -0.0350 -0.0165 -0.0156 -0.0258 -0.0047 -0.0316 -0.1068 -0.0399 -0.0174 -0.0338 -0.0378 -0.4182 -0.0310
+S-93	search for string that <unk> regular expression pattern str_0 in string str_1
+T-93	re . search ( '(?<!Distillr)\\\\AcroTray\\.exe' , 'C:\\SomeDir\\AcroTray.exe' )
+H-93	-0.4615626931190491	re . findall ( 'str_0' , 'str_1' )
+P-93	-0.0051 -0.0314 -1.0083 -0.0290 -0.4602 -0.0201 -0.0046 -0.1319 -0.0344
+S-312	get a value of datetime.today ( ) in the <unk> time zone
+T-312	datetime . now ( pytz . utc )
+H-312	-0.8332452774047852	t = datetime . datetime . now ( )
+P-312	-2.1528 -0.0309 -0.4168 -0.0366 -0.0902 -0.0407 -0.4005 -0.0296 -0.0375 -0.0815
+S-78	<unk> % f with strftime ( ) in <unk> to get <unk>
+T-78	datetime . datetime . now ( ) . strftime ( '%H:%M:%S.%f' )
+H-78	-0.736880362033844	datetime . datetime . now ( ) . isoformat ( )
+P-78	-1.0200 -0.0226 -0.0596 -0.0232 -0.0728 -0.0262 -0.0364 -0.1624 -1.7586 -0.0264 -0.0343 -0.0300
+S-201	cast an int var_0 to a string and concat to string str_0
+T-201	<<unk>> + str ( i )
+H-201	-0.6551879048347473	int ( 'str_0' , var_0 )
+P-201	-1.3931 -0.0294 -0.4434 -0.0510 -0.1330 -0.0243 -0.0317
+S-216	<unk> all <unk> with regex pattern str_0 in list of string var_0
+T-216	[ i for i in <<unk>> if re . search ( '\\d+[xX]' , i ) ]
+H-216	-0.12124588340520859	re . findall ( '(str_0)' , var_0 )
+P-216	-0.1541 -0.0368 -0.0996 -0.0329 -0.0241 -0.0160 -0.0308 -0.0274 -0.0313
+S-144	get list of <unk> of <unk> where column str_0 <unk> match <unk>
+T-144	df [ df [ <<unk>> ] == True ] . index . tolist ( )
+H-144	-1.273730754852295	[ i for i , x in enumerate ( [ 'str_0' ] ) if x == 'str_0' ]
+P-144	-0.3279 -0.4942 -0.0207 -0.0594 -1.3601 -1.2950 -0.0240 -0.4530 -0.0295 -0.1048 -0.0977 -1.0578 -0.0230 -0.0249 -0.4229 -0.1644 -1.4416 -0.0242 -0.0279
+S-179	<unk> multidimensional array var_0 with 3 <unk> and 2 <unk> in python
+T-179	matrix = [ [ a , b ] , [ c , d ] , [ e , f ] ]
+H-179	-0.5132202506065369	var_0 [ np . arange ( 3 ) , ( 3 , 4 ) ]
+P-179	-0.0518 -0.1779 -0.0880 -0.0434 -1.0867 -0.0396 -0.0034 -0.0358 -0.0155 -0.0419 -0.7778 -0.0413 -0.0684 -0.0418 -0.1614 -0.0340
+S-493	get the highest element in absolute value in a numpy matrix var_0
+T-493	max ( x . min ( ) , x . max ( ) , key = abs )
+H-493	-0.5173308253288269	print ( max ( var_0 , key = var_0 [ 0 ] ) )
+P-493	-0.5115 -0.0306 -0.8006 -0.0286 -0.0245 -0.0240 -0.0346 -0.0318 -0.2789 -0.6362 -0.0812 -0.0341 -0.0400 -0.0353 -0.0349
+S-487	<unk> a list of tuples var_0 by third item in the tuple
+T-487	b . sort ( key = lambda x : x [ 1 ] [ 2 ] )
+H-487	-0.32277294993400574	[ x [ 1 ] for x in var_0 ]
+P-487	-0.5081 -0.2882 -0.1307 -0.1223 -0.0581 -0.0146 -0.0228 -0.0180 -0.1109 -0.0516 -0.0354
+S-488	get a list of all <unk> in <unk> database var_0 with pycassa
+T-488	list ( <<unk>> . get_range ( ) . get_keys ( ) )
+H-488	-0.9739881753921509	[ list ( v ) for k , v in itertools . product ( var_0 , 4 ) ]
+P-488	-0.1498 -2.5110 -0.0251 -0.9652 -0.0312 -0.0189 -0.2516 -0.0188 -0.0672 -0.0204 -0.0907 -0.0360 -0.7397 -0.0274 -0.0163 -0.0209 -0.7708 -0.0343 -0.0523 -0.0296
+S-389	sort a list of <unk> str_0 such that third row <unk> first
+T-389	c2 . sort ( key = lambda row : row [ 2 ] )
+H-389	-0.3106960356235504	sorted ( str_0 , key = lambda x : 'a' + x if x . startswith ( 'str_1' ) [ 2 ] )
+P-389	-0.0025 -0.0312 -0.0031 -0.0165 -0.0307 -0.0291 -0.0228 -0.2260 -0.0291 -0.0757 -0.1057 -0.0216 -0.0937 -0.0543 -0.1867 -0.0429 -0.0298 -0.1271 -0.0421 -0.2166 -0.5310 -0.0932 -0.0382 -0.0423
+S-193	<unk> a list of <unk> by splitting a string var_0 with comma
+T-193	[ int ( s ) for s in user . split ( ',' ) ]
+H-193	-0.40745410323143005	[ var_0 . split ( ',' ) for var_0 in s . split ( ',' ) ]
+P-193	-0.0130 -1.1818 -0.0774 -0.5078 -0.0377 -0.1021 -0.0366 -0.0116 -0.0594 -0.0098 -0.0212 -0.0939 -0.0114 -0.0362 -0.0201 -0.0367 -0.0161 -0.0352
+S-396	open a str_0 terminal from python script and run str_1 command .
+T-396	os . system ( <<unk>> <<unk>> <<unk>> <<unk>> <<unk>> <<unk>> <<unk>> exec <<unk>> )
+H-396	-0.33985185623168945	os . system ( <unk> <unk> <unk> )
+P-396	-0.2866 -0.0310 -0.0004 -0.0302 -0.1240 -0.0407 -0.6731 -0.0529 -0.0312
+S-51	convert epoch time represented <unk> <unk> var_0 to string using format str_0
+T-51	datetime . datetime . fromtimestamp ( s ) . strftime ( <<unk>> <<unk>> )
+H-51	-0.4270762801170349	time . strftime ( 'str_0' , var_0 )
+P-51	-0.5822 -0.0317 -0.1845 -0.0275 -0.1208 -0.4708 -0.1175 -0.0263 -0.0348
+S-215	get the html from the current web page of a <unk> driver
+T-215	driver . execute_script ( <<unk>> <<unk>> )
+H-215	-0.7635185122489929	os . getcwd ( )
+P-215	-1.5986 -0.0297 -0.5227 -0.0286 -0.0333 -0.0243
+S-81	print a 2 dimensional list var_0 <unk> a table with delimiters
+T-81	print ( '\n' . join ( '\t' . join ( str ( col ) for col in row ) for row in <<unk>> ) )
+H-81	-0.4708253741264343	[ ( v , k ) for k , v in var_0 . items ( ) ]
+P-81	-1.9359 -0.0053 -0.1847 -0.0144 -0.0347 -0.0297 -0.0222 -0.0219 -0.0229 -0.0424 -0.0124 -0.0286 -0.0395 -0.0371 -0.0359 -0.0422 -0.1268 -0.0303
+S-309	count most frequent int_0 <unk> in column str_0 of dataframe var_0
+T-309	Counter ( <<unk>> <<unk>> . join ( df [ <<unk>> ] ) . split ( ) ) . most_common ( 100 )
+H-309	-0.9494598507881165	var_0 . groupby ( level = 'str_0' ) . agg ( lambda x : x . get_level_values ( 1 ) . \n nunique ( ) )
+P-309	-0.0143 -0.0503 -0.8856 -0.0355 -2.4321 -0.0168 -0.0020 -0.0623 -0.0426 -0.0478 -0.0361 -0.0226 -0.0140 -0.0156 -0.0281 -0.0193 -1.2984 -0.0330 -0.5085 -0.0362 -0.0541 -0.6922 -0.3714 -0.0349 -0.0358 -0.0351 -0.0349
+S-38	<unk> a matrix var_0 with a 3d tensor var_1 in scipy
+T-38	scipy . tensordot ( <<unk>> , T , axes = [ 1 , 1 ] ) . swapaxes ( 0 , 1 )
+H-38	-0.7694834470748901	setattr ( self , var_1 , var_0 )
+P-38	-2.4280 -0.0270 -0.2752 -0.0296 -0.0016 -0.0270 -0.0265 -0.0307 -0.0301
+S-440	load data containing str_0 from file str_1 into numpy array var_0
+T-440	<<unk>> = numpy . fromiter ( codecs . open ( <<unk>> , encoding = 'utf-8' ) , dtype = '<U2' )
+H-440	-0.7227498888969421	var_0 = numpy . fromfile ( 'str_0' , dtype = numpy . float32 )
+P-440	-0.0155 -0.0185 -0.6965 -0.0376 -1.8508 -0.0288 -0.0541 -0.0252 -0.0395 -0.0304 -0.4561 -0.0359 -0.3088 -0.0376 -0.0345
+S-111	check if a directory var_0 exists and create it if necessary
+T-111	try : \n os . makedirs ( path ) \n except OSError : \n if ( not os . path . isdir ( path ) ) : \n raise
+H-111	-0.1998080611228943	os . path . exists ( var_0 )
+P-111	-0.0485 -0.0404 -0.0964 -0.0408 -0.3602 -0.0326 -0.0606 -0.0346 -0.0326
+S-113	check if a directory var_0 exists and create it if necessary
+T-113	try : \n os . makedirs ( path ) \n except OSError as exception : \n if ( exception . errno != errno . EEXIST ) : \n raise
+H-113	-0.1998080611228943	os . path . exists ( var_0 )
+P-113	-0.0485 -0.0404 -0.0964 -0.0408 -0.3602 -0.0326 -0.0606 -0.0346 -0.0326
+S-231	group a list of dicts var_0 into one dict by key
+T-231	print ( dict ( zip ( <<unk>> [ 0 ] , zip ( * [ list ( d . values ( ) ) for d in <<unk>> ] ) ) ) )
+H-231	-0.5045671463012695	[ dict ( t ) for t in var_0 ]
+P-231	-0.3138 -0.1821 -0.0251 -0.2845 -0.0389 -0.0152 -0.2638 -0.0136 -0.5675 -0.3863 -0.0360
+S-382	numpy concatenate two <unk> var_0 and var_1 along the first axis
+T-382	c = np . r_ [ ( a [ None , : ] , b [ None , : ] ) ]
+H-382	-0.9845221638679504	np . dot ( var_0 , var_1 , var_2 )
+P-382	-0.9532 -0.0277 -1.4036 -0.0380 -1.2205 -0.0213 -0.1604 -0.0500 -0.1664 -0.0653 -0.0437
+S-259	regex , find str_0s only in the middle of string var_0
+T-259	re . findall ( 'n(?<=[^n]n)n+(?=[^n])(?i)' , s )
+H-259	-0.5338230729103088	re . findall ( '(?=(\\w\\w))' , 'var_0' )
+P-259	-0.1622 -0.0354 -0.8015 -0.0312 -0.8738 -0.0194 -0.0088 -0.0321 -0.0308
+S-343	find the index of an element str_0 in a list var_0
+T-343	[ x for x in range ( len ( <<unk>> ) ) if <<unk>> [ x ] == <<unk>> ]
+H-343	-0.35684114694595337	max ( var_0 , key = lambda i : var_0 [ i ] ) [ 'str_0' ]
+P-343	-0.1472 -0.0279 -0.1799 -0.0531 -0.0445 -0.0373 -0.0788 -0.2517 -0.0335 -0.0514 -0.3683 -0.0052 -0.0388 -0.0378 -0.0315 -0.5585 -0.0279 -0.0480
+S-19	run script str_0 with argument str_1 on terminal using python executable
+T-19	subprocess . call ( [ 'python.exe' , <<unk>> , <<unk>> ] )
+H-19	-0.8643903732299805	os . system ( <unk> <unk> )
+P-19	-2.1824 -0.0317 -0.0037 -0.0302 -0.0782 -0.0641 -0.5907 -0.0289
+S-245	separate <unk> delimited by one or more <unk> into a list
+T-245	re . split ( <<unk>> <<unk>> , <<unk>> <<unk>> sample <<unk>> )
+H-245	-0.7904223799705505	[ list ( x ) for x in s . split ( ) ]
+P-245	-0.6694 -1.0998 -0.0343 -0.3020 -0.0386 -0.0134 -0.0131 -0.0173 -1.1165 -0.0323 -0.0059 -0.0341 -0.5781 -0.0263 -0.0325
+S-185	split a string str_0 by str_1 keeping str_1 in the result
+T-185	<<unk>> . replace ( '/' , '/\x00/' ) . split ( '\x00' )
+H-185	-0.3264840245246887	re . split ( 'str_1' , 'str_0' )
+P-185	-0.4295 -0.0331 -0.0167 -0.0272 -0.6193 -0.0242 -0.0092 -0.0319 -0.0291
+S-159	<unk> reverse of list <unk> from list str_0 using extended slicing
+T-159	[ x [ : : - 1 ] for x in b ]
+H-159	-0.6737231612205505	[ x for x in str_0 if x [ 2 : ] == str_1 ]
+P-159	-0.1117 -0.3341 -0.0712 -0.0273 -0.0141 -0.1313 -0.1487 -0.0073 -0.1794 -0.7213 -0.4206 -0.4626 -0.1355 -0.7337 -0.0324 -0.0248
+S-92	count non zero <unk> in each column in <unk> data frame
+T-92	df . astype ( bool ) . sum ( axis = 1 )
+H-92	-0.4795774519443512	df . apply ( pd . Series )
+P-92	-0.0583 -0.0319 -0.2787 -0.0321 -0.8261 -0.0342 -0.2306 -0.1027 -0.1976
+S-156	convert index at level 0 into a column in dataframe var_0
+T-156	df . reset_index ( level = 0 , inplace = True )
+H-156	-0.12306687235832214	var_0 . columns = var_0 . columns . get_level_values ( 0 )
+P-156	-0.0123 -0.0471 -0.2098 -0.0245 -0.0854 -0.0367 -0.0215 -0.0193 -0.0101 -0.0330 -0.0015 -0.0341 -0.0380
+S-266	write <unk> in dataframe var_0 to table str_0 in schema str_1
+T-266	df . to_sql ( 'test' , engine , schema = <<unk>> )
+H-266	-0.5543224215507507	var_0 . to_csv ( 'str_1' , cols = [ 'str_0' ] )
+P-266	-0.0069 -0.0373 -2.1716 -0.0351 -0.0915 -0.0300 -0.0193 -0.0282 -0.0372 -0.0269 -0.0321 -0.0291 -0.0378
+S-171	replace all occurences of newlines str_0 with str_1 in dataframe var_0
+T-171	df . replace ( { '\n' : <<unk>> } , regex = True )
+H-171	-0.4418697655200958	var_0 . replace ( <unk> and <unk> , 'str_1' )
+P-171	-0.9408 -0.1337 -0.0019 -0.0305 -0.1515 -0.4373 -0.0244 -0.0233 -0.0511 -0.0344 -0.0335
+S-70	get the last part of a string before the character str_0
+T-70	print ( x . rsplit ( '-' , 1 ) [ 0 ] )
+H-70	-1.11309814453125	re . split ( '[^a-zA-Z]*' , 'str_0' )
+P-70	-1.0258 -0.0363 -0.8315 -0.0280 -2.1290 -0.0182 -0.0304 -0.0301 -0.0306
+S-417	delete all <unk> of a character str_0 in a string str_1
+T-417	re . sub ( 'i' , '' , <<unk>> is <<unk>> )
+H-417	-0.2862333357334137	re . sub ( '\\*\\*+' , 'str_0' , str_1 )
+P-417	-0.1682 -0.0305 -0.0231 -0.0231 -0.8147 -0.0208 -0.0060 -0.0221 -0.0395 -0.0311 -0.0274
+S-189	check <unk> of string var_0 are true predication of function var_1
+T-189	all ( <<unk>> ( x ) for x in string )
+H-189	-0.9302043914794922	var_1 ( var_0 )
+P-189	-0.7111 -0.3090 -0.5090 -0.8859 -0.0282
+S-383	numpy concatenate two <unk> var_0 and var_1 along the first axis
+T-383	np . array ( ( a , b ) )
+H-383	-0.9845221638679504	np . dot ( var_0 , var_1 , var_2 )
+P-383	-0.9532 -0.0277 -1.4036 -0.0380 -1.2205 -0.0213 -0.1604 -0.0500 -0.1664 -0.0653 -0.0437
+S-114	<unk> a separate word str_0 by str_1 in a string str_2
+T-114	re . sub ( '\\bH3\\b' , <<unk>> , text )
+H-114	-0.5255590677261353	re . sub ( '^((.*?cat.*?){1})cat' , '\\1Bull' , str_2 )
+P-114	-0.0016 -0.0331 -0.5181 -0.0264 -1.1118 -0.0172 -0.4212 -0.0198 -0.0003 -0.0315 -0.0345
+S-473	write dataframe var_0 , excluding index , to a csv file
+T-473	df . to_csv ( filename , index = False )
+H-473	-0.47337621450424194	var_0 . write . csv ( 'str_0' )
+P-473	-0.0125 -0.0373 -0.6684 -0.0761 -0.0320 -0.0369 -0.8329 -0.0428 -0.0301
+S-211	<unk> the first row of numpy matrix var_0 to a list
+T-211	numpy . array ( a ) [ 0 ] . tolist ( )
+H-211	-0.6677941679954529	numpy . sort ( var_0 , 0 , axis = 0 )
+P-211	-0.0433 -0.0393 -0.5006 -0.0405 -0.0313 -0.0225 -1.3528 -0.2937 -0.6467 -0.0326 -0.0254 -0.0473 -0.0358
+S-349	<unk> string var_0 at every space followed by an upper-case letter
+T-349	re . split ( <<unk>> <<unk>> , input )
+H-349	-0.5288909077644348	re . split ( <unk> <unk> , var_0 )
+P-349	-0.2419 -0.0270 -1.2293 -0.0270 -0.3745 -0.0834 -0.0157 -0.0410 -0.0376 -0.0283
+S-441	reverse sort list of dicts var_0 by value for key var_1
+T-441	l = sorted ( l , key = itemgetter ( <<unk>> ) , reverse = True )
+H-441	-0.2544243037700653	sorted ( var_0 , key = lambda x : var_1 . index ( x [ 1 ] ) , reverse = True )
+P-441	-0.0360 -0.0309 -0.1144 -0.0228 -0.0164 -0.0309 -0.0155 -0.2366 -0.0212 -0.1598 -0.0274 -0.0081 -0.0276 -0.4402 -0.0963 -0.0935 -0.0376 -0.0460 -0.1154 -0.0256 -0.0340 -0.0081 -0.0336 -0.0348
+S-95	search for <unk> of regex pattern str_0 in xml string var_0
+T-95	print ( re . search ( <<unk>> , line ) . group ( 0 ) )
+H-95	-0.23012235760688782	re . search ( 'str_0' , var_0 ) . group ( 1 )
+P-95	-0.1990 -0.0340 -0.0879 -0.0313 -0.0080 -0.0228 -0.0328 -0.2745 -0.0599 -0.0575 -0.0335 -0.2153 -0.0318 -0.0326
+S-483	<unk> get maximum value associated with field str_0 in model var_0
+T-483	<<unk>> . objects . filter ( group = group ) . order_by ( '-added' ) [ 0 ]
+H-483	-0.5936267375946045	var_0 [ var_0 [ 'str_0' ]
+P-483	-0.0627 -0.7159 -0.3273 -0.3159 -0.0110 -0.0351 -0.4401
+S-130	get the largest key in a dictionary var_0 with non-zero value
+T-130	max ( k for k , v in x . items ( ) if v != 0 )
+H-130	-0.6207744479179382	max ( list ( var_0 . keys ( ) ) , key = int )
+P-130	-0.8016 -0.0280 -0.2414 -0.0288 -0.0112 -0.0302 -0.7220 -0.0301 -0.0320 -0.0333 -0.0181 -0.0267 -0.0265 -1.1845 -0.0318 -0.0303
+S-99	lower a string var_0 and remove non-alphanumeric <unk> aside from space
+T-99	re . sub ( '[^\\sa-zA-Z0-9]' , '' , text ) . lower ( ) . strip ( )
+H-99	-0.3469061553478241	re . sub ( <unk> <unk> , '' , var_0 )
+P-99	-0.3746 -0.0282 -0.2025 -0.0241 -0.6587 -0.0688 -0.0163 -0.0472 -0.0162 -0.0399 -0.0367 -0.0276
+S-196	reverse list var_0 based on the var_1 attribute of each object
+T-196	<<unk>> . sort ( key = lambda x : x . count , reverse = True )
+H-196	-0.5539497137069702	[ x for x in var_1 if x not in var_0 ]
+P-196	-0.7516 -0.2970 -0.1300 -0.0337 -0.0214 -0.0307 -0.3598 -0.0202 -0.7823 -0.0337 -0.0709 -0.0176 -0.0323
+S-118	get a dictionary var_0 of key-value <unk> in <unk> cursor var_1
+T-118	<<unk>> = dict ( ( record [ '_id' ] , record ) for record in cursor )
+H-118	-0.28711551427841187	dict ( ( k , v ) for k , v in var_0 . items ( ) if v )
+P-118	-0.1070 -0.0287 -0.0879 -0.5836 -0.0217 -0.0024 -0.0406 -0.0129 -0.0536 -0.0293 -0.0032 -0.0193 -0.3270 -0.0438 -0.0185 -0.0309 -0.0384 -0.0822 -0.0109 -0.2093 -0.0329
+S-151	split a string var_0 with into all <unk> of repeated <unk>
+T-151	[ m . group ( 0 ) for m in re . finditer ( '(\\d)\\1*' , s ) ]
+H-151	-0.4566481113433838	re . findall ( '.{,16}\\b' , var_0 )
+P-151	-0.3396 -0.0265 -0.0370 -0.0295 -1.1792 -0.0158 -0.0185 -0.0344 -0.0261
+S-108	use str_0 operator to print variable <unk> var_0 inside a string
+T-108	<<unk>> string <<unk>> <<unk>> <<unk>> <<unk>> <<unk>> <<unk>> % ( str1 , 'geo.tif' )
+H-108	-0.6518711447715759	print ( <unk> <unk> <unk> . format ( var_0 ) )
+P-108	-0.0011 -0.0372 -0.2125 -0.7151 -0.6294 -0.4088 -0.6725 -0.0315 -0.0897 -0.0314 -0.0339 -0.0320
+S-15	get the first object from a queryset in django model var_0
+T-15	Entry . objects . filter ( ) [ : 1 ] . get ( )
+H-15	-0.9464168548583984	var_0 . objects . nodeValue
+P-15	-0.1087 -0.0440 -0.1524 -0.0336 -2.3987 -0.0357
+S-381	numpy concatenate two <unk> var_0 and var_1 along the second axis
+T-381	print ( concatenate ( ( a , b ) , axis = 1 ) )
+H-381	-0.6289893984794617	pd . concat ( [ var_0 , var_1 ] , axis = 1 )
+P-381	-1.9331 -0.0285 -0.1049 -0.0352 -0.1048 -0.2805 -0.0151 -0.0273 -0.0221 -0.0288 -0.3454 -0.0325 -0.1665 -0.0374 -0.0316
+S-456	get all the <unk> except <unk> from the list str_0 .
+T-456	[ element for element in lst if not isinstance ( element , str ) ]
+H-456	-0.30022966861724854	[ x for x in str_0 if x [ 2 ] == str_1 ]
+P-456	-0.0847 -0.0256 -0.0339 -0.0139 -0.0154 -0.0609 -0.1184 -0.0046 -0.1951 -0.6674 -0.0388 -0.0366 -0.1759 -0.0312 -0.0222
+S-380	numpy concatenate two <unk> var_0 and var_1 along the first axis
+T-380	print ( concatenate ( ( a , b ) , axis = 0 ) )
+H-380	-0.9845221638679504	np . dot ( var_0 , var_1 , var_2 )
+P-380	-0.9532 -0.0277 -1.4036 -0.0380 -1.2205 -0.0213 -0.1604 -0.0500 -0.1664 -0.0653 -0.0437
+S-54	sum <unk> at index var_0 of each list in list var_1
+T-54	print ( sum ( row [ <<unk>> ] for row in data ) )
+H-54	-0.5306394696235657	sum ( x * y for x , y in zip ( var_0 , var_1 ) )
+P-54	-0.4329 -0.0378 -2.0994 -0.0065 -0.0184 -0.0106 -0.0418 -0.0222 -0.0166 -0.0160 -0.0107 -0.0313 -0.1284 -0.0285 -0.0065 -0.0336 -0.0344 -0.0302
+S-453	sort list var_0 based on second index of each string var_1
+T-453	sorted ( <<unk>> , key = lambda s : s . split ( ',' ) [ 1 ] )
+H-453	-0.24059247970581055	var_0 . sort ( key = lambda x : var_1 . index ( x [ 1 ] ) )
+P-453	-0.5664 -0.0300 -0.0366 -0.0290 -0.0096 -0.0274 -0.1276 -0.0118 -0.0430 -0.2333 -0.0360 -0.0000 -0.0287 -0.0024 -0.0106 -0.1136 -0.0198 -0.0384 -0.0431 -0.0445
+S-434	write multiple <unk> var_0 , var_1 and var_2 in one line in a file var_3
+T-434	target . write ( '%r\n%r\n%r\n' % ( <<unk>> , <<unk>> , <<unk>> ) )
+H-434	-1.0155593156814575	var_0 . set_size_inches ( var_1 , var_2 , forward = True )
+P-434	-1.3431 -0.0767 -2.6515 -0.0348 -0.0528 -0.0224 -0.0034 -0.0258 -0.2933 -0.0235 -0.1305 -0.0429 -0.0315
+S-74	print a list var_0 and move first 3 <unk> to the end of the list
+T-74	print ( l [ 3 : ] + l [ : 3 ] )
+H-74	-0.40134087204933167	print ( '[%s]' % <unk> <unk> . join ( '%.3f' % v for v in var_0 ) )
+P-74	-0.0490 -0.0322 -0.5587 -0.1560 -0.1204 -0.0506 -0.0345 -0.0058 -0.0318 -0.5706 -0.1697 -0.1681 -0.0163 -0.0376 -0.0170 -0.0505 -0.0463 -0.2009 -0.0322
+S-462	join together with str_0 <unk> inside a list indexed with str_1 within a dictionary var_0
+T-462	""",""" . join ( <<unk>> [ <<unk>> ] )
+H-462	-0.8543734550476074	[ { 'str_0' : x for x in var_0 ]
+P-462	-0.1574 -0.4026 -1.8921 -0.0975 -0.0393 -0.3524 -0.0196 -0.0238 -0.0216 -0.5712 -0.0240
+S-477	python regex - check for a capital letter with a following lowercase in string var_0
+T-477	re . sub ( '^[A-Z0-9]*(?![a-z])' , '' , string )
+H-477	-0.5949456095695496	re . sub ( '(?<!\\S)((\\S+)(?:\\s+\\2))(?:\\s+\\2)+(?!\\S)' , '\\1' , var_0 )
+P-477	-0.0043 -0.0362 -0.1571 -0.0294 -1.7323 -0.0190 -0.4212 -0.0202 -0.0242 -0.0331 -0.0310
+S-314	<unk> var_0 to contain the <unk> from list var_1 excluding the empty <unk> from var_1
+T-314	<<unk>> = [ x for x in <<unk>> if x ]
+H-314	-1.0584385395050049	[ x for x in var_1 if not in var_0 ]
+P-314	-0.0792 -3.3339 -0.0120 -0.1816 -0.0129 -0.0341 -0.1397 -0.3142 -0.1359 -0.3913 -0.0392 -0.0269
+S-195	sort a list of <unk> var_0 , based on a function var_1 in descending order
+T-195	<<unk>> . sort ( key = <<unk>> , reverse = True )
+H-195	-0.5347232818603516	sorted ( var_0 , key = lambda x : var_1 . index ( x . values , reverse = True ) )
+P-195	-0.4582 -0.0296 -0.4537 -0.0238 -0.0908 -0.0335 -0.1536 -0.0409 -0.0213 -0.4905 -0.0478 -0.0141 -0.0290 -0.3440 -0.4716 -0.3029 -0.1583 -0.1737 -0.0303 -0.0033 -0.0397 -0.0594 -0.0385
+S-445	<unk> to create a list of date string in str_0 format with <unk> <unk> ?
+T-445	[ d . strftime ( '%Y%m%d' ) for d in pandas . date_range ( '20130226' , '20130302' ) ]
+H-445	-0.3819352090358734	datetime . datetime . strptime ( 'str_0' , <unk> <unk> <unk> )
+P-445	-0.2420 -0.0322 -0.2227 -0.0368 -0.2334 -0.0295 -0.0173 -0.0244 -0.6769 -0.0142 -0.0727 -0.1233 -0.0543
+S-388	<unk> do <unk> <unk> <unk> t1 ( <unk> * <unk> t2 ) in <unk> ?
+T-388	session . execute ( <<unk>> <<unk>> <<unk>> <<unk>> * <<unk>> <<unk>> )
+H-388	-0.879603922367096	plt . figure ( figsize = ( 3 , 4 ) )
+P-388	-0.5381 -0.0273 -1.2665 -0.0285 -0.8293 -0.0281 -0.0258 -1.1350 -0.0217 -0.0968 -0.0346 -0.0359 -0.0312
+S-290	<unk> <unk> : <unk> to replace a <unk> in a column of a dataframe ?
+T-290	df [ 'range' ] . replace ( ',' , '-' , inplace = True )
+H-290	-0.5585002899169922	df . apply ( lambda x : x . fillna ( x . mean ( ) ) , axis = 0 )
+P-290	-0.8518 -0.0352 -0.2062 -0.0284 -0.2610 -0.2920 -0.0151 -0.4807 -0.0227 -0.0307 -0.0281 -0.1736 -0.0354 -0.4035 -0.0296 -0.0238 -0.0343 -0.0491 -0.0586 -0.0331 -0.5031 -0.0352 -0.0334
+S-438	calculate the mean of each element in array var_0 with the element previous to it
+T-438	( x [ 1 : ] + x [ : - 1 ] ) / 2
+H-438	-0.5145471692085266	np . isnan ( var_0 ) . sum ( )
+P-438	-0.0138 -0.0422 -1.0880 -0.0333 -0.0723 -0.0365 -0.0337 -0.1145 -0.0335 -0.0361 -0.6651
+S-213	convert <unk> of each tuple in list var_0 into a string separated by character str_0
+T-213	<<unk>> <<unk>> . join ( [ ( '%d@%d' % t ) for t in l ] )
+H-213	-0.7934482097625732	list ( map ( 'str_0' , var_0 ) )
+P-213	-1.3514 -0.0333 -1.2427 -0.0292 -0.3007 -0.0614 -0.0255 -0.0577 -0.0294 -0.0275
+S-433	<unk> the corresponding decimal <unk> for binary <unk> of each boolean element in list var_0
+T-433	sum ( 1 << i for i , b in enumerate ( x ) if b )
+H-433	-0.6468362212181091	[ list ( x ) for x in zip ( * var_0 ) ]
+P-433	-0.0194 -0.5116 -0.0310 -0.3637 -0.0296 -0.0252 -0.0320 -0.0233 -1.9176 -0.0312 -0.1466 -0.0332 -0.0325 -0.0478 -0.0396
+S-254	convert a <unk> series var_0 into a <unk> dataframe var_1 with <unk> var_2 and var_3
+T-254	pd . DataFrame ( { <<unk>> : <<unk>> . index , <<unk>> : <<unk>> . values } )
+H-254	-0.5940536260604858	pd . concat ( [ var_0 , var_2 . var_1 ] , axis = 1 )
+P-254	-1.1146 -0.0371 -0.8092 -0.0311 -0.0242 -0.0432 -0.0131 -0.1640 -0.0341 -0.0554 -0.0252 -0.0214 -0.7464 -0.0276 -0.0121 -0.0409 -0.0520
+S-3	format number of <unk> between <unk> var_0 , str_0 and str_1 to be str_2
+T-3	print ( <<unk>> : <<unk>> % ( 20 , <<unk>> , 20 , <<unk>> <<unk>> ) )
+H-3	-0.7664960026741028	print ( 'str_1' . format ( var_0 ) )
+P-3	-0.1665 -0.0295 -2.0421 -0.0490 -0.0311 -0.0310 -0.5900 -0.0271 -0.0421 -0.0432
+S-452	replace dot <unk> str_0 associated with ascii <unk> in list var_0 with space str_1
+T-452	[ re . sub ( '(?<!\\d)\\.(?!\\d)' , <<unk>> <<unk>> , i ) for i in s ]
+H-452	-0.42908281087875366	re . sub ( '(str_0)' , 'str_1' , var_0 )
+P-452	-0.2226 -0.0557 -0.0050 -0.0262 -1.3496 -0.0191 -0.0088 -0.0195 -0.0392 -0.0343 -0.0286
+S-458	sort a list of <unk> var_0 by <unk> in key var_1 in descending order
+T-458	newlist = sorted ( l , key = itemgetter ( 'name' ) , reverse = True )
+H-458	-0.6262198686599731	sorted ( var_0 , key = lambda x : var_1 . index ( x [ 1 ] ) , reverse = True )
+P-458	-0.6075 -0.0284 -0.2275 -0.0230 -0.0683 -0.0329 -0.3260 -0.2453 -0.0233 -0.0535 -0.0371 -0.0114 -0.0263 -1.0481 -0.7298 -0.2774 -0.0334 -0.2072 -0.0211 -0.0772 -0.0364 -0.0020 -0.0384 -0.0340
+S-419	<unk> to delete all <unk> of a character in a string in python ?
+T-419	"""""" . join ( [ char for char in <<unk>> is <<unk>> if char != 'i' ] )
+H-419	-0.381877601146698	re . sub ( '[^0-9a-zA-Z]+' , '*' , <unk> <unk> )
+P-419	-0.0977 -0.0336 -0.0985 -0.0240 -0.4139 -0.0179 -0.8766 -0.0186 -0.0138 -0.0423 -0.0346 -0.0244
+S-282	<unk> <unk> var_0 in ascending order based on the <unk> value of <unk> <unk>
+T-282	sorted ( list5 , lambda x : ( degree ( x ) , x ) )
+H-282	-0.5644229054450989	var_0 . sort ( key = lambda x : x . lower ( ) )
+P-282	-0.1717 -0.0348 -0.4909 -0.0292 -0.2712 -0.0305 -0.1810 -0.0484 -0.0269 -0.1180 -0.0583 -1.3421 -0.0280 -0.0333 -0.0859 -0.0288
+S-457	<unk> a list of <unk> var_0 by the value of the dictionary key var_1
+T-457	newlist = sorted ( <<unk>> , key = lambda k : k [ 'name' ] )
+H-457	-0.7234131693840027	max ( var_1 , key = lambda x : var_1 [ x ] [ 'var_0' ] )
+P-457	-1.8254 -0.0310 -1.4425 -0.0206 -0.0389 -0.0367 -0.1003 -0.0311 -0.0443 -0.1430 -0.0315 -0.0193 -0.0336 -0.1158 -0.0819 -0.0334 -0.0358 -0.0327
+S-170	select <unk> in a dataframe var_0 column str_0 between two <unk> int_0 and int_1
+T-170	df = df [ ( df [ <<unk>> ] >= <<unk>> ) & ( df [ <<unk>> ] <= <<unk>> ) ]
+H-170	-0.5188149213790894	var_0 [ 'str_0' ] . str . lower ( )
+P-170	-0.0148 -0.2523 -0.1711 -0.0522 -0.0292 -0.0626 -0.4663 -1.0085 -0.0344 -0.0473 -0.0482
+S-129	get the largest key whose not associated with value of 0 in dictionary var_0
+T-129	( k for k , v in x . items ( ) if v != 0 )
+H-129	-0.9575542211532593	{ k : var_0 [ k ] for k in ( 0 ) }
+P-129	-2.2834 -0.2505 -0.0974 -0.0431 -0.1383 -0.6095 -0.0344 -0.0075 -0.5032 -0.0093 -0.1705 -0.5698 -0.0508 -0.0616 -0.0326
+S-313	<unk> a new list var_0by removing empty list from a list of <unk> var_1
+T-313	<<unk>> = [ x for x in <<unk>> if x != [ ] ]
+H-313	-0.7648381590843201	[ x for x in var_1 if x not in var_0 ]
+P-313	-0.0416 -0.3685 -0.0118 -0.1083 -0.0117 -0.0418 -0.3763 -0.1243 -0.4732 -0.0215 -1.9344 -0.0164 -0.0341
+S-403	get the first value from dataframe var_0 where column str_0 is equal to str_1
+T-403	df . loc [ df [ <<unk>> ] == 'C' , <<unk>> ] . values [ 0 ]
+H-403	-0.35938963294029236	var_0 . groupby ( 'User' ) [ 'str_0' ] . transform ( sum ) == 0
+P-403	-0.0133 -0.3813 -0.5307 -0.0366 -0.7441 -0.0381 -0.0142 -0.0139 -0.0287 -0.0312 -0.0109 -0.0347 -0.0058 -0.0422 -0.0013 -0.0021 -0.0381
+S-285	remove <unk> from list var_0 that have an index number mentioned in list var_1
+T-285	newlist = [ v for i , v in enumerate ( <<unk>> ) if i not in <<unk>> ]
+H-285	-0.670070230960846	[ x for x in var_1 if x is not var_0 ]
+P-285	-0.7357 -0.8412 -0.0092 -0.1802 -0.0378 -0.0758 -0.0083 -0.0513 -1.0302 -0.0002 -0.0970 -0.0216 -0.0339
+S-87	combine <unk> of each list in list var_0 into <unk> of a single integer
+T-87	[ '' . join ( str ( d ) for d in x ) for x in L ]
+H-87	-0.6828972101211548	map ( dict , zip ( * var_0 ) )
+P-87	-2.2637 -0.0330 -0.2957 -0.0148 -0.0059 -0.0307 -0.0966 -0.0253 -0.0376 -0.0379 -0.0376
+S-350	send multipart encoded file var_0 to url var_1 with <unk> var_2 and metadata var_3
+T-350	r = requests . post ( url , files = files , headers = headers , data = data )
+H-350	-0.6946552395820618	pickle . dump ( var_0 , var_1 )
+P-350	-2.0318 -0.0554 -0.3549 -0.0361 -0.0199 -0.0211 -0.0033 -0.0383 -0.0353
+S-467	sort a list of dictionary var_0 first by key var_1 and then by var_2
+T-467	list . sort ( key = lambda item : ( item [ <<unk>> ] , item [ <<unk>> ] ) )
+H-467	-0.3697054982185364	var_0 . sort ( key = lambda x : ( x . var_1 , x . var_2 ) , reverse = True )
+P-467	-0.3035 -0.3412 -0.0017 -0.0366 -0.0031 -0.0347 -0.0127 -0.1294 -0.0695 -0.0550 -0.5411 -0.5850 -0.0027 -0.0243 -0.0260 -0.0874 -0.0247 -0.0532 -0.0276 -0.0139 -0.0344 -0.0018 -0.0391 -0.0403
+S-340	append a tuple of <unk> from list var_0 with <unk> str_0 to list var_1
+T-340	b . append ( ( a [ 0 ] [ 0 ] , a [ 0 ] [ 2 ] ) )
+H-340	-0.7182672023773193	[ ( a + b ) for a , b in zip ( var_0 , var_1 ) ]
+P-340	-1.0865 -0.4699 -1.6253 -0.0067 -0.0488 -0.0551 -0.0114 -0.3208 -0.0260 -0.1766 -0.0082 -0.0786 -0.0290 -0.1454 -0.0247 -0.0089 -0.0263 -0.0229 -0.0317
+S-173	create a list containing each two adjacent <unk> in string var_0 <unk> <unk> <unk>
+T-173	[ ( x + y ) for x , y in zip ( word , word [ 1 : ] ) ]
+H-173	-0.4725334942340851	print ( '' . join ( '' . join ( i ) for i in zip ( a2 , a1 ) )
+P-173	-0.1104 -0.0362 -0.0888 -0.0383 -0.0082 -0.0365 -0.0501 -0.0356 -0.0099 -0.0368 -0.0557 -0.0400 -0.0309 -0.0040 -0.0187 -0.0427 -0.0367 -0.0474 -0.0255 -0.0202 -0.0405 -0.0474 -2.2405
+S-264	find 10 largest <unk> between each respective <unk> of list var_0 and list var_1
+T-264	heapq . nlargest ( 10 , range ( len ( <<unk>> ) ) , key = lambda i : abs ( <<unk>> [ i ] - <<unk>> [ i ] ) )
+H-264	-0.6918196678161621	var_0 = [ ( i - j ) for i , j in zip ( var_0 , var_1 ) ]
+P-264	-0.7883 -0.3979 -0.3719 -0.4604 -0.1791 -0.0909 -0.7273 -0.0317 -0.0111 -0.0023 -0.0138 -0.1518 -0.0105 -0.0050 -0.0335 -0.8755 -0.0241 -0.0035 -0.0368 -0.0390 -0.0441
+S-31	argparse add argument with flag str_0 and version action of str_1 to parser var_0
+T-31	parser . add_argument ( <<unk>> , action = 'version' , version = <<unk>> <<unk>> )
+H-31	-0.33967551589012146	var_0 [ 'str_1' ] = 'str_0' + var_0 [ 'str_1' ] . astype ( str_0 )
+P-31	-0.1121 -0.4440 -0.4236 -0.0522 -0.0101 -0.2179 -0.0066 -0.0095 -0.0420 -0.0343 -0.0828 -0.0191 -0.2476 -0.0319 -0.0545 -0.0346 -0.0363
+S-492	choose a random file from the directory <unk> of the <unk> drive , str_0
+T-492	random . choice ( os . listdir ( 'C:\\' ) )
+H-492	-0.6068098545074463	os . path . dirname ( os . path . realpath ( __file__ ) )
+P-492	-0.0240 -0.0330 -0.4373 -0.0353 -1.7689 -0.0325 -0.0417 -0.0337 -0.0042 -0.0359 -0.5729 -0.0312 -0.0262 -0.0419 -0.0504 -0.0336
+S-89	write the <unk> of list var_0 concatenated by special character str_0 to file var_1
+T-89	myfile . write ( '\n' . join ( lines ) )
+H-89	-0.5374054312705994	var_1 . write ( '\n' . join ( var_0 ) )
+P-89	-0.3450 -0.0345 -0.0226 -0.0302 -1.5147 -0.0350 -0.0289 -0.0307 -0.2151 -0.0380 -0.0609 -0.0312
+S-20	<unk> can <unk> parse a time string containing <unk> in it with python ?
+T-20	time . strptime ( <<unk>> <<unk>> , <<unk>> <<unk>> )
+H-20	-0.36521875858306885	"""2.7.0_bf4fda703454""" . split ( '_' )
+P-20	-0.1005 -0.0292 -0.9242 -0.0287 -0.0217 -0.0394 -0.0301
+S-177	remove all special <unk> , punctuation and <unk> from a string var_0 using regex
+T-177	re . sub ( '[^A-Za-z0-9]+' , '' , mystring )
+H-177	-0.36569109559059143	re . sub ( '\\w*\\d\\w*' , '' , var_0 ) . strip ( )
+P-177	-0.0093 -0.0349 -0.0038 -0.0281 -1.1174 -0.0181 -0.0008 -0.0182 -0.0474 -0.0377 -0.1871 -0.2493 -0.0315 -0.0410 -0.0322
+S-495	match <unk> whose domain <unk> n't start with var_0 from string var_1 using regex
+T-495	re . findall ( 'http://[^t][^s"]+\\.html' , <<unk>> )
+H-495	-0.43948835134506226	[ m . start ( ) for m in re . finditer ( '(?=tt)' , 'var_1' ) ]
+P-495	-0.4094 -0.6153 -0.0218 -0.1716 -0.0251 -0.0389 -0.0192 -0.1049 -0.0170 -0.0028 -0.0362 -0.6964 -0.0272 -0.2222 -0.0236 -0.0271 -0.0316 -0.0497 -0.0317
+S-247	get the value associated with unicode key str_0 of first dictionary in list var_0
+T-247	result [ 0 ] [ <<unk>> ]
+H-247	-0.4280432462692261	print ( var_0 [ 'str_0' ] [ 'str_1' ] )
+P-247	-0.0803 -0.0418 -0.6202 -0.0137 -0.0182 -0.0255 -0.0768 -0.2438 -0.0383 -0.6046 -0.0412
+S-72	add one to the hidden web element with id str_0 with selenium python script
+T-72	browser . execute_script ( "document.getElementById('XYZ').value+='1'" )
+H-72	-0.3968547284603119	driver . find_element_by_xpath ( <unk> <unk> )
+P-72	-0.0145 -0.0348 -0.8556 -0.0322 -0.3006 -0.0576 -0.0537 -0.0329
+S-352	get a list from a list var_0 with <unk> mapped into a dictionary var_1
+T-352	[ dct [ k ] for k in lst ]
+H-352	-0.3699057996273041	[ dict ( zip ( var_0 , x ) ) for x in var_1 ]
+P-352	-0.4639 -0.0147 -0.0320 -1.0437 -0.0284 -0.0449 -0.0225 -0.0936 -0.0299 -0.0467 -0.0133 -0.0289 -0.0172 -0.0013 -0.0371 -0.0342
+S-397	add an item with key str_0 and value 1 to an dictionary var_0
+T-397	<<unk>> . update ( { <<unk>> : 1 } )
+H-397	-0.6561843156814575	var_0 [ 'str_0' ] = list ( var_0 . items ( ) )
+P-397	-0.0338 -0.0928 -0.3997 -0.0324 -0.2150 -1.1236 -0.0342 -0.1279 -0.2675 -0.7135 -0.0317 -0.0350 -0.0553 -0.0343
+S-395	<unk> the integer location of a key var_0 in a <unk> data frame
+T-395	df . index . get_loc ( <<unk>> )
+H-395	-0.8089174628257751	pd . concat ( [ var_0 ] , axis = 1 )
+P-395	-1.9465 -0.0386 -0.2266 -0.0325 -0.0274 -0.4468 -0.1307 -0.1961 -0.5799 -0.0470 -0.0308 -0.0377 -0.0287
+S-145	get index of <unk> in dataframe var_0 which column str_0 <unk> value <unk>
+T-145	df [ df [ <<unk>> ] ] . index . tolist ( )
+H-145	-0.7246329188346863	var_0 . drop ( var_0 . index [ 'str_0' ] , inplace = True )
+P-145	-0.0167 -0.4083 -1.1972 -0.0319 -0.6173 -0.0243 -0.1584 -0.0967 -0.8257 -0.0592 -0.0647 -0.2171 -0.0230 -0.0149 -0.0335 -0.0357
+S-421	get <unk> from list var_0 , that have a field var_1 value int_0
+T-421	[ x for x in <<unk>> if x . n == 30 ]
+H-421	-0.2739149332046509	var_0 = [ x for x in var_1 if x ]
+P-421	-0.1365 -0.2357 -0.0296 -0.2241 -0.0450 -0.0207 -0.0210 -0.0434 -0.0156 -0.0279 -0.3613 -0.0558
+S-265	<unk> find all str_0 <unk> in <unk> string var_0 with class of str_1
+T-265	soup . find_all ( <<unk>> , { 'class' : <<unk>> <<unk>> } )
+H-265	-0.3947024345397949	re . sub ( '(str_0)' , 'str_1' , var_0 )
+P-265	-0.0435 -0.0319 -0.7212 -0.0296 -0.7021 -0.0160 -0.0126 -0.0159 -0.0183 -0.0373 -0.0354
+S-420	<unk> <unk> of <unk> dataframe var_0 having float_0 in column at index str_0
+T-420	df . dropna ( subset = [ 1 ] )
+H-420	-0.4814090430736542	var_0 . ix [ var_0 . str_1 ] = 'str_0'
+P-420	-0.0115 -0.0747 -0.1858 -0.0381 -0.0880 -0.0387 -0.6014 -0.2751 -0.3383 -0.1443 -0.2334
+S-323	get list of <unk> from dictionary str_0 w.r.t . list of <unk> str_1
+T-323	[ mydict [ x ] for x in <<unk>> ]
+H-323	-0.9198334217071533	dict ( ( x [ 'str_0' ] , x ) for x in str_1 )
+P-323	-3.3169 -0.0341 -0.2151 -0.7537 -0.1114 -0.0524 -0.0279 -0.0788 -0.0641 -0.0349 -0.0095 -0.0285 -0.0175 -0.0078 -0.0463 -0.0560
+S-119	<unk> new matrix object by concatenating data from matrix <unk> and matrix <unk>
+T-119	np . concatenate ( ( A , B ) )
+H-119	-1.4865330457687378	np . dot ( [ 1 , 0 , 0 , 1 , 0 , 0 ] , [ [ 0 , 1 ] , [ 1 ] , [ 1 , 0 ] , 0 ] , [ 1 , 0 ] , [ 1 ] , 0 , [ 1 ] , 1 ] )
+P-119	-0.6236 -0.0259 -0.3644 -0.0308 -0.3209 -0.0976 -0.0200 -0.3048 -0.0203 -0.6392 -0.0311 -0.2338 -0.0309 -0.0711 -0.0326 -0.0840 -0.0541 -0.0243 -0.0530 -0.3142 -0.1815 -0.0339 -0.0632 -0.0587 -0.0264 -0.4094 -0.0739 -1.0157 -0.0266 -0.6843 -0.1792 -0.1133 -0.5080 -0.3251 -0.0292 -0.6369 -0.1909 -0.0368 -0.8922 -0.1239 -0.0395 -0.5607 -0.2304 -0.0401 -1.3954 -0.0985 -0.7896 -0.0465 -1.3741 -0.1170 -1.0035 -0.1882 -0.3060 -0.5032 -0.4539 -0.1619 -0.6695 -0.0280
+S-197	sort a list of <unk> var_0 in reverse order by their var_1 property
+T-197	<<unk>> . sort ( key = lambda x : x . count , reverse = True )
+H-197	-0.3677402436733246	var_0 . sort ( key = operator . attrgetter ( 'var_1' ) )
+P-197	-0.1175 -0.0282 -0.0005 -0.0302 -0.0213 -0.0264 -1.1916 -0.0309 -0.1967 -0.0293 -0.0059 -0.0377 -0.0390 -0.0364
+S-316	get all text that is not enclosed within square <unk> in string var_0
+T-316	re . findall ( '(.*?)\\[.*?\\]' , <<unk>> )
+H-316	-0.6966280937194824	re . findall ( '$\\d+\\W+|\\b\\d+\\b|\\W+\\d+$' , var_0 )
+P-316	-0.0233 -0.0335 -0.1483 -0.0289 -2.2496 -0.0220 -0.0367 -0.0307 -0.0303
+S-21	convert a string var_0 with dot and comma into a float number var_1
+T-21	<<unk>> = float ( my_string . replace ( ',' , '' ) )
+H-21	-0.8091528415679932	var_1 = int ( '' . join ( var_0 ) )
+P-21	-0.1011 -0.0119 -0.2393 -0.0309 -0.7041 -0.0339 -0.0401 -0.0341 -1.4221 -0.0432 -0.8972 -0.0359
+S-191	how to get a single result from a <unk> query in python ?
+T-191	cursor . fetchone ( ) [ 0 ]
+H-191	-0.6194320321083069	os . system ( <unk> <unk> )
+P-191	-1.6029 -0.0262 -0.3070 -0.0262 -0.0671 -0.0399 -0.0596 -0.0281
+S-305	filter dataframe var_0 by <unk> in column var_1 that appear more than once
+T-305	df . groupby ( 'A' ) . filter ( lambda x : len ( x ) > 1 )
+H-305	-0.4212125241756439	var_0 . groupby ( np . arange ( len ( var_0 . columns ) ) // 3 , axis = 1 ) . mean ( )
+P-305	-0.0228 -0.0329 -0.8071 -0.0350 -0.6523 -0.0423 -0.0731 -0.0359 -0.0070 -0.0349 -0.0173 -0.0393 -0.0673 -0.0384 -0.0448 -0.1936 -0.4549 -0.0136 -0.0065 -0.0271 -0.0091 -0.0362 -0.0160 -0.2266 -0.0340 -0.0367 -0.0383
+S-234	find all <unk> in a string var_0 that start with the str_0 sign
+T-234	[ word for word in mystring . split ( ) if word . startswith ( '$' ) ]
+H-234	-0.6074017286300659	re . findall ( '\\b[A-Z]' , var_0 )
+P-234	-0.0300 -0.0353 -0.1040 -0.0292 -1.9400 -0.0172 -0.0513 -0.0321 -0.0308
+S-90	removing an element from a list based on a predicate str_0 or str_1
+T-90	[ x for x in [ 'AAT' , 'XAC' , 'ANT' , 'TTA' ] if 'X' not in x and <<unk>> not in x ]
+H-90	-0.5698971748352051	[ x for x in str_0 if x != str_1 ]
+P-90	-0.0177 -0.0531 -0.0198 -0.1280 -0.0188 -0.6689 -0.0082 -0.0060 -1.5511 -0.0090 -0.0216 -0.0290
+S-134	<unk> datetime field in var_0 to be the existing var_1 plus int_0 <unk>
+T-134	<<unk>> . objects . update ( timestamp = F ( <<unk>> ) + timedelta ( days = 36524.25 ) )
+H-134	-0.8575962781906128	{ var_1 . var_0 }
+P-134	-0.5116 -1.1452 -0.0264 -0.3057 -0.4488 -0.0751
+S-442	<unk> a list of dictionary var_0 based on key var_1 in descending order
+T-442	l = sorted ( l , key = lambda a : a [ <<unk>> ] , reverse = True )
+H-442	-0.4767090082168579	sorted ( var_0 , key = dict . values , reverse = True )
+P-442	-0.4483 -0.0291 -0.1558 -0.0238 -0.0331 -0.0319 -1.1139 -0.0270 -0.4041 -0.0217 -0.0174 -0.0325 -0.0094 -0.0368 -0.0355
+S-252	<unk> if any key in the dictionary var_0 <unk> with the string str_0
+T-252	any ( key . startswith ( <<unk>> ) for key in dict1 )
+H-252	-0.3953382968902588	'str_0' in var_0
+P-252	-0.2100 -0.0080 -0.6701 -0.0202
+S-106	get the content of child tag withvar_0 attribute whose parent <unk> <unk> var_1
+T-106	self . driver . find_element_by_css_selector ( <<unk>> <<unk>> ) . get_attribute ( <<unk>> )
+H-106	-0.46517765522003174	getattr ( var_1 , 'id' , None )
+P-106	-0.2938 -0.0253 -0.0387 -0.0235 -1.2222 -0.0284 -0.0467 -0.0363 -0.0237
+S-100	remove all non-alphanumeric <unk> except space from a string var_0 and lower it
+T-100	re . sub ( '(?!\\s)[\\W_]' , '' , text ) . lower ( ) . strip ( )
+H-100	-0.2792116701602936	re . sub ( <unk> <unk> , '' , var_0 )
+P-100	-0.0086 -0.0409 -0.0230 -0.0251 -0.8899 -0.0746 -0.0181 -0.0108 -0.0168 -0.0649 -0.0365 -0.0311
+S-50	<unk> the order of <unk> , delimited by str_0 , in string var_0
+T-50	<<unk>> . join ( s . split ( '.' ) [ : : - 1 ] )
+H-50	-0.5149428844451904	var_0 . lower ( )
+P-50	-1.0886 -0.0320 -0.2620 -0.0332 -0.0444 -0.0486
+S-258	resized image var_0 to width , height of str_0 with filter of var_1
+T-258	image = image . resize ( ( x , y ) , Image . <<unk>> )
+H-258	-1.1334559917449951	var_0 , var_1 = input ( 'str_0' ) . show ( )
+P-258	-0.0617 -0.2734 -0.0695 -0.0912 -1.6583 -0.0302 -0.2252 -0.0397 -1.2235 -1.5142 -0.0299 -0.0378 -0.0272
+S-320	match multiple regex <unk> with the alternation operator str_0 in a string str_1
+T-320	re . findall ( '\\(.*?\\)|\\w' , <<unk>> )
+H-320	-0.5019765496253967	re . findall ( 'str_0' , 'str_1' )
+P-320	-0.2406 -0.0312 -0.8862 -0.0328 -0.0788 -0.0171 -0.0396 -0.5191 -0.0307
+S-174	<unk> a list of <unk> from a string var_0 using lambda function
+T-174	list ( map ( lambda x , y : x + y , word [ : - 1 ] , word [ 1 : ] ) )
+H-174	-0.4282277524471283	[ list ( x ) for x in var_0 . split ( ) ]
+P-174	-0.0603 -0.4910 -0.0280 -0.0152 -0.0332 -0.0174 -0.0107 -0.0178 -0.9433 -0.0350 -0.1747 -0.0312 -0.2482 -0.0326 -0.0359
+S-44	<unk> each value by str_0 for all <unk> in a dictionary var_0
+T-44	<<unk>> . update ( ( x , y * 2 ) for x , y in list ( <<unk>> . items ( ) ) )
+H-44	-0.3271333575248718	dict ( ( k . lower ( ) , v ) for k , v in var_0 . items ( ) )
+P-44	-0.0545 -0.0338 -0.0853 -0.1603 -0.6929 -0.0738 -0.0336 -0.0383 -0.0269 -0.0316 -0.0474 -0.0147 -0.2704 -0.0332 -0.0163 -0.0299 -0.2115 -0.0420 -0.0723 -0.0357 -0.0357 -0.0704 -0.0363
+S-217	select <unk> from column str_0 for which corresponding <unk> in column str_1 will be greater than int_0 , and in column str_2 - equal int_1 in dataframe var_0
+T-217	df [ 'A' ] [ ( df [ 'B' ] > 50 ) & ( df [ 'C' ] == <<unk>> ) ]
+H-217	-0.6050167083740234	var_0 . iloc [ : , ( np . r_ [ 1 : 10 , ( int_0 ) , ( int_1 ) , axis = 1 ) ]
+P-217	-0.0078 -0.6278 -0.6466 -0.0319 -0.2106 -0.0124 -0.0349 -0.5753 -0.0468 -0.1452 -0.0274 -0.1116 -0.1266 -0.2955 -0.0194 -0.0314 -0.0184 -0.1151 -0.0160 -0.0291 -0.0774 -0.0567 -0.0173 -0.8685 -0.0280 -0.0153 -0.0529 -0.1770 -0.1396
+S-33	<unk> new <unk> object by merging <unk> str_0 of dataframes var_0 and var_1 and rename the <unk> from dataframes var_0 and var_1 with suffix var_4 and var_5 respectively
+T-33	pd . merge ( <<unk>> , <<unk>> , on = [ 'key' ] , suffixes = ( <<unk>> , <<unk>> ) )
+H-33	-0.3911281228065491	df1 . merge ( df2 , on = 'str_0' ) . merge ( df3 , on = 'str_0' )
+P-33	-1.0832 -0.0309 -0.3744 -0.0344 -0.1705 -0.0207 -0.0152 -0.0220 -0.0109 -0.0417 -0.1407 -0.1443 -0.0340 -0.0965 -0.0203 -0.0146 -0.0209 -0.0101 -0.0415 -0.0333
+S-244	selecting <unk> in <unk> ndarray str_0 , where the value in the first column is 0 and value in the second column is 1
+T-244	a [ np . where ( ( a [ : , ( 0 ) ] == 0 ) * ( a [ : , ( 1 ) ] == 1 ) ) ]
+H-244	-0.9302978515625	var_0 [ 0 , 1 ]
+P-244	-0.2730 -0.0204 -0.5690 -1.3166 -0.1223 -0.0259 -0.6630
+S-318	get whatever is between <unk> <unk> a single match , and any char outside <unk> an individual match in string str_0
+T-318	re . findall ( '\\(.+?\\)|\\w' , <<unk>> )
+H-318	-0.30104491114616394	re . findall ( '([a-z])*' , 'str_0' )
+P-318	-0.0054 -0.0332 -0.0171 -0.0315 -0.9222 -0.0195 -0.0292 -0.0322 -0.0349
+S-143	<unk> a list containing the <unk> of <unk> where the value of column str_0 in dataframe var_0 are equal to <unk>
+T-143	df . iloc [ np . flatnonzero ( df [ <<unk>> ] ) ]
+H-143	-0.5855752229690552	var_0 [ var_0 . loc [ 'str_0' ] == True ]
+P-143	-0.0114 -0.2400 -0.1796 -0.2039 -1.1370 -0.0315 -0.0100 -0.0311 -0.0943 -0.4761 -0.0244 -0.1614
+S-355	sort list var_0 in descending order based on the date value in second element of each list in list var_0
+T-355	sorted ( <<unk>> , key = lambda x : datetime . strptime ( x [ 1 ] , '%d/%m/%Y' ) , reverse = True )
+H-355	-0.16617928445339203	var_0 . sort ( key = lambda x : x [ 2 ] , reverse = True )
+P-355	-0.2675 -0.0658 -0.0276 -0.0318 -0.0136 -0.0308 -0.1759 -0.0168 -0.0218 -0.0181 -0.0306 -0.0889 -0.0308 -0.0204 -0.0043 -0.0396 -0.0034 -0.0446 -0.0400
+S-107	joining data from dataframe var_0 with data from dataframe var_1 based on matching <unk> of column str_0 in both dataframes
+T-107	df1 . merge ( df2 , on = <<unk>> )
+H-107	-0.15206217765808105	s1 = pd . merge ( var_0 , var_1 , how = 'inner' , on = [ 'str_0' ] )
+P-107	-0.4004 -0.0228 -0.0521 -0.0450 -0.0475 -0.0308 -0.0511 -0.0244 -0.0016 -0.0234 -0.0094 -0.0275 -0.0155 -0.0264 -0.0086 -0.0243 -0.0247 -0.0023 -0.0293 -0.0405 -0.0374
+S-98	find the index of a list with the first element equal to str_0 within the list of <unk> var_0
+T-98	[ index for index , item in enumerate ( <<unk>> ) if item [ 0 ] == <<unk>> ]
+H-98	-0.48733988404273987	max ( var_0 , key = lambda x : x [ 'str_0' ] )
+P-98	-0.2010 -0.0301 -0.0719 -0.0268 -0.0101 -0.0301 -0.0350 -0.1168 -0.0311 -0.6490 -0.0194 -0.9541 -0.0330 -0.1206 -0.1455
+S-263	sort a list of <unk> by the value of <unk> str_0 , str_1 , str_2 in ascending order .
+T-263	l . sort ( key = lambda x : ( x [ <<unk>> ] , x [ <<unk>> ] , x [ 'id' ] ) )
+H-263	-0.6208299398422241	str_0 . sort ( [ 'str_1' , 'str_2' , 'str_3' ] )
+P-263	-1.2481 -0.0268 -0.0002 -0.0293 -0.9697 -0.0490 -0.0232 -0.0309 -0.0299 -0.3827 -0.0247 -0.0366 -0.0418
+S-374	replace each str_0 with str_1 and each str_1 with str_0 in the string str_4 in a single <unk> .
+T-374	<<unk>> . replace ( 'a' , '%temp%' ) . replace ( 'b' , 'a' ) . replace ( '%temp%' , 'b' )
+H-374	-0.1785893440246582	re . sub ( '\\*\\*+' , 'str_0' , str_1 )
+P-374	-0.1510 -0.0308 -0.0019 -0.0308 -0.2514 -0.0205 -0.0106 -0.0206 -0.1683 -0.0307 -0.0361
+S-278	get the item at index 0 from the tuple that <unk> maximum value at index 1 in list var_0
+T-278	max ( <<unk>> , key = itemgetter ( 1 ) ) [ 0 ]
+H-278	-0.5303202271461487	max ( var_0 , key = lambda x : x [ 1 ] )
+P-278	-1.6689 -0.0274 -0.0346 -0.0267 -0.0262 -0.0375 -0.5591 -0.0556 -0.0453 -0.0384 -0.0224 -0.0075 -0.0462 -0.0486 -0.0482
+S-166	extract all the <unk> with <unk> str_0 and str_1 from a list of <unk> var_0 to list of tuples
+T-166	[ ( x [ 'x' ] , x [ 'y' ] ) for x in d ]
+H-166	-0.25497931241989136	[ x [ 'str_0' ] for x in var_0 ]
+P-166	-0.0076 -0.1111 -0.2037 -0.2903 -0.0404 -0.0178 -0.0245 -0.0217 -0.1582 -0.1673 -0.0322
+S-469	insert var_0 before the file extension in str_0 or replace var_1 with var_2 if it precedes the extension .
+T-469	re . sub ( '(\\_a)?\\.([^\\.]*)$' , '_suff.\\2' , <<unk>> )
+H-469	-0.4896893799304962	var_2 = var_1 . xpath ( <unk> <unk> )
+P-469	-1.0769 -0.2873 -0.1995 -0.0450 -0.0980 -0.0342 -0.0268 -0.0757 -0.0582 -0.0480
+S-277	find the first element of the tuple with the maximum second element in a list of tuples var_0
+T-277	max ( <<unk>> , key = lambda item : item [ 1 ] ) [ 0 ]
+H-277	-0.28555065393447876	max ( var_0 , key = lambda x : x [ 1 ] )
+P-277	-0.4501 -0.0344 -0.0156 -0.0226 -0.0220 -0.0344 -0.0530 -0.0146 -0.0771 -0.2282 -0.0180 -0.1796 -0.0516 -0.1854 -0.0633
+S-187	copy all <unk> in a column str_0 to a new column str_1 in a <unk> data frame str_2
+T-187	df [ 'D' ] = df [ 'B' ]
+H-187	-0.6574193835258484	df [ 'str_0' ] = df [ 'str_1' ] + df [ 'str_2' ]
+P-187	-0.3378 -0.0215 -0.0546 -0.0296 -0.0101 -0.0489 -0.0273 -0.0565 -0.0299 -2.4978 -0.1224 -0.0213 -0.0220 -0.0309 -0.0276
+S-232	<unk> do <unk> sum the first value in each tuple in a list of tuples in <unk> ?
+T-232	sum ( [ pair [ 0 ] for pair in list_of_pairs ] )
+H-232	-0.25616300106048584	[ x [ 0 ] for x in var_2 ]
+P-232	-0.1081 -0.1542 -0.0204 -0.0362 -0.0341 -0.0158 -0.0151 -0.0186 -0.5743 -0.0607 -0.0424
+S-317	<unk> a regex to get all text in a string var_0 that is not surrounded by square <unk>
+T-317	re . findall ( '(.*?)(?:\\[.*?\\]|$)' , <<unk>> )
+H-317	-0.23483581840991974	re . sub ( '$\\d+\\W+|\\b\\d+\\b|\\W+\\d+$' , '' , var_0 )
+P-317	-0.0039 -0.0357 -0.1138 -0.0283 -0.6422 -0.0189 -0.0363 -0.0191 -0.0197 -0.0339 -0.0381
+S-58	<unk> a nested dictionary var_0 into a flat dictionary by concatenating nested <unk> with the same key var_1
+T-58	{ k : [ d [ k ] for d in <<unk>> ] for k in <<unk>> [ 0 ] }
+H-58	-0.3056521415710449	dict ( ( k , v ) for k , v in var_0 . items ( ) if v )
+P-58	-0.0659 -0.0319 -0.0629 -0.1020 -0.0204 -0.0242 -0.0365 -0.0210 -0.0682 -0.0288 -0.0070 -0.0154 -0.3390 -0.0461 -0.0206 -0.0350 -0.0407 -0.0075 -0.0927 -0.4426 -0.3909
+S-160	join each element in array var_0 with element at the same index in array var_1 <unk> a tuple
+T-160	np . array ( [ zip ( x , y ) for x , y in zip ( a , b ) ] )
+H-160	-0.48992133140563965	[ ( x / y ) for x , y in zip ( var_0 , var_1 ) ]
+P-160	-0.3280 -0.0491 -0.7744 -0.7403 -0.5099 -0.0338 -0.0164 -0.0424 -0.0198 -0.0537 -0.0148 -0.0554 -0.0374 -0.0418 -0.0318 -0.0011 -0.0377 -0.0443 -0.0346
+S-490	get the index of an integer str_0 from a list var_0 if the list also contains boolean <unk>
+T-490	next ( i for i , x in enumerate ( lst ) if not isinstance ( x , bool ) and x == 1 )
+H-490	-0.666803777217865	[ i for i , e in enumerate ( var_0 ) if e != str_0 ]
+P-490	-0.2770 -0.5280 -0.0198 -0.0144 -0.0175 -1.7651 -0.0187 -0.0027 -0.0338 -0.0510 -0.1688 -0.0027 -0.4477 -0.0757 -0.1350 -0.0500 -0.0417
+S-361	split a list in first column into multiple <unk> keeping other <unk> <unk> well in <unk> data frame
+T-361	pd . concat ( [ df [ 0 ] . apply ( pd . Series ) , df [ 1 ] ] , axis = 1 )
+H-361	-0.8005372285842896	[ list ( v ) for k , v in itertools . groupby ( var_0 , key = lambda x : x [ 0 ] ) ]
+P-361	-0.4059 -0.7957 -0.0323 -0.6361 -0.0552 -0.0167 -0.1481 -0.0212 -0.0913 -0.0166 -0.1034 -0.0380 -0.0323 -0.0316 -0.6661 -0.0226 -0.9869 -0.0322 -0.1316 -0.0495 -0.0213 -0.0944 -0.1550 -1.1851 -0.0408 -0.0522 -0.0267 -0.0223
+S-188	find a value within nested json str_0 where the key inside another key str_1 is unknown .
+T-188	list ( data [ 'A' ] [ 'B' ] . values ( ) ) [ 0 ] [ 'maindata' ] [ 0 ] [ 'Info' ]
+H-188	-0.9080861806869507	max ( str_0 , key = lambda x : str_1 [ x ] [ 'str_0' ] )
+P-188	-1.8138 -0.0284 -0.1316 -0.0239 -0.0283 -0.0366 -0.0046 -0.0603 -0.0327 -1.8233 -0.0216 -0.0152 -0.0370 -0.0354 -0.5478 -0.0326 -0.4303 -0.0404
+S-168	create a dictionary by adding each two adjacent <unk> in tuple var_0 <unk> key/value pair to it
+T-168	dict ( x [ i : i + 2 ] for i in range ( 0 , len ( x ) , 2 ) )
+H-168	-0.1459035575389862	dict ( zip ( var_0 [ : : 2 ] , var_0 [ 1 : : 2 ] ) )
+P-168	-0.0012 -0.0344 -0.3078 -0.0347 -0.0252 -0.0142 -0.0517 -0.0232 -0.0166 -0.0518 -0.0396 -0.0174 -0.0264 -0.0077 -0.0239 -0.0726 -0.0049 -0.0362 -0.0358 -0.0396 -0.0417
+S-330	finding the index of <unk> containing substring str_0 and str_1 in a list of <unk> str_2 .
+T-330	[ i for i , j in enumerate ( <<unk>> ) if <<unk>> in j . lower ( ) or <<unk>> in j . lower ( ) ]
+H-330	-0.19530250132083893	[ list ( a ) for a in zip ( [ str_0 ] , [ str_1 ] , [ str_2 ] ) ]
+P-330	-0.0069 -0.2812 -0.0292 -0.0078 -0.0311 -0.0080 -0.0209 -0.0751 -0.0399 -0.0289 -0.0092 -0.2667 -0.0399 -0.0267 -0.0087 -0.1867 -0.0332 -0.0277 -0.0320 -0.0122 -0.0355 -0.0304 -0.0452 -0.0315
+S-132	combine <unk> from column str_0 and column str_1 of dataframe var_0 into column str_2 of datafram var_0
+T-132	df [ 'c' ] = np . where ( df [ 'a' ] . isnull , df [ 'b' ] , df [ 'a' ] )
+H-132	-0.6390318870544434	var_0 [ 'str_0' ] . multiply ( var_0 [ 'str_1' ] , axis = 'index' )
+P-132	-0.0136 -0.0329 -0.2401 -0.1258 -0.0639 -1.3405 -0.0312 -0.0361 -0.0437 -0.7657 -0.0678 -0.0206 -0.1342 -0.0337 -0.4721 -0.0385 -0.0372
+S-212	<unk> var_0 , get the content of the sibling of the var_1 tag with text content str_0
+T-212	print ( soup . find ( text = <<unk>> ) . findNext ( 'td' ) . contents [ 0 ] )
+H-212	-0.5990816950798035	getattr ( var_1 , 'id' , None )
+P-212	-0.4868 -0.0270 -0.0332 -0.0176 -1.3001 -0.0212 -0.2864 -0.0334 -0.0332
+S-465	<unk> all <unk> from a list a <unk> var_0 where the <unk> <unk> with str_0 or str_1
+T-465	[ x for x in <<unk>> if not x . startswith ( '@$\t' ) and not x . startswith ( '#' ) ]
+H-465	-0.567720890045166	[ x for x in var_0 if x [ str_0 ] == str_1 ]
+P-465	-0.1723 -0.6429 -0.0478 -0.0204 -0.0190 -0.0261 -0.0043 -0.0223 -0.9556 -0.6712 -0.0500 -0.0905 -0.0975 -0.0349 -0.0278
+S-184	get a list containing the sum of each element var_0 in list var_1 plus the previous <unk>
+T-184	[ sum ( l [ : i ] ) for i , _ in enumerate ( l ) ]
+H-184	-0.13259239494800568	var_0 = [ sum ( var_1 ) for var_1 in var_2 ]
+P-184	-0.1756 -0.0150 -0.0064 -0.0007 -0.0368 -0.1493 -0.0419 -0.0131 -0.0926 -0.0194 -0.0075 -0.0249 -0.0347
+S-178	create a <unk> containing int_0 <unk> of the second friday of each month starting from date str_0
+T-178	pd . date_range ( <<unk>> , freq = 'WOM-2FRI' , periods = <<unk>> )
+H-178	-0.8193826675415039	monthrange ( int_0 , int_0 )
+P-178	-1.9884 -0.0255 -0.0017 -0.0163 -0.5369 -0.0377 -0.0271
+S-376	create a new column var_0 in <unk> data frame var_1 based on the <unk> in column var_2
+T-376	data [ <<unk>> ] = data [ <<unk>> ] . apply ( lambda x : x . <<unk>> ( ) )
+H-376	-0.722356915473938	var_1 = var_1 [ 'var_0' ] / var_1 [ 'var_2' ]
+P-376	-0.0350 -2.0450 -0.0175 -0.0252 -0.0501 -0.0350 -0.2042 -0.0007 -0.0278 -0.7086 -0.0362 -0.0229
+S-128	find the key associated with the largest value in dictionary var_0 whilst key is non-zero value
+T-128	max ( k for k , v in x . items ( ) if v != 0 )
+H-128	-0.7292171120643616	max ( var_0 , key = var_0 . get )
+P-128	-1.2757 -0.0287 -0.5657 -0.0340 -0.0151 -0.0266 -0.8012 -0.0531 -0.2044 -0.0278 -0.0416
+S-203	prepend the line str_0 to the <unk> of file str_1 and save <unk> the file str_2
+T-203	open ( <<unk>> , 'w' ) . write ( <<unk>> <<unk>> + open ( <<unk>> ) . read ( ) )
+H-203	-0.6655486822128296	with open ( 'str_1' , 'a' ) as myfile : \n myfile . write ( 'str_0' )
+P-203	-1.9456 -0.0126 -0.0332 -0.1591 -0.0346 -0.0311 -0.0335 -0.0159 -0.5323 -0.0196 -0.0126 -0.7774 -0.0310 -0.0112 -0.0287 -0.0086 -0.0383 -0.0446
+S-102	subscript text str_0 with str_1 <unk> subscripted in matplotlib <unk> for <unk> str_2 and str_3 .
+T-102	plt . plot ( x , y , label = '$H_2O$' )
+H-102	-0.7536078095436096	Task . objects . exclude ( prerequisites__status__in = [ 'str_1' , 'str_2' , 'str_3' ] )
+P-102	-2.1080 -0.0379 -0.4716 -0.0360 -0.9239 -0.0310 -0.2882 -0.0286 -0.0237 -0.0050 -0.0216 -0.0015 -0.0201 -0.0157 -0.0373 -0.0387 -0.0362
+S-101	subscript text str_0 with str_1 <unk> subscripted in matplotlib <unk> for <unk> str_2 and str_3 .
+T-101	plt . plot ( x , y , label = <<unk>> )
+H-101	-0.7536078095436096	Task . objects . exclude ( prerequisites__status__in = [ 'str_1' , 'str_2' , 'str_3' ] )
+P-101	-2.1080 -0.0379 -0.4716 -0.0360 -0.9239 -0.0310 -0.2882 -0.0286 -0.0237 -0.0050 -0.0216 -0.0015 -0.0201 -0.0157 -0.0373 -0.0387 -0.0362
+S-454	call multiple bash function ‘ vasp ’ and ‘ tee tee_output ’ using ‘ | ’
+T-454	subprocess . check_call ( <<unk>> | <<unk>> <<unk>> , shell = True )
+H-454	-0.3416425883769989	subprocess . call ( <unk> <unk> )
+P-454	-0.5085 -0.0261 -0.0154 -0.0271 -0.2721 -0.0634 -0.2510 -0.0261
+S-459	<unk> do <unk> sort a list of <unk> by <unk> of the dictionary in <unk> ?
+T-459	list_of_dicts . sort ( key = operator . itemgetter ( 'name' ) )
+H-459	-0.17222405970096588	sorted ( list ( data . items ( ) ) , key = lambda x : x [ 1 ] [ 0 ] )
+P-459	-0.0079 -0.0289 -0.0042 -0.0288 -0.0678 -0.0317 -0.0061 -0.0288 -0.0381 -0.0385 -0.0278 -0.0334 -0.0290 -0.0073 -0.0747 -0.0251 -0.0208 -0.0210 -0.0193 -0.0346 -0.4643 -0.0438 -0.0404 -0.0325 -0.0332
+S-460	<unk> do <unk> sort a list of <unk> by <unk> of the dictionary in <unk> ?
+T-460	list_of_dicts . sort ( key = operator . itemgetter ( 'age' ) )
+H-460	-0.17222405970096588	sorted ( list ( data . items ( ) ) , key = lambda x : x [ 1 ] [ 0 ] )
+P-460	-0.0079 -0.0289 -0.0042 -0.0288 -0.0678 -0.0317 -0.0061 -0.0288 -0.0381 -0.0385 -0.0278 -0.0334 -0.0290 -0.0073 -0.0747 -0.0251 -0.0208 -0.0210 -0.0193 -0.0346 -0.4643 -0.0438 -0.0404 -0.0325 -0.0332
+S-425	round off the float that is the product of str_0 and convert it to an int
+T-425	int ( round ( 2.51 * 100 ) )
+H-425	-0.6548107862472534	print ( round ( float_0 , - 1 ) )
+P-425	-1.0263 -0.0296 -0.7590 -0.0311 -0.2969 -0.0410 -0.1542 -0.3097 -0.0382 -0.0356 -0.0387
+S-172	replace all <unk> of a string str_0 by string str_1 in a <unk> data frame var_0
+T-172	df . replace ( { '\n' : <<unk>> } , regex = True )
+H-172	-0.42836853861808777	var_0 [ 'str_1' ] = var_0 [ 'str_1' ] . str . replace ( 'str_0' , 'str_1' )
+P-172	-0.5492 -0.3301 -0.1789 -0.0335 -0.0618 -0.0393 -0.1106 -0.8259 -0.0250 -0.0172 -0.0633 -0.0303 -0.0513 -0.0310 -0.0381 -0.0223 -0.0280 -0.0335 -0.0373
+S-461	<unk> to sort a <unk> by the ocurrences in a column in <unk> ( <unk> )
+T-461	df . groupby ( 'prots' ) . sum ( ) . sort ( 'scores' , ascending = False )
+H-461	-0.8313548564910889	df . sort ( key = lambda x : x . index ( x [ 1 ] ) )
+P-461	-0.0319 -0.0313 -0.0102 -0.0288 -0.0513 -0.0232 -0.0671 -0.1347 -0.0135 -0.3938 -0.0641 -1.7404 -0.0285 -1.2447 -0.4449 -0.3979 -0.0814 -0.0354 -0.1641 -0.0293
+S-342	unpack a series of tuples in <unk> into a <unk> with column <unk> str_0 and str_1
+T-342	pd . DataFrame ( out . tolist ( ) , columns = [ <<unk>> , <<unk>> ] , index = out . index )
+H-342	-0.41055920720100403	df [ 'str_0' ] = pd . to_datetime ( df [ 'str_0' ] )
+P-342	-0.2514 -0.1243 -0.0089 -0.0359 -0.0201 -0.9769 -0.0294 -0.1838 -0.0306 -0.0253 -0.0422 -0.2354 -0.0456 -0.0332 -0.0414
+S-57	combine list of <unk> var_0 with the same <unk> in each list to a single dictionary
+T-57	dict ( ( k , [ d [ k ] for d in <<unk>> ] ) for k in <<unk>> [ 0 ] )
+H-57	-0.43867531418800354	dict ( ( k , v ) for k , v in var_0 . items ( ) if v )
+P-57	-0.1439 -0.0339 -0.6865 -0.2911 -0.0228 -0.0144 -0.0354 -0.0204 -0.3348 -0.0249 -0.0140 -0.0234 -0.0175 -0.0460 -0.0074 -0.0342 -0.0383 -0.0655 -0.0956 -0.7389 -0.0367
+S-152	scatter a plot with x , y position of str_0 and face color equal to none
+T-152	plt . scatter ( np . random . randn ( 100 ) , np . random . randn ( 100 ) , facecolors = 'none' )
+H-152	-0.23651368916034698	plt . plot ( x , y , color = 'str_0' )
+P-152	-0.0274 -0.0272 -0.1279 -0.0338 -0.5703 -0.0410 -0.0781 -0.0208 -0.0805 -0.0269 -0.0026 -0.0361 -0.0297
+S-214	convert each tuple in list var_0 to a string with str_0 separating the tuples ' <unk>
+T-214	<<unk>> <<unk>> . join ( [ ( '%d@%d' % ( t [ 0 ] , t [ 1 ] ) ) for t in l ] )
+H-214	-0.32009682059288025	[ 'str_0' . join ( x ) for x in var_0 ]
+P-214	-0.0140 -0.6777 -0.1609 -0.0251 -0.0391 -0.3026 -0.0345 -0.0254 -0.0522 -0.0148 -0.0734 -0.0383 -0.0337
+S-366	make a barplot of data in column var_0 of dataframe var_1 colour-coded according to list var_2
+T-366	df [ <<unk>> ] . plot ( kind = 'bar' , color = [ 'r' , 'g' , 'b' , 'r' , 'g' , 'b' , 'r' ] )
+H-366	-0.3488215506076813	var_0 = [ var_1 [ i ] for i in var_2 ]
+P-366	-0.3630 -0.0262 -0.1811 -0.0831 -0.6287 -0.1059 -0.0557 -0.0440 -0.0241 -0.0216 -0.0011 -0.0674 -0.0234
+S-344	rotate the xtick <unk> of matplotlib plot var_0 by str_0 <unk> to make long <unk> readable
+T-344	ax . set_xticklabels ( labels , rotation = <<unk>> )
+H-344	-0.7012160420417786	var_0 . setp ( legend . get_title ( ) , 'str_0' )
+P-344	-0.0259 -0.0562 -0.2778 -0.0325 -0.5593 -0.0412 -0.1298 -0.0317 -0.0372 -0.0366 -1.9671 -0.0370 -0.0353
+S-439	get an array of the mean of each two consecutive <unk> in numpy array var_0
+T-439	x [ : - 1 ] + ( x [ 1 : ] - x [ : - 1 ] ) / 2
+H-439	-0.23092104494571686	np . mean ( np . array ( [ var_0 , var_1 ] ) , axis = 0 )
+P-439	-0.0041 -0.0378 -0.7415 -0.0356 -0.0364 -0.0406 -0.0560 -0.0337 -0.0361 -0.0319 -0.0522 -0.0804 -0.0236 -0.0301 -0.0253 -0.0096 -0.0346 -0.0136 -0.0331 -0.0373
+S-163	<unk> a post request with raw data var_0 and basic authentication with var_1 and var_2
+T-163	requests . post ( url , data = <<unk>> , headers = HEADERS_DICT , auth = ( <<unk>> , <<unk>> ) )
+H-163	-0.46294108033180237	r = requests . post ( var_0 , data = var_1 )
+P-163	-1.4336 -0.0241 -0.0081 -0.0315 -0.0057 -0.0319 -0.4219 -0.0229 -0.0214 -0.0275 -0.0643 -0.0375 -0.0268
+S-251	<unk> to count distinct <unk> in a column of a <unk> group by object ?
+T-251	df . groupby ( [ 'col1' , 'col2' ] ) [ 'col3' ] . nunique ( ) . reset_index ( )
+H-251	-0.8037898540496826	groupby . groupby ( level = 0 ) . size ( )
+P-251	-1.6711 -0.0428 -0.2242 -0.0301 -0.8218 -0.0363 -0.1561 -0.0343 -0.0343 -0.3623 -0.0284 -0.0357 -0.2681
+S-253	create list of <unk> from dictionary var_0 that have a key that <unk> with str_0
+T-253	[ value for key , value in list ( dict1 . items ( ) ) if key . startswith ( <<unk>> ) ]
+H-253	-0.589112401008606	[ y for x in list ( var_0 . items ( ) ) for y in x ]
+P-253	-0.0524 -1.8088 -0.0402 -0.0214 -0.0158 -0.6801 -0.0329 -0.0193 -0.0480 -0.0790 -0.0332 -0.0385 -0.0357 -0.3510 -0.0311 -0.0234 -0.0260 -0.0784 -0.0319
+S-236	replace all <unk> in array var_0 that are not present in array str_0 with <unk>
+T-236	np . where ( np . in1d ( A , [ 1 , 3 , 4 ] ) . reshape ( A . shape ) , A , 0 )
+H-236	-0.562553346157074	var_0 = np . concatenate ( ( str_0 , str_0 ) , axis = 0 )
+P-236	-0.8903 -0.2386 -0.0073 -0.0408 -0.4622 -0.0319 -0.0059 -0.6981 -0.0228 -0.4601 -0.0534 -0.0159 -0.0103 -0.0387 -0.0357 -0.0358 -0.0316
+S-73	create array containing the maximum value of respective <unk> of array str_0 and array str_1
+T-73	np . maximum ( [ 2 , 3 , 4 ] , [ 1 , 5 , 2 ] )
+H-73	-0.6122809052467346	np . zeros ( ( ( str_0 ) ) + np . array ( [ str_1 ] ) . reshape ( 1 , 9 , 1 )
+P-73	-0.0271 -0.0286 -0.1672 -0.0346 -0.0410 -0.4847 -0.4090 -0.2481 -0.4827 -0.2224 -0.0008 -0.0320 -0.0272 -0.0379 -0.0129 -0.0208 -0.0407 -0.2958 -0.0400 -0.0437 -0.0346 -1.3285 -0.0204 -0.1776 -0.0214 -0.0787 -0.0401 -0.1225
+| Translated 500 sentences (6266 tokens) in 3.7s (133.79 sentences/s, 1676.68 tokens/s)
+| Generate test with beam=4: BLEU4 = 10.69, 47.6/17.7/9.3/5.0 (BP=0.762, ratio=0.786, syslen=5766, reflen=7337)

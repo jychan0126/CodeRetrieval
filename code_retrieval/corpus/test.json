@@ -1,0 +1,2002 @@
+[
+  {
+    "intent": "send a signal `signal.SIGUSR1` to the current process",
+    "code": "os.kill(os.getpid(), signal.SIGUSR1)"
+  },
+  {
+    "intent": "decode a hex string '4a4b4c' to UTF-8.",
+    "code": "bytes.fromhex('4a4b4c').decode('utf-8')"
+  },
+  {
+    "intent": "check if all elements in list `myList` are identical",
+    "code": "all(x == myList[0] for x in myList)"
+  },
+  {
+    "intent": "format number of spaces between strings `Python`, `:` and `Very Good` to be `20`",
+    "code": "print('%*s : %*s' % (20, 'Python', 20, 'Very Good'))"
+  },
+  {
+    "intent": "How to convert a string from CP-1251 to UTF-8?",
+    "code": "d.decode('cp1251').encode('utf8')"
+  },
+  {
+    "intent": "get rid of None values in dictionary `kwargs`",
+    "code": "res = {k: v for k, v in list(kwargs.items()) if v is not None}"
+  },
+  {
+    "intent": "get rid of None values in dictionary `kwargs`",
+    "code": "res = dict((k, v) for k, v in kwargs.items() if v is not None)"
+  },
+  {
+    "intent": "capture final output of a chain of system commands `ps -ef | grep something | wc -l`",
+    "code": "subprocess.check_output('ps -ef | grep something | wc -l', shell=True)"
+  },
+  {
+    "intent": "concatenate a list of strings `['a', 'b', 'c']`",
+    "code": "\"\"\"\"\"\".join(['a', 'b', 'c'])"
+  },
+  {
+    "intent": "find intersection data between series `s1` and series `s2`",
+    "code": "pd.Series(list(set(s1).intersection(set(s2))))"
+  },
+  {
+    "intent": "sending http headers to `client`",
+    "code": "client.send('HTTP/1.0 200 OK\\r\\n')"
+  },
+  {
+    "intent": "Format a datetime string `when` to extract date only",
+    "code": "then = datetime.datetime.strptime(when, '%Y-%m-%d').date()"
+  },
+  {
+    "intent": "split a multi-line string `inputString` into separate strings",
+    "code": "inputString.split('\\n')"
+  },
+  {
+    "intent": "Split a multi-line string ` a \\n b \\r\\n c ` by new line character `\\n`",
+    "code": "' a \\n b \\r\\n c '.split('\\n')"
+  },
+  {
+    "intent": "concatenate elements of list `b` by a colon \":\"",
+    "code": "\"\"\":\"\"\".join(str(x) for x in b)"
+  },
+  {
+    "intent": "get the first object from a queryset in django model `Entry`",
+    "code": "Entry.objects.filter()[:1].get()"
+  },
+  {
+    "intent": "Calculate sum over all rows of 2D numpy array",
+    "code": "a.sum(axis=1)"
+  },
+  {
+    "intent": "enable warnings using action 'always'",
+    "code": "warnings.simplefilter('always')"
+  },
+  {
+    "intent": "concatenate items of list `l` with a space ' '",
+    "code": "print(' '.join(map(str, l)))"
+  },
+  {
+    "intent": "run script 'hello.py' with argument 'htmlfilename.htm' on terminal using python executable",
+    "code": "subprocess.call(['python.exe', 'hello.py', 'htmlfilename.htm'])"
+  },
+  {
+    "intent": "How can I parse a time string containing milliseconds in it with python?",
+    "code": "time.strptime('30/03/09 16:31:32.123', '%d/%m/%y %H:%M:%S.%f')"
+  },
+  {
+    "intent": "convert a string `my_string` with dot and comma into a float number `my_float`",
+    "code": "my_float = float(my_string.replace(',', ''))"
+  },
+  {
+    "intent": "convert a string `123,456.908` with dot and comma into a floating number",
+    "code": "float('123,456.908'.replace(',', ''))"
+  },
+  {
+    "intent": "set pythonpath in python script.",
+    "code": "sys.path.append('/path/to/whatever')"
+  },
+  {
+    "intent": "split string 'Words, words, words.' using a regex '(\\\\W+)'",
+    "code": "re.split('(\\\\W+)', 'Words, words, words.')"
+  },
+  {
+    "intent": "open a file `Output.txt` in append mode",
+    "code": "file = open('Output.txt', 'a')"
+  },
+  {
+    "intent": "download a file \"http://www.example.com/songs/mp3.mp3\" over HTTP and save to \"mp3.mp3\"",
+    "code": "urllib.request.urlretrieve('http://www.example.com/songs/mp3.mp3', 'mp3.mp3')"
+  },
+  {
+    "intent": "download a file `url` over HTTP and save to `file_name`",
+    "code": "u = urllib.request.urlopen(url)\nf = open(file_name, 'wb')\nmeta = u.info()\nfile_size = int(meta.getheaders('Content-Length')[0])\nprint(('Downloading: %s Bytes: %s' % (file_name, file_size)))\nfile_size_dl = 0\nblock_sz = 8192\nwhile True:\n    buffer = u.read(block_sz)\n    if (not buffer):\n        break\n    file_size_dl += len(buffer)\n    f.write(buffer)\n    status = ('%10d  [%3.2f%%]' % (file_size_dl, ((file_size_dl * 100.0) / file_size)))\n    status = (status + (chr(8) * (len(status) + 1)))\n    print(status, end=' ')\nf.close()"
+  },
+  {
+    "intent": "download a file 'http://www.example.com/' over HTTP",
+    "code": "response = urllib.request.urlopen('http://www.example.com/')\nhtml = response.read()"
+  },
+  {
+    "intent": "download a file `url` over HTTP",
+    "code": "r = requests.get(url)"
+  },
+  {
+    "intent": "download a file `url` over HTTP and save to \"10MB\"",
+    "code": "response = requests.get(url, stream=True)\nwith open('10MB', 'wb') as handle:\n    for data in tqdm(response.iter_content()):\n        handle.write(data)"
+  },
+  {
+    "intent": "argparse add argument with flag '--version' and version action of '%(prog)s 2.0' to parser `parser`",
+    "code": "parser.add_argument('--version', action='version', version='%(prog)s 2.0')"
+  },
+  {
+    "intent": "remove key 'c' from dictionary `d`",
+    "code": "{i: d[i] for i in d if i != 'c'}"
+  },
+  {
+    "intent": "Create new DataFrame object by merging columns \"key\" of  dataframes `split_df` and `csv_df` and rename the columns from dataframes `split_df` and `csv_df` with suffix `_left` and `_right` respectively",
+    "code": "pd.merge(split_df, csv_df, on=['key'], suffixes=('_left', '_right'))"
+  },
+  {
+    "intent": "Split a string `s` by space with `4` splits",
+    "code": "s.split(' ', 4)"
+  },
+  {
+    "intent": "read keyboard-input",
+    "code": "input('Enter your input:')"
+  },
+  {
+    "intent": "enable debug mode on Flask application `app`",
+    "code": "app.run(debug=True)"
+  },
+  {
+    "intent": "python save list `mylist` to file object 'save.txt'",
+    "code": "pickle.dump(mylist, open('save.txt', 'wb'))"
+  },
+  {
+    "intent": "Multiply a matrix `P` with a 3d tensor `T` in scipy",
+    "code": "scipy.tensordot(P, T, axes=[1, 1]).swapaxes(0, 1)"
+  },
+  {
+    "intent": "Create 3d array of zeroes of size `(3,3,3)`",
+    "code": "numpy.zeros((3, 3, 3))"
+  },
+  {
+    "intent": "cut off the last word of a sentence `content`",
+    "code": "\"\"\" \"\"\".join(content.split(' ')[:-1])"
+  },
+  {
+    "intent": "convert scalar `x` to array",
+    "code": "x = np.asarray(x).reshape(1, -1)[(0), :]"
+  },
+  {
+    "intent": "sum all elements of nested list `L`",
+    "code": "sum(sum(i) if isinstance(i, list) else i for i in L)"
+  },
+  {
+    "intent": "convert hex string '470FC614' to a float number",
+    "code": "struct.unpack('!f', '470FC614'.decode('hex'))[0]"
+  },
+  {
+    "intent": "Multiple each value by `2` for all keys in a dictionary `my_dict`",
+    "code": "my_dict.update((x, y * 2) for x, y in list(my_dict.items()))"
+  },
+  {
+    "intent": "running bash script 'sleep.sh'",
+    "code": "subprocess.call('sleep.sh', shell=True)"
+  },
+  {
+    "intent": "Join elements of list `l` with a comma `,`",
+    "code": "\"\"\",\"\"\".join(l)"
+  },
+  {
+    "intent": "make a comma-separated string from a list `myList`",
+    "code": "myList = ','.join(map(str, myList))"
+  },
+  {
+    "intent": "reverse the list that contains 1 to 10",
+    "code": "list(reversed(list(range(10))))"
+  },
+  {
+    "intent": "remove substring 'bag,' from a string 'lamp, bag, mirror'",
+    "code": "print('lamp, bag, mirror'.replace('bag,', ''))"
+  },
+  {
+    "intent": "Reverse the order of words, delimited by `.`, in string `s`",
+    "code": "\"\"\".\"\"\".join(s.split('.')[::-1])"
+  },
+  {
+    "intent": "convert epoch time represented as milliseconds `s` to string using format '%Y-%m-%d %H:%M:%S.%f'",
+    "code": "datetime.datetime.fromtimestamp(s).strftime('%Y-%m-%d %H:%M:%S.%f')"
+  },
+  {
+    "intent": "parse milliseconds epoch time '1236472051807' to format '%Y-%m-%d %H:%M:%S'",
+    "code": "time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(1236472051807 / 1000.0))"
+  },
+  {
+    "intent": "get the date 7 days before the current date",
+    "code": "(datetime.datetime.now() - datetime.timedelta(days=7)).date()"
+  },
+  {
+    "intent": "sum elements at index `column` of each list in list `data`",
+    "code": "print(sum(row[column] for row in data))"
+  },
+  {
+    "intent": "sum columns of a list `array`",
+    "code": "[sum(row[i] for row in array) for i in range(len(array[0]))]"
+  },
+  {
+    "intent": "encode binary string 'your string' to base64 code",
+    "code": "base64.b64encode(bytes('your string', 'utf-8'))"
+  },
+  {
+    "intent": "combine list of dictionaries `dicts` with the same keys in each list to a single dictionary",
+    "code": "dict((k, [d[k] for d in dicts]) for k in dicts[0])"
+  },
+  {
+    "intent": "Merge a nested dictionary `dicts` into a flat dictionary by concatenating nested values with the same key `k`",
+    "code": "{k: [d[k] for d in dicts] for k in dicts[0]}"
+  },
+  {
+    "intent": "How do I get the url parameter in a Flask view",
+    "code": "request.args['myParam']"
+  },
+  {
+    "intent": "identify duplicate values in list `mylist`",
+    "code": "[k for k, v in list(Counter(mylist).items()) if v > 1]"
+  },
+  {
+    "intent": "Insert directory 'apps' into directory `__file__`",
+    "code": "sys.path.insert(1, os.path.join(os.path.dirname(__file__), 'apps'))"
+  },
+  {
+    "intent": "modify sys.path for python module `subdir`",
+    "code": "sys.path.append(os.path.join(os.path.dirname(__file__), 'subdir'))"
+  },
+  {
+    "intent": "Insert a 'None' value into a SQLite3 table.",
+    "code": "db.execute(\"INSERT INTO present VALUES('test2', ?, 10)\", (None,))"
+  },
+  {
+    "intent": "flatten list `list_of_menuitems`",
+    "code": "[image for menuitem in list_of_menuitems for image in menuitem]"
+  },
+  {
+    "intent": "append elements of a set `b` to a list `a`",
+    "code": "a.extend(b)"
+  },
+  {
+    "intent": "Append elements of a set to a list in Python",
+    "code": "a.extend(list(b))"
+  },
+  {
+    "intent": "write the data of dataframe `df` into text file `np.txt`",
+    "code": "np.savetxt('c:\\\\data\\\\np.txt', df.values, fmt='%d')"
+  },
+  {
+    "intent": "write content of DataFrame `df` into text file 'c:\\\\data\\\\pandas.txt'",
+    "code": "df.to_csv('c:\\\\data\\\\pandas.txt', header=None, index=None, sep=' ', mode='a')"
+  },
+  {
+    "intent": "Split a string `x` by last occurrence of character `-`",
+    "code": "print(x.rpartition('-')[0])"
+  },
+  {
+    "intent": "get the last part of a string before the character '-'",
+    "code": "print(x.rsplit('-', 1)[0])"
+  },
+  {
+    "intent": "upload file using FTP",
+    "code": "ftp.storlines('STOR ' + filename, open(filename, 'r'))"
+  },
+  {
+    "intent": "add one to the hidden web element with id 'XYZ' with selenium python script",
+    "code": "browser.execute_script(\"document.getElementById('XYZ').value+='1'\")"
+  },
+  {
+    "intent": "create array containing the maximum value of respective elements of array `[2, 3, 4]` and array `[1, 5, 2]`",
+    "code": "np.maximum([2, 3, 4], [1, 5, 2])"
+  },
+  {
+    "intent": "print a list `l` and move first 3 elements to the end of the list",
+    "code": "print(l[3:] + l[:3])"
+  },
+  {
+    "intent": "loop over files in directory '.'",
+    "code": "for fn in os.listdir('.'):\n    if os.path.isfile(fn):\n        pass"
+  },
+  {
+    "intent": "loop over files in directory `source`",
+    "code": "for (root, dirs, filenames) in os.walk(source):\n    for f in filenames:\n        pass"
+  },
+  {
+    "intent": "create a random list of integers",
+    "code": "[int(1000 * random.random()) for i in range(10000)]"
+  },
+  {
+    "intent": "Using %f with strftime() in Python to get microseconds",
+    "code": "datetime.datetime.now().strftime('%H:%M:%S.%f')"
+  },
+  {
+    "intent": "Google App Engine execute GQL query 'SELECT * FROM Schedule WHERE station = $1' with parameter `foo.key()`",
+    "code": "db.GqlQuery('SELECT * FROM Schedule WHERE station = $1', foo.key())"
+  },
+  {
+    "intent": "filter rows in pandas starting with alphabet 'f' using regular expression.",
+    "code": "df.b.str.contains('^f')"
+  },
+  {
+    "intent": "print a 2 dimensional list `tab` as a table with delimiters",
+    "code": "print('\\n'.join('\\t'.join(str(col) for col in row) for row in tab))"
+  },
+  {
+    "intent": "pandas: delete rows in dataframe `df` based on multiple columns values",
+    "code": "df.set_index(list('BC')).drop(tuples, errors='ignore').reset_index()"
+  },
+  {
+    "intent": "format the variables `self.goals` and `self.penalties` using string formatting",
+    "code": "\"\"\"({:d} goals, ${:d})\"\"\".format(self.goals, self.penalties)"
+  },
+  {
+    "intent": "format string \"({} goals, ${})\" with variables `goals` and `penalties`",
+    "code": "\"\"\"({} goals, ${})\"\"\".format(self.goals, self.penalties)"
+  },
+  {
+    "intent": "format string \"({0.goals} goals, ${0.penalties})\"",
+    "code": "\"\"\"({0.goals} goals, ${0.penalties})\"\"\".format(self)"
+  },
+  {
+    "intent": "convert list of lists `L` to list of integers",
+    "code": "[int(''.join(str(d) for d in x)) for x in L]"
+  },
+  {
+    "intent": "combine elements of each list in list `L` into digits of a single integer",
+    "code": "[''.join(str(d) for d in x) for x in L]"
+  },
+  {
+    "intent": "convert a list of lists `L` to list of integers",
+    "code": "L = [int(''.join([str(y) for y in x])) for x in L]"
+  },
+  {
+    "intent": "write the elements of list `lines` concatenated by special character '\\n' to file `myfile`",
+    "code": "myfile.write('\\n'.join(lines))"
+  },
+  {
+    "intent": "removing an element from a list based on a predicate 'X' or 'N'",
+    "code": "[x for x in ['AAT', 'XAC', 'ANT', 'TTA'] if 'X' not in x and 'N' not in x]"
+  },
+  {
+    "intent": "Remove duplicate words from a string `text` using regex",
+    "code": "text = re.sub('\\\\b(\\\\w+)( \\\\1\\\\b)+', '\\\\1', text)"
+  },
+  {
+    "intent": "count non zero values in each column in pandas data frame",
+    "code": "df.astype(bool).sum(axis=1)"
+  },
+  {
+    "intent": "search for string that matches regular expression pattern '(?<!Distillr)\\\\\\\\AcroTray\\\\.exe' in string 'C:\\\\SomeDir\\\\AcroTray.exe'",
+    "code": "re.search('(?<!Distillr)\\\\\\\\AcroTray\\\\.exe', 'C:\\\\SomeDir\\\\AcroTray.exe')"
+  },
+  {
+    "intent": "split string 'QH QD JC KD JS' into a list on white spaces",
+    "code": "\"\"\"QH QD JC KD JS\"\"\".split()"
+  },
+  {
+    "intent": "search for occurrences of regex pattern '>.*<' in xml string `line`",
+    "code": "print(re.search('>.*<', line).group(0))"
+  },
+  {
+    "intent": "erase all the contents of a file `filename`",
+    "code": "open(filename, 'w').close()"
+  },
+  {
+    "intent": "convert a string into datetime using the format '%Y-%m-%d %H:%M:%S.%f'",
+    "code": "datetime.datetime.strptime(string_date, '%Y-%m-%d %H:%M:%S.%f')"
+  },
+  {
+    "intent": "find the index of a list with the first element equal to '332' within the list of lists `thelist`",
+    "code": "[index for index, item in enumerate(thelist) if item[0] == '332']"
+  },
+  {
+    "intent": "lower a string `text` and remove non-alphanumeric characters aside from space",
+    "code": "re.sub('[^\\\\sa-zA-Z0-9]', '', text).lower().strip()"
+  },
+  {
+    "intent": "remove all non-alphanumeric characters except space from a string `text` and lower it",
+    "code": "re.sub('(?!\\\\s)[\\\\W_]', '', text).lower().strip()"
+  },
+  {
+    "intent": "subscript text 'H20' with '2' as subscripted in matplotlib labels for arrays 'x' and 'y'.",
+    "code": "plt.plot(x, y, label='H\\u2082O')"
+  },
+  {
+    "intent": "subscript text 'H20' with '2' as subscripted in matplotlib labels for arrays 'x' and 'y'.",
+    "code": "plt.plot(x, y, label='$H_2O$')"
+  },
+  {
+    "intent": "loop over a list `mylist` if sublists length equals 3",
+    "code": "[x for x in mylist if len(x) == 3]"
+  },
+  {
+    "intent": "initialize a list `lst` of 100 objects Object()",
+    "code": "lst = [Object() for _ in range(100)]"
+  },
+  {
+    "intent": "create list `lst` containing 100 instances of object `Object`",
+    "code": "lst = [Object() for i in range(100)]"
+  },
+  {
+    "intent": "get the content of child tag with`href` attribute whose parent has css `someclass`",
+    "code": "self.driver.find_element_by_css_selector('.someclass a').get_attribute('href')"
+  },
+  {
+    "intent": "joining data from dataframe `df1` with data from dataframe `df2` based on matching values of column 'Date_Time' in both dataframes",
+    "code": "df1.merge(df2, on='Date_Time')"
+  },
+  {
+    "intent": "use `%s` operator to print variable values `str1` inside a string",
+    "code": "'first string is: %s, second one is: %s' % (str1, 'geo.tif')"
+  },
+  {
+    "intent": "Split a string by a delimiter in python",
+    "code": "[x.strip() for x in '2.MATCHES $$TEXT$$ STRING'.split('$$TEXT$$')]"
+  },
+  {
+    "intent": "check if directory `directory ` exists and create it if necessary",
+    "code": "if (not os.path.exists(directory)):\n    os.makedirs(directory)"
+  },
+  {
+    "intent": "check if a directory `path` exists and create it if necessary",
+    "code": "try:\n    os.makedirs(path)\nexcept OSError:\n    if (not os.path.isdir(path)):\n        raise"
+  },
+  {
+    "intent": "check if a directory `path` exists and create it if necessary",
+    "code": "distutils.dir_util.mkpath(path)"
+  },
+  {
+    "intent": "check if a directory `path` exists and create it if necessary",
+    "code": "try:\n    os.makedirs(path)\nexcept OSError as exception:\n    if (exception.errno != errno.EEXIST):\n        raise"
+  },
+  {
+    "intent": "Replace a separate word 'H3' by 'H1' in a string 'text'",
+    "code": "re.sub('\\\\bH3\\\\b', 'H1', text)"
+  },
+  {
+    "intent": "substitute ASCII letters in string 'aas30dsa20' with empty string ''",
+    "code": "re.sub('\\\\D', '', 'aas30dsa20')"
+  },
+  {
+    "intent": "get digits only from a string `aas30dsa20` using lambda function",
+    "code": "\"\"\"\"\"\".join([x for x in 'aas30dsa20' if x.isdigit()])"
+  },
+  {
+    "intent": "access a tag called \"name\" in beautifulsoup `soup`",
+    "code": "print(soup.find('name').string)"
+  },
+  {
+    "intent": "get a dictionary `records` of key-value pairs in PyMongo cursor `cursor`",
+    "code": "records = dict((record['_id'], record) for record in cursor)"
+  },
+  {
+    "intent": "Create new matrix object  by concatenating data from matrix A and matrix B",
+    "code": "np.concatenate((A, B))"
+  },
+  {
+    "intent": "concat two matrices `A` and `B` in numpy",
+    "code": "np.vstack((A, B))"
+  },
+  {
+    "intent": "Get the characters count in a file `filepath`",
+    "code": "os.stat(filepath).st_size"
+  },
+  {
+    "intent": "count the occurrences of item \"a\" in list `l`",
+    "code": "l.count('a')"
+  },
+  {
+    "intent": "count the occurrences of items in list `l`",
+    "code": "Counter(l)"
+  },
+  {
+    "intent": "count the occurrences of items in list `l`",
+    "code": "[[x, l.count(x)] for x in set(l)]"
+  },
+  {
+    "intent": "count the occurrences of items in list `l`",
+    "code": "dict(((x, l.count(x)) for x in set(l)))"
+  },
+  {
+    "intent": "count the occurrences of item \"b\" in list `l`",
+    "code": "l.count('b')"
+  },
+  {
+    "intent": "copy file `srcfile` to directory `dstdir`",
+    "code": "shutil.copy(srcfile, dstdir)"
+  },
+  {
+    "intent": "find the key associated with the largest value in dictionary `x` whilst key is non-zero value",
+    "code": "max(k for k, v in x.items() if v != 0)"
+  },
+  {
+    "intent": "get the largest key whose not associated with value of 0 in dictionary `x`",
+    "code": "(k for k, v in x.items() if v != 0)"
+  },
+  {
+    "intent": "get the largest key in a dictionary `x` with non-zero value",
+    "code": "max(k for k, v in x.items() if v != 0)"
+  },
+  {
+    "intent": "Put the curser at beginning of the file",
+    "code": "file.seek(0)"
+  },
+  {
+    "intent": "combine values from column 'b' and column 'a' of dataframe `df`  into column 'c' of datafram `df`",
+    "code": "df['c'] = np.where(df['a'].isnull, df['b'], df['a'])"
+  },
+  {
+    "intent": "remove key 'ele' from dictionary `d`",
+    "code": "del d['ele']"
+  },
+  {
+    "intent": "Update datetime field in `MyModel` to be the existing `timestamp` plus 100 years",
+    "code": "MyModel.objects.update(timestamp=F('timestamp') + timedelta(days=36524.25))"
+  },
+  {
+    "intent": "merge list `['it']` and list `['was']` and list `['annoying']` into one list",
+    "code": "['it'] + ['was'] + ['annoying']"
+  },
+  {
+    "intent": "increment a value with leading zeroes in a number `x`",
+    "code": "str(int(x) + 1).zfill(len(x))"
+  },
+  {
+    "intent": "check if a pandas dataframe `df`'s index is sorted",
+    "code": "all(df.index[:-1] <= df.index[1:])"
+  },
+  {
+    "intent": "Convert tuple `t` to list",
+    "code": "list(t)"
+  },
+  {
+    "intent": "Convert list `t` to tuple",
+    "code": "tuple(l)"
+  },
+  {
+    "intent": "Convert tuple `level1` to list",
+    "code": "level1 = map(list, level1)"
+  },
+  {
+    "intent": "send the output of pprint object `dataobject` to file `logFile`",
+    "code": "pprint.pprint(dataobject, logFile)"
+  },
+  {
+    "intent": "get index of rows in column 'BoolCol'",
+    "code": "df.loc[df['BoolCol']]"
+  },
+  {
+    "intent": "Create a list containing the indexes of rows where the value of column 'BoolCol' in dataframe `df` are equal to True",
+    "code": "df.iloc[np.flatnonzero(df['BoolCol'])]"
+  },
+  {
+    "intent": "get list of indexes of rows where column 'BoolCol' values match True",
+    "code": "df[df['BoolCol'] == True].index.tolist()"
+  },
+  {
+    "intent": "get index of rows in dataframe `df` which column 'BoolCol' matches value True",
+    "code": "df[df['BoolCol']].index.tolist()"
+  },
+  {
+    "intent": "change working directory to the directory `owd`",
+    "code": "os.chdir(owd)"
+  },
+  {
+    "intent": "insert data from a string `testfield` to sqlite db `c`",
+    "code": "c.execute(\"INSERT INTO test VALUES (?, 'bar')\", (testfield,))"
+  },
+  {
+    "intent": "decode string \"\\\\x89\\\\n\" into a normal string",
+    "code": "\"\"\"\\\\x89\\\\n\"\"\".decode('string_escape')"
+  },
+  {
+    "intent": "convert a raw string `raw_string` into a normal string",
+    "code": "raw_string.decode('string_escape')"
+  },
+  {
+    "intent": "convert a raw string `raw_byte_string` into a normal string",
+    "code": "raw_byte_string.decode('unicode_escape')"
+  },
+  {
+    "intent": "split a string `s` with into all strings of repeated characters",
+    "code": "[m.group(0) for m in re.finditer('(\\\\d)\\\\1*', s)]"
+  },
+  {
+    "intent": "scatter a plot with x, y position of `np.random.randn(100)` and face color equal to none",
+    "code": "plt.scatter(np.random.randn(100), np.random.randn(100), facecolors='none')"
+  },
+  {
+    "intent": "do a scatter plot with empty circles",
+    "code": "plt.plot(np.random.randn(100), np.random.randn(100), 'o', mfc='none')"
+  },
+  {
+    "intent": "remove a div with a id `main-content` using beautifulsoup",
+    "code": "soup.find('div', id='main-content').decompose()"
+  },
+  {
+    "intent": "filter rows containing key word `ball` in column `ids`",
+    "code": "df[df['ids'].str.contains('ball')]"
+  },
+  {
+    "intent": "convert index at level 0 into a column in dataframe `df`",
+    "code": "df.reset_index(level=0, inplace=True)"
+  },
+  {
+    "intent": "Add indexes in a data frame `df` to a column `index1`",
+    "code": "df['index1'] = df.index"
+  },
+  {
+    "intent": "convert pandas index in a dataframe to columns",
+    "code": "df.reset_index(level=['tick', 'obs'])"
+  },
+  {
+    "intent": "Get reverse of list items from list 'b' using extended slicing",
+    "code": "[x[::-1] for x in b]"
+  },
+  {
+    "intent": "join each element in array `a` with element at the same index in array `b` as a tuple",
+    "code": "np.array([zip(x, y) for x, y in zip(a, b)])"
+  },
+  {
+    "intent": "zip two 2-d arrays `a` and `b`",
+    "code": "np.array(zip(a.ravel(), b.ravel()), dtype='i4,i4').reshape(a.shape)"
+  },
+  {
+    "intent": "convert list `list_of_ints` into a comma separated string",
+    "code": "\"\"\",\"\"\".join([str(i) for i in list_of_ints])"
+  },
+  {
+    "intent": "Send a post request with raw data `DATA` and basic authentication with `username` and `password`",
+    "code": "requests.post(url, data=DATA, headers=HEADERS_DICT, auth=(username, password))"
+  },
+  {
+    "intent": "Find last occurrence of character '}' in string \"abcd}def}\"",
+    "code": "'abcd}def}'.rfind('}')"
+  },
+  {
+    "intent": "Iterate ove list `[1, 2, 3]` using list comprehension",
+    "code": "print([item for item in [1, 2, 3]])"
+  },
+  {
+    "intent": "extract all the values with keys 'x' and 'y' from a list of dictionaries `d` to list of tuples",
+    "code": "[(x['x'], x['y']) for x in d]"
+  },
+  {
+    "intent": "get the filename without the extension from file 'hemanth.txt'",
+    "code": "print(os.path.splitext(os.path.basename('hemanth.txt'))[0])"
+  },
+  {
+    "intent": "create a dictionary by adding each two adjacent elements in tuple `x` as key/value pair to it",
+    "code": "dict(x[i:i + 2] for i in range(0, len(x), 2))"
+  },
+  {
+    "intent": "create a list containing flattened list `[['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']]`",
+    "code": "values = sum([['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']], [])"
+  },
+  {
+    "intent": "select rows in a dataframe `df` column 'closing_price' between two values 99 and 101",
+    "code": "df = df[(df['closing_price'] >= 99) & (df['closing_price'] <= 101)]"
+  },
+  {
+    "intent": "replace all occurences of newlines `\\n` with `<br>` in dataframe `df`",
+    "code": "df.replace({'\\n': '<br>'}, regex=True)"
+  },
+  {
+    "intent": "replace all occurrences of a string `\\n` by string `<br>` in a pandas data frame `df`",
+    "code": "df.replace({'\\n': '<br>'}, regex=True)"
+  },
+  {
+    "intent": "create a list containing each two adjacent letters in string `word` as its elements",
+    "code": "[(x + y) for x, y in zip(word, word[1:])]"
+  },
+  {
+    "intent": "Get a list of pairs from a string `word` using lambda function",
+    "code": "list(map(lambda x, y: x + y, word[:-1], word[1:]))"
+  },
+  {
+    "intent": "extract a url from a string `myString`",
+    "code": "print(re.findall('(https?://[^\\\\s]+)', myString))"
+  },
+  {
+    "intent": "extract a url from a string `myString`",
+    "code": "print(re.search('(?P<url>https?://[^\\\\s]+)', myString).group('url'))"
+  },
+  {
+    "intent": "remove all special characters, punctuation and spaces from a string `mystring` using regex",
+    "code": "re.sub('[^A-Za-z0-9]+', '', mystring)"
+  },
+  {
+    "intent": "create a DatetimeIndex containing 13 periods of the second friday of each month starting from date '2016-01-01'",
+    "code": "pd.date_range('2016-01-01', freq='WOM-2FRI', periods=13)"
+  },
+  {
+    "intent": "Create multidimensional array `matrix` with 3 rows and 2 columns in python",
+    "code": "matrix = [[a, b], [c, d], [e, f]]"
+  },
+  {
+    "intent": "replace spaces with underscore",
+    "code": "mystring.replace(' ', '_')"
+  },
+  {
+    "intent": "get an absolute file path of file 'mydir/myfile.txt'",
+    "code": "os.path.abspath('mydir/myfile.txt')"
+  },
+  {
+    "intent": "split string `my_string` on white spaces",
+    "code": "\"\"\" \"\"\".join(my_string.split())"
+  },
+  {
+    "intent": "get filename without extension from file `filename`",
+    "code": "os.path.splitext(filename)[0]"
+  },
+  {
+    "intent": "get a list containing the sum of each element `i` in list `l` plus the previous elements",
+    "code": "[sum(l[:i]) for i, _ in enumerate(l)]"
+  },
+  {
+    "intent": "split a string `Docs/src/Scripts/temp` by `/` keeping `/` in the result",
+    "code": "\"\"\"Docs/src/Scripts/temp\"\"\".replace('/', '/\\x00/').split('\\x00')"
+  },
+  {
+    "intent": "shuffle columns of an numpy array 'r'",
+    "code": "np.random.shuffle(np.transpose(r))"
+  },
+  {
+    "intent": "copy all values in a column 'B' to a new column 'D' in a pandas data frame 'df'",
+    "code": "df['D'] = df['B']"
+  },
+  {
+    "intent": "find a value within nested json 'data' where the key inside another key 'B' is unknown.",
+    "code": "list(data['A']['B'].values())[0]['maindata'][0]['Info']"
+  },
+  {
+    "intent": "check characters of string `string` are true predication of function `predicate`",
+    "code": "all(predicate(x) for x in string)"
+  },
+  {
+    "intent": "determine number of files on a drive with python",
+    "code": "os.statvfs('/').f_files - os.statvfs('/').f_ffree"
+  },
+  {
+    "intent": "how to get a single result from a SQLite query in python?",
+    "code": "cursor.fetchone()[0]"
+  },
+  {
+    "intent": "convert string `user_input` into a list of integers `user_list`",
+    "code": "user_list = [int(number) for number in user_input.split(',')]"
+  },
+  {
+    "intent": "Get a list of integers by splitting  a string `user` with comma",
+    "code": "[int(s) for s in user.split(',')]"
+  },
+  {
+    "intent": "Sorting a Python list by two criteria",
+    "code": "sorted(list, key=lambda x: (x[0], -x[1]))"
+  },
+  {
+    "intent": "sort a list of objects `ut`, based on a function `cmpfun` in descending order",
+    "code": "ut.sort(key=cmpfun, reverse=True)"
+  },
+  {
+    "intent": "reverse list `ut` based on the `count` attribute of each object",
+    "code": "ut.sort(key=lambda x: x.count, reverse=True)"
+  },
+  {
+    "intent": "sort a list of objects `ut` in reverse order by their `count` property",
+    "code": "ut.sort(key=lambda x: x.count, reverse=True)"
+  },
+  {
+    "intent": "click a href button 'Send' with selenium",
+    "code": "driver.find_element_by_partial_link_text('Send').click()"
+  },
+  {
+    "intent": "click a href button having text `Send InMail` with selenium",
+    "code": "driver.findElement(By.linkText('Send InMail')).click()"
+  },
+  {
+    "intent": "click a href button with text 'Send InMail' with selenium",
+    "code": "driver.find_element_by_link_text('Send InMail').click()"
+  },
+  {
+    "intent": "cast an int `i` to a string and concat to string 'ME'",
+    "code": "'ME' + str(i)"
+  },
+  {
+    "intent": "Sorting data in DataFrame Pandas",
+    "code": "df.sort_values(['System_num', 'Dis'])"
+  },
+  {
+    "intent": "prepend the line '#test firstline\\n' to the contents of file 'infile' and save as the file 'outfile'",
+    "code": "open('outfile', 'w').write('#test firstline\\n' + open('infile').read())"
+  },
+  {
+    "intent": "sort a list `l` by length of value in tuple",
+    "code": "l.sort(key=lambda t: len(t[1]), reverse=True)"
+  },
+  {
+    "intent": "split string `s` by words that ends with 'd'",
+    "code": "re.findall('\\\\b(\\\\w+)d\\\\b', s)"
+  },
+  {
+    "intent": "return `True` if string `foobarrrr` contains regex `ba[rzd]`",
+    "code": "bool(re.search('ba[rzd]', 'foobarrrr'))"
+  },
+  {
+    "intent": "Removing duplicates in list `t`",
+    "code": "list(set(t))"
+  },
+  {
+    "intent": "Removing duplicates in list `source_list`",
+    "code": "list(set(source_list))"
+  },
+  {
+    "intent": "Removing duplicates in list `abracadabra`",
+    "code": "list(OrderedDict.fromkeys('abracadabra'))"
+  },
+  {
+    "intent": "Convert array `a` into a list",
+    "code": "numpy.array(a).reshape(-1).tolist()"
+  },
+  {
+    "intent": "Convert the first row of numpy matrix `a` to a list",
+    "code": "numpy.array(a)[0].tolist()"
+  },
+  {
+    "intent": "In `soup`, get the content of the sibling of the `td`  tag with text content `Address:`",
+    "code": "print(soup.find(text='Address:').findNext('td').contents[0])"
+  },
+  {
+    "intent": "convert elements of each tuple in list `l` into a string  separated by character `@`",
+    "code": "\"\"\" \"\"\".join([('%d@%d' % t) for t in l])"
+  },
+  {
+    "intent": "convert each tuple in list `l` to a string with '@' separating the tuples' elements",
+    "code": "\"\"\" \"\"\".join([('%d@%d' % (t[0], t[1])) for t in l])"
+  },
+  {
+    "intent": "get the html from the current web page of a Selenium driver",
+    "code": "driver.execute_script('return document.documentElement.outerHTML;')"
+  },
+  {
+    "intent": "Get all matches with regex pattern `\\\\d+[xX]` in list of string `teststr`",
+    "code": "[i for i in teststr if re.search('\\\\d+[xX]', i)]"
+  },
+  {
+    "intent": "select values from column 'A' for which corresponding values in column 'B' will be greater than 50, and in column 'C' - equal 900 in dataframe `df`",
+    "code": "df['A'][(df['B'] > 50) & (df['C'] == 900)]"
+  },
+  {
+    "intent": "Sort dictionary `o` in ascending order based on its keys and items",
+    "code": "sorted(o.items())"
+  },
+  {
+    "intent": "get sorted list of keys of dict `d`",
+    "code": "sorted(d)"
+  },
+  {
+    "intent": "How to sort dictionaries by keys in Python",
+    "code": "sorted(d.items())"
+  },
+  {
+    "intent": "convert string \"1\" into integer",
+    "code": "int('1')"
+  },
+  {
+    "intent": "function to convert strings into integers",
+    "code": "int()"
+  },
+  {
+    "intent": "convert items in `T1` to integers",
+    "code": "T2 = [map(int, x) for x in T1]"
+  },
+  {
+    "intent": "call a shell script `./test.sh` using subprocess",
+    "code": "subprocess.call(['./test.sh'])"
+  },
+  {
+    "intent": "call a shell script `notepad` using subprocess",
+    "code": "subprocess.call(['notepad'])"
+  },
+  {
+    "intent": "combine lists `l1` and `l2`  by alternating their elements",
+    "code": "[val for pair in zip(l1, l2) for val in pair]"
+  },
+  {
+    "intent": "encode string 'data to be encoded'",
+    "code": "encoded = base64.b64encode('data to be encoded')"
+  },
+  {
+    "intent": "encode a string `data to be encoded` to `ascii` encoding",
+    "code": "encoded = 'data to be encoded'.encode('ascii')"
+  },
+  {
+    "intent": "parse tab-delimited CSV file 'text.txt' into a list",
+    "code": "lol = list(csv.reader(open('text.txt', 'rb'), delimiter='\\t'))"
+  },
+  {
+    "intent": "Get attribute `my_str` of object `my_object`",
+    "code": "getattr(my_object, my_str)"
+  },
+  {
+    "intent": "group a list of dicts `LD` into one dict by key",
+    "code": "print(dict(zip(LD[0], zip(*[list(d.values()) for d in LD]))))"
+  },
+  {
+    "intent": "How do I sum the first value in each tuple in a list of tuples in Python?",
+    "code": "sum([pair[0] for pair in list_of_pairs])"
+  },
+  {
+    "intent": "convert unicode string u\"{'code1':1,'code2':1}\" into dictionary",
+    "code": "d = ast.literal_eval(\"{'code1':1,'code2':1}\")"
+  },
+  {
+    "intent": "find all words in a string `mystring` that start with the `$` sign",
+    "code": "[word for word in mystring.split() if word.startswith('$')]"
+  },
+  {
+    "intent": "remove any url within string `text`",
+    "code": "text = re.sub('^https?:\\\\/\\\\/.*[\\\\r\\\\n]*', '', text, flags=re.MULTILINE)"
+  },
+  {
+    "intent": "replace all elements in array `A` that are not present in array `[1, 3, 4]` with zeros",
+    "code": "np.where(np.in1d(A, [1, 3, 4]).reshape(A.shape), A, 0)"
+  },
+  {
+    "intent": "calculate mean across dimension in a 2d array `a`",
+    "code": "np.mean(a, axis=1)"
+  },
+  {
+    "intent": "running r script '/pathto/MyrScript.r' from python",
+    "code": "subprocess.call(['/usr/bin/Rscript', '--vanilla', '/pathto/MyrScript.r'])"
+  },
+  {
+    "intent": "run r script '/usr/bin/Rscript --vanilla /pathto/MyrScript.r'",
+    "code": "subprocess.call('/usr/bin/Rscript --vanilla /pathto/MyrScript.r', shell=True)"
+  },
+  {
+    "intent": "add a header to a csv file",
+    "code": "writer.writeheader()"
+  },
+  {
+    "intent": "replacing nan in the dataframe `df` with row average",
+    "code": "df.fillna(df.mean(axis=1), axis=1)"
+  },
+  {
+    "intent": "Convert unix timestamp '1347517370' to formatted string '%Y-%m-%d %H:%M:%S'",
+    "code": "time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1347517370))"
+  },
+  {
+    "intent": "Call a base class's class method `do` from derived class `Derived`",
+    "code": "super(Derived, cls).do(a)"
+  },
+  {
+    "intent": "selecting rows in Numpy ndarray 'a', where the value in the first column is 0 and value in the second column is 1",
+    "code": "a[np.where((a[:, (0)] == 0) * (a[:, (1)] == 1))]"
+  },
+  {
+    "intent": "separate words delimited by one or more spaces into a list",
+    "code": "re.split(' +', 'hello world sample text')"
+  },
+  {
+    "intent": "length of longest element in list `words`",
+    "code": "len(max(words, key=len))"
+  },
+  {
+    "intent": "get the value associated with unicode key 'from_user' of first dictionary in list `result`",
+    "code": "result[0]['from_user']"
+  },
+  {
+    "intent": "Retrieve each line from a file 'File.txt' as a list",
+    "code": "[line.split() for line in open('File.txt')]"
+  },
+  {
+    "intent": "swap keys with values in a dictionary `a`",
+    "code": "res = dict((v, k) for k, v in a.items())"
+  },
+  {
+    "intent": "Open a file `path/to/FILE_NAME.ext` in write mode",
+    "code": "new_file = open('path/to/FILE_NAME.ext', 'w')"
+  },
+  {
+    "intent": "How to count distinct values in a column of a pandas group by object?",
+    "code": "df.groupby(['col1', 'col2'])['col3'].nunique().reset_index()"
+  },
+  {
+    "intent": "Check if any key in the dictionary `dict1` starts with the string `EMP$$`",
+    "code": "any(key.startswith('EMP$$') for key in dict1)"
+  },
+  {
+    "intent": "create list of values from dictionary `dict1` that have a key that starts with 'EMP$$'",
+    "code": "[value for key, value in list(dict1.items()) if key.startswith('EMP$$')]"
+  },
+  {
+    "intent": "convert a pandas series `sf` into a pandas dataframe `df` with columns `email` and `list`",
+    "code": "pd.DataFrame({'email': sf.index, 'list': sf.values})"
+  },
+  {
+    "intent": "print elements of list `list` seperated by tabs `\\t`",
+    "code": "print('\\t'.join(map(str, list)))"
+  },
+  {
+    "intent": "print unicode string '\\xd0\\xbf\\xd1\\x80\\xd0\\xb8' with utf-8",
+    "code": "print('\\xd0\\xbf\\xd1\\x80\\xd0\\xb8'.encode('raw_unicode_escape'))"
+  },
+  {
+    "intent": "Encode a latin character in string `Sopet\\xc3\\xb3n` properly",
+    "code": "'Sopet\\xc3\\xb3n'.encode('latin-1').decode('utf-8')"
+  },
+  {
+    "intent": "resized image `image` to width, height of `(x, y)` with filter of `ANTIALIAS`",
+    "code": "image = image.resize((x, y), Image.ANTIALIAS)"
+  },
+  {
+    "intent": "regex, find \"n\"s only in the middle of string `s`",
+    "code": "re.findall('n(?<=[^n]n)n+(?=[^n])(?i)', s)"
+  },
+  {
+    "intent": "display the float `1/3*100` as a percentage",
+    "code": "print('{0:.0f}%'.format(1.0 / 3 * 100))"
+  },
+  {
+    "intent": "sort a list of dictionary `mylist` by the key `title`",
+    "code": "mylist.sort(key=lambda x: x['title'])"
+  },
+  {
+    "intent": "sort a list `l` of dicts by dict value 'title'",
+    "code": "l.sort(key=lambda x: x['title'])"
+  },
+  {
+    "intent": "sort a list of dictionaries by the value of keys 'title', 'title_url', 'id' in ascending order.",
+    "code": "l.sort(key=lambda x: (x['title'], x['title_url'], x['id']))"
+  },
+  {
+    "intent": "find 10 largest differences between each respective elements of list `l1` and list `l2`",
+    "code": "heapq.nlargest(10, range(len(l1)), key=lambda i: abs(l1[i] - l2[i]))"
+  },
+  {
+    "intent": "BeautifulSoup find all 'span' elements in HTML string `soup` with class of 'starGryB sp'",
+    "code": "soup.find_all('span', {'class': 'starGryB sp'})"
+  },
+  {
+    "intent": "write records in dataframe `df` to table 'test' in schema 'a_schema'",
+    "code": "df.to_sql('test', engine, schema='a_schema')"
+  },
+  {
+    "intent": "Extract brackets from string `s`",
+    "code": "brackets = re.sub('[^(){}[\\\\]]', '', s)"
+  },
+  {
+    "intent": "remove duplicate elements from list 'L'",
+    "code": "list(dict((x[0], x) for x in L).values())"
+  },
+  {
+    "intent": "read a file `file` without newlines",
+    "code": "[line.rstrip('\\n') for line in file]"
+  },
+  {
+    "intent": "get the position of item 1 in `testlist`",
+    "code": "[i for (i, x) in enumerate(testlist) if (x == 1)]"
+  },
+  {
+    "intent": "get the position of item 1 in `testlist`",
+    "code": "[i for (i, x) in enumerate(testlist) if (x == 1)]"
+  },
+  {
+    "intent": "get the position of item 1 in `testlist`",
+    "code": "for i in [i for (i, x) in enumerate(testlist) if (x == 1)]:\n    pass"
+  },
+  {
+    "intent": "get the position of item 1 in `testlist`",
+    "code": "for i in (i for (i, x) in enumerate(testlist) if (x == 1)):\n    pass"
+  },
+  {
+    "intent": "get the position of item 1 in `testlist`",
+    "code": "gen = (i for (i, x) in enumerate(testlist) if (x == 1))\nfor i in gen:\n    pass"
+  },
+  {
+    "intent": "get the position of item `element` in list `testlist`",
+    "code": "print(testlist.index(element))"
+  },
+  {
+    "intent": "get the position of item `element` in list `testlist`",
+    "code": "try:\n    print(testlist.index(element))\nexcept ValueError:\n    pass"
+  },
+  {
+    "intent": "find the first element of the tuple with the maximum second element in a list of tuples `lis`",
+    "code": "max(lis, key=lambda item: item[1])[0]"
+  },
+  {
+    "intent": "get the item at index 0 from the tuple that has maximum value at index 1 in list `lis`",
+    "code": "max(lis, key=itemgetter(1))[0]"
+  },
+  {
+    "intent": "Make a delay of 1 second",
+    "code": "time.sleep(1)"
+  },
+  {
+    "intent": "convert list of tuples `L` to a string",
+    "code": "\"\"\", \"\"\".join('(' + ', '.join(i) + ')' for i in L)"
+  },
+  {
+    "intent": "Django set default value of field `b` equal to '0000000'",
+    "code": "b = models.CharField(max_length=7, default='0000000', editable=False)"
+  },
+  {
+    "intent": "Sort lis `list5` in ascending order based on the degrees value of its elements",
+    "code": "sorted(list5, lambda x: (degree(x), x))"
+  },
+  {
+    "intent": "How do I perform secondary sorting in python?",
+    "code": "sorted(list5, key=lambda vertex: (degree(vertex), vertex))"
+  },
+  {
+    "intent": "convert a list  into a generator object",
+    "code": "(n for n in [1, 2, 3, 5])"
+  },
+  {
+    "intent": "remove elements from list `oldlist` that have an index number mentioned in list `removelist`",
+    "code": "newlist = [v for i, v in enumerate(oldlist) if i not in removelist]"
+  },
+  {
+    "intent": "Open a file `yourfile.txt` in write mode",
+    "code": "f = open('yourfile.txt', 'w')"
+  },
+  {
+    "intent": "get attribute 'attr' from object `obj`",
+    "code": "getattr(obj, 'attr')"
+  },
+  {
+    "intent": "convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to tuple",
+    "code": "from functools import reduce\nreduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))"
+  },
+  {
+    "intent": "convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to list in one line",
+    "code": "map(lambda a: a[0], (('aa',), ('bb',), ('cc',)))"
+  },
+  {
+    "intent": "Python Pandas: How to replace a characters in a column of a dataframe?",
+    "code": "df['range'].replace(',', '-', inplace=True)"
+  },
+  {
+    "intent": "unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`",
+    "code": "zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])"
+  },
+  {
+    "intent": "unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`",
+    "code": "zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])"
+  },
+  {
+    "intent": "unzip list `original`",
+    "code": "result = ([a for (a, b) in original], [b for (a, b) in original])"
+  },
+  {
+    "intent": "unzip list `original` and return a generator",
+    "code": "result = ((a for (a, b) in original), (b for (a, b) in original))"
+  },
+  {
+    "intent": "unzip list `[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]`",
+    "code": "zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e',)])"
+  },
+  {
+    "intent": "unzip list `[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]` and fill empty results with None",
+    "code": "map(None, *[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e',)])"
+  },
+  {
+    "intent": "encode `Decimal('3.9')` to a JSON string",
+    "code": "json.dumps(Decimal('3.9'))"
+  },
+  {
+    "intent": "Add key \"mynewkey\" to dictionary `d` with value \"mynewvalue\"",
+    "code": "d['mynewkey'] = 'mynewvalue'"
+  },
+  {
+    "intent": "Add key 'a' to dictionary `data` with value 1",
+    "code": "data.update({'a': 1, })"
+  },
+  {
+    "intent": "Add key 'a' to dictionary `data` with value 1",
+    "code": "data.update(dict(a=1))"
+  },
+  {
+    "intent": "Add key 'a' to dictionary `data` with value 1",
+    "code": "data.update(a=1)"
+  },
+  {
+    "intent": "find maximal value in matrix `matrix`",
+    "code": "max([max(i) for i in matrix])"
+  },
+  {
+    "intent": "Round number `answer` to 2 precision after the decimal point",
+    "code": "answer = str(round(answer, 2))"
+  },
+  {
+    "intent": "extract ip address from an html string",
+    "code": "ip = re.findall('[0-9]+(?:\\\\.[0-9]+){3}', s)"
+  },
+  {
+    "intent": "filter dataframe `df` by values in column `A` that appear more than once",
+    "code": "df.groupby('A').filter(lambda x: len(x) > 1)"
+  },
+  {
+    "intent": "append each line in file `myfile` into a list",
+    "code": "[x for x in myfile.splitlines() if x != '']"
+  },
+  {
+    "intent": "Get a list of integers `lst` from a file `filename.txt`",
+    "code": "lst = map(int, open('filename.txt').readlines())"
+  },
+  {
+    "intent": "add color bar with image `mappable` to plot `plt`",
+    "code": "plt.colorbar(mappable=mappable, cax=ax3)"
+  },
+  {
+    "intent": "count most frequent 100 words in column 'text' of dataframe `df`",
+    "code": "Counter(' '.join(df['text']).split()).most_common(100)"
+  },
+  {
+    "intent": "Python split a string using regex",
+    "code": "re.findall('(.+?):(.+?)\\\\b ?', text)"
+  },
+  {
+    "intent": "generate all 2-element subsets of tuple `(1, 2, 3)`",
+    "code": "list(itertools.combinations((1, 2, 3), 2))"
+  },
+  {
+    "intent": "get a value of datetime.today() in the UTC time zone",
+    "code": "datetime.now(pytz.utc)"
+  },
+  {
+    "intent": "Get a new list `list2`by removing empty list from a list of lists `list1`",
+    "code": "list2 = [x for x in list1 if x != []]"
+  },
+  {
+    "intent": "Create `list2` to contain the lists from list `list1` excluding the empty lists from `list1`",
+    "code": "list2 = [x for x in list1 if x]"
+  },
+  {
+    "intent": "Django response with JSON `data`",
+    "code": "return HttpResponse(data, mimetype='application/json')"
+  },
+  {
+    "intent": "get all text that is not enclosed within square brackets in string `example_str`",
+    "code": "re.findall('(.*?)\\\\[.*?\\\\]', example_str)"
+  },
+  {
+    "intent": "Use a regex to get all text in a string `example_str` that is not surrounded by square brackets",
+    "code": "re.findall('(.*?)(?:\\\\[.*?\\\\]|$)', example_str)"
+  },
+  {
+    "intent": "get whatever is between parentheses as a single match, and any char outside as an individual match in string '(zyx)bc'",
+    "code": "re.findall('\\\\(.+?\\\\)|\\\\w', '(zyx)bc')"
+  },
+  {
+    "intent": "match regex '\\\\((.*?)\\\\)|(\\\\w)' with string '(zyx)bc'",
+    "code": "re.findall('\\\\((.*?)\\\\)|(\\\\w)', '(zyx)bc')"
+  },
+  {
+    "intent": "match multiple regex patterns with the alternation operator `|` in a string `(zyx)bc`",
+    "code": "re.findall('\\\\(.*?\\\\)|\\\\w', '(zyx)bc')"
+  },
+  {
+    "intent": "formate each string cin list `elements` into pattern '%{0}%'",
+    "code": "elements = ['%{0}%'.format(element) for element in elements]"
+  },
+  {
+    "intent": "Open a background process 'background-process' with arguments 'arguments'",
+    "code": "subprocess.Popen(['background-process', 'arguments'])"
+  },
+  {
+    "intent": "get list of values from dictionary 'mydict' w.r.t. list of keys 'mykeys'",
+    "code": "[mydict[x] for x in mykeys]"
+  },
+  {
+    "intent": "convert list `[('Name', 'Joe'), ('Age', 22)]` into a dictionary",
+    "code": "dict([('Name', 'Joe'), ('Age', 22)])"
+  },
+  {
+    "intent": "average each two columns of array `data`",
+    "code": "data.reshape(-1, j).mean(axis=1).reshape(data.shape[0], -1)"
+  },
+  {
+    "intent": "double backslash escape all double quotes in string `s`",
+    "code": "print(s.encode('unicode-escape').replace('\"', '\\\\\"'))"
+  },
+  {
+    "intent": "split a string into a list of words and whitespace",
+    "code": "re.split('(\\\\W+)', s)"
+  },
+  {
+    "intent": "plotting stacked barplots on a panda data frame",
+    "code": "df.plot(kind='barh', stacked=True)"
+  },
+  {
+    "intent": "reverse the keys and values in a dictionary `myDictionary`",
+    "code": "{i[1]: i[0] for i in list(myDictionary.items())}"
+  },
+  {
+    "intent": "finding the index of elements containing substring 'how' and 'what' in a list of strings 'myList'.",
+    "code": "[i for i, j in enumerate(myList) if 'how' in j.lower() or 'what' in j.lower()]"
+  },
+  {
+    "intent": "check if object `obj` is a string",
+    "code": "isinstance(obj, str)"
+  },
+  {
+    "intent": "check if object `o` is a string",
+    "code": "isinstance(o, str)"
+  },
+  {
+    "intent": "check if object `o` is a string",
+    "code": "(type(o) is str)"
+  },
+  {
+    "intent": "check if object `o` is a string",
+    "code": "isinstance(o, str)"
+  },
+  {
+    "intent": "check if `obj_to_test` is a string",
+    "code": "isinstance(obj_to_test, str)"
+  },
+  {
+    "intent": "append list `list1` to `list2`",
+    "code": "list2.extend(list1)"
+  },
+  {
+    "intent": "append list `mylog` to `list1`",
+    "code": "list1.extend(mylog)"
+  },
+  {
+    "intent": "append list `a` to `c`",
+    "code": "c.extend(a)"
+  },
+  {
+    "intent": "append items in list `mylog` to `list1`",
+    "code": "for line in mylog:\n    list1.append(line)"
+  },
+  {
+    "intent": "append a tuple of elements from list `a` with indexes '[0][0] [0][2]' to list `b`",
+    "code": "b.append((a[0][0], a[0][2]))"
+  },
+  {
+    "intent": "Initialize `SECRET_KEY` in flask config with `Your_secret_string `",
+    "code": "app.config['SECRET_KEY'] = 'Your_secret_string'"
+  },
+  {
+    "intent": "unpack a series of tuples in pandas into a DataFrame with column names 'out-1' and 'out-2'",
+    "code": "pd.DataFrame(out.tolist(), columns=['out-1', 'out-2'], index=out.index)"
+  },
+  {
+    "intent": "find the index of an element 'MSFT' in a list `stocks_list`",
+    "code": "[x for x in range(len(stocks_list)) if stocks_list[x] == 'MSFT']"
+  },
+  {
+    "intent": "rotate the xtick labels of matplotlib plot `ax` by `45` degrees to make long labels readable",
+    "code": "ax.set_xticklabels(labels, rotation=45)"
+  },
+  {
+    "intent": "remove symbols from a string `s`",
+    "code": "re.sub('[^\\\\w]', ' ', s)"
+  },
+  {
+    "intent": "Get the current directory of a script",
+    "code": "os.path.basename(os.path.dirname(os.path.realpath(__file__)))"
+  },
+  {
+    "intent": "Find octal characters matches from a string `str` using regex",
+    "code": "print(re.findall(\"'\\\\\\\\[0-7]{1,3}'\", str))"
+  },
+  {
+    "intent": "split string `input` based on occurrences of regex pattern '[ ](?=[A-Z]+\\\\b)'",
+    "code": "re.split('[ ](?=[A-Z]+\\\\b)', input)"
+  },
+  {
+    "intent": "Split string `input` at every space followed by an upper-case letter",
+    "code": "re.split('[ ](?=[A-Z])', input)"
+  },
+  {
+    "intent": "send multipart encoded file `files` to url `url` with headers `headers` and metadata `data`",
+    "code": "r = requests.post(url, files=files, headers=headers, data=data)"
+  },
+  {
+    "intent": "write bytes `bytes_` to a file `filename` in python 3",
+    "code": "open('filename', 'wb').write(bytes_)"
+  },
+  {
+    "intent": "get a list from a list `lst` with values mapped into a dictionary `dct`",
+    "code": "[dct[k] for k in lst]"
+  },
+  {
+    "intent": "find duplicate names in column 'name' of the dataframe `x`",
+    "code": "x.set_index('name').index.get_duplicates()"
+  },
+  {
+    "intent": "truncate float 1.923328437452 to 3 decimal places",
+    "code": "round(1.923328437452, 3)"
+  },
+  {
+    "intent": "sort list `li` in descending order based on the date value in second element of each list in list `li`",
+    "code": "sorted(li, key=lambda x: datetime.strptime(x[1], '%d/%m/%Y'), reverse=True)"
+  },
+  {
+    "intent": "place the radial ticks in plot `ax` at 135 degrees",
+    "code": "ax.set_rlabel_position(135)"
+  },
+  {
+    "intent": "check if path `my_path` is an absolute path",
+    "code": "os.path.isabs(my_path)"
+  },
+  {
+    "intent": "get number of keys in dictionary `yourdict`",
+    "code": "len(list(yourdict.keys()))"
+  },
+  {
+    "intent": "count the number of keys in dictionary `yourdictfile`",
+    "code": "len(set(open(yourdictfile).read().split()))"
+  },
+  {
+    "intent": "pandas dataframe get first row of each group by 'id'",
+    "code": "df.groupby('id').first()"
+  },
+  {
+    "intent": "split a list in first column  into multiple columns keeping other columns as well in pandas data frame",
+    "code": "pd.concat([df[0].apply(pd.Series), df[1]], axis=1)"
+  },
+  {
+    "intent": "extract attributes 'src=\"js/([^\"]*\\\\bjquery\\\\b[^\"]*)\"' from string `data`",
+    "code": "re.findall('src=\"js/([^\"]*\\\\bjquery\\\\b[^\"]*)\"', data)"
+  },
+  {
+    "intent": "Sum integers contained in strings in list `['', '3.4', '', '', '1.0']`",
+    "code": "sum(int(float(item)) for item in [_f for _f in ['', '3.4', '', '', '1.0'] if _f])"
+  },
+  {
+    "intent": "Call a subprocess with arguments `c:\\\\Program Files\\\\VMware\\\\VMware Server\\\\vmware-cmd.bat` that may contain spaces",
+    "code": "subprocess.Popen(['c:\\\\Program Files\\\\VMware\\\\VMware Server\\\\vmware-cmd.bat'])"
+  },
+  {
+    "intent": "reverse a priority queue `q` in python without using classes",
+    "code": "q.put((-n, n))"
+  },
+  {
+    "intent": "make a barplot of data in column `group` of dataframe `df` colour-coded according to list `color`",
+    "code": "df['group'].plot(kind='bar', color=['r', 'g', 'b', 'r', 'g', 'b', 'r'])"
+  },
+  {
+    "intent": "find all matches of regex pattern '([a-fA-F\\\\d]{32})' in string `data`",
+    "code": "re.findall('([a-fA-F\\\\d]{32})', data)"
+  },
+  {
+    "intent": "Get the length of list `my_list`",
+    "code": "len(my_list)"
+  },
+  {
+    "intent": "Getting the length of array `l`",
+    "code": "len(l)"
+  },
+  {
+    "intent": "Getting the length of array `s`",
+    "code": "len(s)"
+  },
+  {
+    "intent": "Getting the length of `my_tuple`",
+    "code": "len(my_tuple)"
+  },
+  {
+    "intent": "Getting the length of `my_string`",
+    "code": "len(my_string)"
+  },
+  {
+    "intent": "remove escape character from string \"\\\\a\"",
+    "code": "\"\"\"\\\\a\"\"\".decode('string_escape')"
+  },
+  {
+    "intent": "replace each 'a' with 'b' and each 'b' with 'a' in the string 'obama' in a single pass.",
+    "code": "\"\"\"obama\"\"\".replace('a', '%temp%').replace('b', 'a').replace('%temp%', 'b')"
+  },
+  {
+    "intent": "remove directory tree '/folder_name'",
+    "code": "shutil.rmtree('/folder_name')"
+  },
+  {
+    "intent": "create a new column `weekday` in pandas data frame `data` based on the values in column `my_dt`",
+    "code": "data['weekday'] = data['my_dt'].apply(lambda x: x.weekday())"
+  },
+  {
+    "intent": "reverse sort Counter `x` by values",
+    "code": "sorted(x, key=x.get, reverse=True)"
+  },
+  {
+    "intent": "reverse sort counter `x` by value",
+    "code": "sorted(list(x.items()), key=lambda pair: pair[1], reverse=True)"
+  },
+  {
+    "intent": "append a numpy array 'b' to a numpy array 'a'",
+    "code": "np.vstack((a, b))"
+  },
+  {
+    "intent": "numpy concatenate two arrays `a` and `b` along the first axis",
+    "code": "print(concatenate((a, b), axis=0))"
+  },
+  {
+    "intent": "numpy concatenate two arrays `a` and `b` along the second axis",
+    "code": "print(concatenate((a, b), axis=1))"
+  },
+  {
+    "intent": "numpy concatenate two arrays `a` and `b` along the first axis",
+    "code": "c = np.r_[(a[None, :], b[None, :])]"
+  },
+  {
+    "intent": "numpy concatenate two arrays `a` and `b` along the first axis",
+    "code": "np.array((a, b))"
+  },
+  {
+    "intent": "fetch address information for host 'google.com' ion port 80",
+    "code": "print(socket.getaddrinfo('google.com', 80))"
+  },
+  {
+    "intent": "add a column 'day' with value 'sat' to dataframe `df`",
+    "code": "df.xs('sat', level='day', drop_level=False)"
+  },
+  {
+    "intent": "return a 401 unauthorized in django",
+    "code": "return HttpResponse('Unauthorized', status=401)"
+  },
+  {
+    "intent": "Flask set folder 'wherever' as the default template folder",
+    "code": "Flask(__name__, template_folder='wherever')"
+  },
+  {
+    "intent": "How do I INSERT INTO t1 (SELECT * FROM t2) in SQLAlchemy?",
+    "code": "session.execute('INSERT INTO t1 (SELECT * FROM t2)')"
+  },
+  {
+    "intent": "sort a list of lists 'c2' such that third row comes first",
+    "code": "c2.sort(key=lambda row: row[2])"
+  },
+  {
+    "intent": "Sorting a list of lists in Python",
+    "code": "c2.sort(key=lambda row: (row[2], row[1], row[0]))"
+  },
+  {
+    "intent": "Sorting a list of lists in Python",
+    "code": "c2.sort(key=lambda row: (row[2], row[1]))"
+  },
+  {
+    "intent": "set font `Arial` to display non-ascii characters in matplotlib",
+    "code": "matplotlib.rc('font', **{'sans-serif': 'Arial', 'family': 'sans-serif'})"
+  },
+  {
+    "intent": "Convert  DateTime column 'date' of pandas dataframe 'df' to ordinal",
+    "code": "df['date'].apply(lambda x: x.toordinal())"
+  },
+  {
+    "intent": "get html source of Selenium WebElement `element`",
+    "code": "element.get_attribute('innerHTML')"
+  },
+  {
+    "intent": "Get the integer location of a key `bob` in a pandas data frame",
+    "code": "df.index.get_loc('bob')"
+  },
+  {
+    "intent": "open a 'gnome' terminal from python script and run  'sudo apt-get update' command.",
+    "code": "os.system('gnome-terminal -e \\'bash -c \"sudo apt-get update; exec bash\"\\'')"
+  },
+  {
+    "intent": "add an item with key 'third_key' and value 1 to an dictionary `my_dict`",
+    "code": "my_dict.update({'third_key': 1})"
+  },
+  {
+    "intent": "declare an array",
+    "code": "my_list = []"
+  },
+  {
+    "intent": "Insert item `12` to a list `my_list`",
+    "code": "my_list.append(12)"
+  },
+  {
+    "intent": "add an entry 'wuggah' at the beginning of list `myList`",
+    "code": "myList.insert(0, 'wuggah')"
+  },
+  {
+    "intent": "convert a hex-string representation to actual bytes",
+    "code": "\"\"\"\\\\xF3\\\\xBE\\\\x80\\\\x80\"\"\".replace('\\\\x', '').decode('hex')"
+  },
+  {
+    "intent": "select the last column of dataframe `df`",
+    "code": "df[df.columns[-1]]"
+  },
+  {
+    "intent": "get the first value from dataframe `df` where column 'Letters' is equal to 'C'",
+    "code": "df.loc[df['Letters'] == 'C', 'Letters'].values[0]"
+  },
+  {
+    "intent": "converting two lists `[1, 2, 3]` and `[4, 5, 6]` into a matrix",
+    "code": "np.column_stack(([1, 2, 3], [4, 5, 6]))"
+  },
+  {
+    "intent": "get the type of `i`",
+    "code": "type(i)"
+  },
+  {
+    "intent": "determine the type of variable `v`",
+    "code": "type(v)"
+  },
+  {
+    "intent": "determine the type of variable `v`",
+    "code": "type(v)"
+  },
+  {
+    "intent": "determine the type of variable `v`",
+    "code": "type(v)"
+  },
+  {
+    "intent": "determine the type of variable `v`",
+    "code": "type(v)"
+  },
+  {
+    "intent": "get the type of variable `variable_name`",
+    "code": "print(type(variable_name))"
+  },
+  {
+    "intent": "get the 5th item of a generator",
+    "code": "next(itertools.islice(range(10), 5, 5 + 1))"
+  },
+  {
+    "intent": "Print a string `word` with string format",
+    "code": "print('\"{}\"'.format(word))"
+  },
+  {
+    "intent": "join a list of strings `list` using a space ' '",
+    "code": "\"\"\" \"\"\".join(list)"
+  },
+  {
+    "intent": "create list `y` containing two empty lists",
+    "code": "y = [[] for n in range(2)]"
+  },
+  {
+    "intent": "read a file 'C:/name/MyDocuments/numbers' into a list `data`",
+    "code": "data = [line.strip() for line in open('C:/name/MyDocuments/numbers', 'r')]"
+  },
+  {
+    "intent": "delete all occurrences of character 'i' in string 'it is icy'",
+    "code": "\"\"\"\"\"\".join([char for char in 'it is icy' if char != 'i'])"
+  },
+  {
+    "intent": "delete all instances of a character 'i' in a string 'it is icy'",
+    "code": "re.sub('i', '', 'it is icy')"
+  },
+  {
+    "intent": "delete all characters \"i\" in string \"it is icy\"",
+    "code": "\"\"\"it is icy\"\"\".replace('i', '')"
+  },
+  {
+    "intent": "How to delete all instances of a character in a string in python?",
+    "code": "\"\"\"\"\"\".join([char for char in 'it is icy' if char != 'i'])"
+  },
+  {
+    "intent": "Drop rows of pandas dataframe `df` having NaN in column at index \"1\"",
+    "code": "df.dropna(subset=[1])"
+  },
+  {
+    "intent": "get elements from list `myList`, that have a field `n` value 30",
+    "code": "[x for x in myList if x.n == 30]"
+  },
+  {
+    "intent": "converting list of strings `intstringlist` to list of integer `nums`",
+    "code": "nums = [int(x) for x in intstringlist]"
+  },
+  {
+    "intent": "convert list of string numbers into list of integers",
+    "code": "map(int, eval(input('Enter the unfriendly numbers: ')))"
+  },
+  {
+    "intent": "print \".\" without newline",
+    "code": "sys.stdout.write('.')"
+  },
+  {
+    "intent": "round off the float that is the product of `2.52 * 100` and convert it to an int",
+    "code": "int(round(2.51 * 100))"
+  },
+  {
+    "intent": "Find all files in directory \"/mydir\" with extension \".txt\"",
+    "code": "os.chdir('/mydir')\nfor file in glob.glob('*.txt'):\n    pass"
+  },
+  {
+    "intent": "Find all files in directory \"/mydir\" with extension \".txt\"",
+    "code": "for file in os.listdir('/mydir'):\n    if file.endswith('.txt'):\n        pass"
+  },
+  {
+    "intent": "Find all files in directory \"/mydir\" with extension \".txt\"",
+    "code": "for (root, dirs, files) in os.walk('/mydir'):\n    for file in files:\n        if file.endswith('.txt'):\n            pass"
+  },
+  {
+    "intent": "plot dataframe `df` without a legend",
+    "code": "df.plot(legend=False)"
+  },
+  {
+    "intent": "loop through the IP address range \"192.168.x.x\"",
+    "code": "for i in range(256):\n    for j in range(256):\n        ip = ('192.168.%d.%d' % (i, j))\n        print(ip)"
+  },
+  {
+    "intent": "loop through the IP address range \"192.168.x.x\"",
+    "code": "for (i, j) in product(list(range(256)), list(range(256))):\n    pass"
+  },
+  {
+    "intent": "loop through the IP address range \"192.168.x.x\"",
+    "code": "generator = iter_iprange('192.168.1.1', '192.168.255.255', step=1)"
+  },
+  {
+    "intent": "Sum the corresponding decimal values for binary values of each boolean element in list `x`",
+    "code": "sum(1 << i for i, b in enumerate(x) if b)"
+  },
+  {
+    "intent": "write multiple strings `line1`, `line2` and `line3` in one line in a file `target`",
+    "code": "target.write('%r\\n%r\\n%r\\n' % (line1, line2, line3))"
+  },
+  {
+    "intent": "Convert list of lists `data` into a flat list",
+    "code": "[y for x in data for y in (x if isinstance(x, list) else [x])]"
+  },
+  {
+    "intent": "Print new line character as `\\n` in a string `foo\\nbar`",
+    "code": "print('foo\\nbar'.encode('string_escape'))"
+  },
+  {
+    "intent": "remove last comma character ',' in string `s`",
+    "code": "\"\"\"\"\"\".join(s.rsplit(',', 1))"
+  },
+  {
+    "intent": "calculate the mean of each element in array `x` with the element previous to it",
+    "code": "(x[1:] + x[:-1]) / 2"
+  },
+  {
+    "intent": "get an array of the mean of each two consecutive values in numpy array `x`",
+    "code": "x[:-1] + (x[1:] - x[:-1]) / 2"
+  },
+  {
+    "intent": "load data containing `utf-8` from file `new.txt` into numpy array `arr`",
+    "code": "arr = numpy.fromiter(codecs.open('new.txt', encoding='utf-8'), dtype='<U2')"
+  },
+  {
+    "intent": "reverse sort list of dicts `l` by value for key `time`",
+    "code": "l = sorted(l, key=itemgetter('time'), reverse=True)"
+  },
+  {
+    "intent": "Sort a list of dictionary `l` based on key `time` in descending order",
+    "code": "l = sorted(l, key=lambda a: a['time'], reverse=True)"
+  },
+  {
+    "intent": "get rows of dataframe `df` that match regex '(Hel|Just)'",
+    "code": "df.loc[df[0].str.contains('(Hel|Just)')]"
+  },
+  {
+    "intent": "find the string in `your_string` between two special characters \"[\" and \"]\"",
+    "code": "re.search('\\\\[(.*)\\\\]', your_string).group(1)"
+  },
+  {
+    "intent": "How to create a list of date string in 'yyyymmdd' format with Python Pandas?",
+    "code": "[d.strftime('%Y%m%d') for d in pandas.date_range('20130226', '20130302')]"
+  },
+  {
+    "intent": "count number of times string 'brown' occurred in string 'The big brown fox is brown'",
+    "code": "\"\"\"The big brown fox is brown\"\"\".count('brown')"
+  },
+  {
+    "intent": "decode json string `request.body` to python dict",
+    "code": "json.loads(request.body)"
+  },
+  {
+    "intent": "download the file from url `url` and save it under file `file_name`",
+    "code": "urllib.request.urlretrieve(url, file_name)"
+  },
+  {
+    "intent": "split string `text` by space",
+    "code": "text.split()"
+  },
+  {
+    "intent": "split string `text` by \",\"",
+    "code": "text.split(',')"
+  },
+  {
+    "intent": "Split string `line` into a list by whitespace",
+    "code": "line.split()"
+  },
+  {
+    "intent": "replace dot characters  '.' associated with ascii letters in list `s` with space ' '",
+    "code": "[re.sub('(?<!\\\\d)\\\\.(?!\\\\d)', ' ', i) for i in s]"
+  },
+  {
+    "intent": "sort list `list_of_strings` based on second index of each string `s`",
+    "code": "sorted(list_of_strings, key=lambda s: s.split(',')[1])"
+  },
+  {
+    "intent": "call multiple bash function \u2018vasp\u2019 and \u2018tee tee_output\u2019 using \u2018|\u2019",
+    "code": "subprocess.check_call('vasp | tee tee_output', shell=True)"
+  },
+  {
+    "intent": "eliminate all strings from list `lst`",
+    "code": "[element for element in lst if isinstance(element, int)]"
+  },
+  {
+    "intent": "get all the elements except strings from the list 'lst'.",
+    "code": "[element for element in lst if not isinstance(element, str)]"
+  },
+  {
+    "intent": "Sort a list of dictionaries `list_to_be_sorted` by the value of the dictionary key `name`",
+    "code": "newlist = sorted(list_to_be_sorted, key=lambda k: k['name'])"
+  },
+  {
+    "intent": "sort a list of dictionaries `l` by values in key `name` in descending order",
+    "code": "newlist = sorted(l, key=itemgetter('name'), reverse=True)"
+  },
+  {
+    "intent": "How do I sort a list of dictionaries by values of the dictionary in Python?",
+    "code": "list_of_dicts.sort(key=operator.itemgetter('name'))"
+  },
+  {
+    "intent": "How do I sort a list of dictionaries by values of the dictionary in Python?",
+    "code": "list_of_dicts.sort(key=operator.itemgetter('age'))"
+  },
+  {
+    "intent": "How to sort a Dataframe by the ocurrences in a column in Python (pandas)",
+    "code": "df.groupby('prots').sum().sort('scores', ascending=False)"
+  },
+  {
+    "intent": "join together with \",\" elements inside a list indexed with 'category' within a dictionary `trans`",
+    "code": "\"\"\",\"\"\".join(trans['category'])"
+  },
+  {
+    "intent": "concatenate array of strings `['A', 'B', 'C', 'D']` into a string",
+    "code": "\"\"\"\"\"\".join(['A', 'B', 'C', 'D'])"
+  },
+  {
+    "intent": "get json data from restful service 'url'",
+    "code": "json.load(urllib.request.urlopen('url'))"
+  },
+  {
+    "intent": "Remove all strings from a list a strings `sents` where the values starts with `@$\\t` or `#`",
+    "code": "[x for x in sents if not x.startswith('@$\\t') and not x.startswith('#')]"
+  },
+  {
+    "intent": "django filter by hour",
+    "code": "Entry.objects.filter(pub_date__contains='08:00')"
+  },
+  {
+    "intent": "sort a list of dictionary `list` first by key `points` and then by `time`",
+    "code": "list.sort(key=lambda item: (item['points'], item['time']))"
+  },
+  {
+    "intent": "convert datetime object `(1970, 1, 1)` to seconds",
+    "code": "(t - datetime.datetime(1970, 1, 1)).total_seconds()"
+  },
+  {
+    "intent": "insert `_suff` before the file extension in `long.file.name.jpg` or replace `_a` with `suff` if it precedes the extension.",
+    "code": "re.sub('(\\\\_a)?\\\\.([^\\\\.]*)$', '_suff.\\\\2', 'long.file.name.jpg')"
+  },
+  {
+    "intent": "reload a module `module`",
+    "code": "import imp\nimp.reload(module)"
+  },
+  {
+    "intent": "Convert integer `number` into an unassigned integer",
+    "code": "struct.unpack('H', struct.pack('h', number))"
+  },
+  {
+    "intent": "convert int values in list `numlist` to float",
+    "code": "numlist = [float(x) for x in numlist]"
+  },
+  {
+    "intent": "write dataframe `df`, excluding index, to a csv file",
+    "code": "df.to_csv(filename, index=False)"
+  },
+  {
+    "intent": "convert a urllib unquoted string `unescaped` to a json data `json_data`",
+    "code": "json_data = json.loads(unescaped)"
+  },
+  {
+    "intent": "Create a list containing all ascii characters as its elements",
+    "code": "[chr(i) for i in range(127)]"
+  },
+  {
+    "intent": "write `newFileBytes` to a binary file `newFile`",
+    "code": "newFile.write(struct.pack('5B', *newFileBytes))"
+  },
+  {
+    "intent": "python regex - check for a capital letter with a following lowercase in string `string`",
+    "code": "re.sub('^[A-Z0-9]*(?![a-z])', '', string)"
+  },
+  {
+    "intent": "get the last key of dictionary `dict`",
+    "code": "list(dict.keys())[-1]"
+  },
+  {
+    "intent": "write line \"hi there\" to file `f`",
+    "code": "print('hi there', file=f)"
+  },
+  {
+    "intent": "write line \"hi there\" to file `myfile`",
+    "code": "f = open('myfile', 'w')\nf.write('hi there\\n')\nf.close()"
+  },
+  {
+    "intent": "write line \"Hello\" to file `somefile.txt`",
+    "code": "with open('somefile.txt', 'a') as the_file:\n    the_file.write('Hello\\n')"
+  },
+  {
+    "intent": "convert unicode string `s` to ascii",
+    "code": "s.encode('iso-8859-15')"
+  },
+  {
+    "intent": "Django get maximum value associated with field 'added' in model `AuthorizedEmail`",
+    "code": "AuthorizedEmail.objects.filter(group=group).order_by('-added')[0]"
+  },
+  {
+    "intent": "Find all numbers and dots from a string `text` using regex",
+    "code": "re.findall('Test([0-9.]*[0-9]+)', text)"
+  },
+  {
+    "intent": "python regex  to find all numbers and dots from 'text'",
+    "code": "re.findall('Test([\\\\d.]*\\\\d+)', text)"
+  },
+  {
+    "intent": "execute script 'script.ps1' using 'powershell.exe' shell",
+    "code": "os.system('powershell.exe', 'script.ps1')"
+  },
+  {
+    "intent": "Sort a list of tuples `b` by third item in the tuple",
+    "code": "b.sort(key=lambda x: x[1][2])"
+  },
+  {
+    "intent": "get a list of all keys in Cassandra database `cf` with pycassa",
+    "code": "list(cf.get_range().get_keys())"
+  },
+  {
+    "intent": "create a datetime with the current date & time",
+    "code": "datetime.datetime.now()"
+  },
+  {
+    "intent": "get the index of an integer `1` from a list `lst` if the list also contains boolean items",
+    "code": "next(i for i, x in enumerate(lst) if not isinstance(x, bool) and x == 1)"
+  },
+  {
+    "intent": "subtract 13 from every number in a list `a`",
+    "code": "a[:] = [(x - 13) for x in a]"
+  },
+  {
+    "intent": "choose a random file from the directory contents of the C drive, `C:\\\\`",
+    "code": "random.choice(os.listdir('C:\\\\'))"
+  },
+  {
+    "intent": "get the highest element in absolute value in a numpy matrix `x`",
+    "code": "max(x.min(), x.max(), key=abs)"
+  },
+  {
+    "intent": "Get all urls within text `s`",
+    "code": "re.findall('\"(http.*?)\"', s, re.MULTILINE | re.DOTALL)"
+  },
+  {
+    "intent": "match urls whose domain doesn't start with `t` from string `document` using regex",
+    "code": "re.findall('http://[^t][^s\"]+\\\\.html', document)"
+  },
+  {
+    "intent": "split a string `mystring` considering the spaces ' '",
+    "code": "mystring.replace(' ', '! !').split('!')"
+  },
+  {
+    "intent": "open file `path` with mode 'r'",
+    "code": "open(path, 'r')"
+  },
+  {
+    "intent": "sum elements at the same index in list `data`",
+    "code": "[[sum(item) for item in zip(*items)] for items in zip(*data)]"
+  },
+  {
+    "intent": "add a new axis to array `a`",
+    "code": "a[:, (np.newaxis)]"
+  }
+]
