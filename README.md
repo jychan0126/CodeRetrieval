@@ -66,3 +66,6 @@ python fairseq/interactive.py data-bin/data/ \
 --path averaged_model.pt \
 --beam 4
 ```
+
+# Reference
+[Understanding Back-Translation at Scale](https://arxiv.org/abs/1808.09381)
